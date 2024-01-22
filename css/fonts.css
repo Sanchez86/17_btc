@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'ChinaCyr';
+    src: url('../fonts/ChinaCyr.woff') format('woff'), url('../fonts/ChinaCyr.ttf') format('truetype'), url('../fonts/CHINACYR.TTF.eot') format('embedded-opentype');
+}
+@font-face {
+    font-family: 'OpenSans-Regular';
+    src: url('../fonts/OpenSans-Regular.eot') format('embedded-opentype'), url('../fonts/OpenSans.otf') format('opentype'), url('../fonts/OpenSans.ttf') format('truetype'), url('../fonts/OpenSans.woff') format('woff');
+}
+@font-face {
+    font-family: 'Roboto-BoldCondensed';
+    src: url('../fonts/Roboto-BoldCondensed.eot') format('embedded-opentype'), url('../fonts/Roboto-BoldCondensed.otf') format('opentype'), url('../fonts/Roboto-BoldCondensed.ttf') format('truetype'), url('../fonts/Roboto-BoldCondensed.woff') format('woff');
+}
+@font-face {
+    font-family: 'RobotoCondensed-Regular';
+    src: url('../fonts/RobotoCondensed-Regular.eot') format('embedded-opentype'), url('../fonts/RobotoCondensed-Regular.otf') format('opentype'), url('../fonts/RobotoCondensed-Regular.ttf') format('truetype'), url('../fonts/RobotoCondensed-Regular.woff') format('woff');
+}
+@font-face {
+    font-family: 'HanZi';
+    src: url('../fonts/HanZi.otf') format('opentype'), url('../fonts/HanZi.ttf') format('truetype'), url('../fonts/HANZI.TTF.eot') format('embedded-opentype'), url('../fonts/HanZi.woff') format('woff');
+}
+@font-face {
+    font-family: 'OpenSans-Semibold';
+    src: url('../fonts/OpenSans-Semibold.eot') format('embedded-opentype'), url('../fonts/OpenSans-Semibold.otf') format('opentype'), url('../fonts/OpenSans-Semibold.ttf') format('truetype'), url('../fonts/OpenSans-Semibold.woff') format('woff');
+}
+@font-face {
+    font-family: 'OpenSans-Bold';
+    src: url('../fonts/OpenSans-Bold.woff') format('woff'), url('../fonts/OpenSans-Bold.eot') format('embedded-opentype'), url('../fonts/OpenSans-Bold.otf') format('opentype'), url('../fonts/OpenSans-Bold.ttf') format('truetype');
+}

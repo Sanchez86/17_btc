@@ -1,0 +1,501 @@
+.body_games_fast {
+    overflow: auto;
+    overflow-x: hidden;
+    /*background-image: url('../images/games_fast/games_fast_bg.png');*/
+    background-image: url('../images/games_fast/games_fast_bg2.png');
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 100%;
+    min-height: 100vh;
+}
+.g_border_left {
+    background-image: url('../images/games_fast/g_border_left.png');
+    background-repeat: repeat-y;
+    background-size: contain;
+    position: absolute;
+    left: 0;
+    width: 17px;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+}
+.g_border_right {
+    background-image: url('../images/games_fast/g_border_right.png');
+    background-repeat: repeat-y;
+    background-size: contain;
+    position: absolute;
+    right: 0;
+    width: 18px;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+}
+.g_border_top {
+    background-image: url('../images/games_fast/g_border_top.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    height: 18px;
+    width: 100%;
+}
+.g_border_bottom {
+    background-image: url('../images/games_fast/g_border_bottom.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    height: 19px;
+    width: 100%;
+}
+.games_fast_block h2 {
+    color: #000000;
+    font-size: 36px;
+    font-family: 'ChinaCyr';
+    text-align: center;
+    font-weight: bold;
+}
+.games_fast_blocks {
+    margin: 0 auto;
+    width: 1830px;
+}
+.games_fast_block .fairGameModals {
+    position: absolute;
+    z-index: 10000;
+    top: 59px;
+}
+.roulet_block .fairGameModals {
+    left: 40px;
+}
+.duel_block .fairGameModals {
+    left: 60px;
+}
+.cells_block .fairGameModals {
+    left: 80px;
+}
+.games_fast_block .fairGameModals a {
+    font-family: 'OpenSans-Regular';
+    color: #323232;
+    font-size: 10px;
+    text-transform: uppercase;
+    display: inline-block;
+    border: 1px solid #121212;
+    border-radius: 20px;
+    transition: all 0.5s;
+    text-decoration: none;
+    outline: none;
+    text-align: center;
+    width: 71px;
+    line-height: 23px;
+}
+.games_fast_block .fairGameModals a:hover {
+    background-color: #323232;
+    color: #fff;
+}
+.games_fast_block .fairGameModals span {
+    font-size: 29.5px;
+    font-family: 'OpenSans-Regular';
+    color: #323232;
+    vertical-align: bottom;
+}
+.games_fast_block .fairGameModals a:first-child {
+    margin-right: -5px;
+}
+.games_fast_block .fairGameModals a:last-child {
+    margin-left: -5px;
+}
+/*roulet_block*/
+.igrok.active {
+    border: 2px solid #f23600;
+}
+.wrap_roulette {
+    background-image:none;
+}
+.games_fast_block {
+    width: 33.3%;
+    max-width: 608px;
+    float: left;
+    margin: 0 auto;
+    margin-top: 83px;
+}
+.roulet_block {
+    position: relative;
+    padding-top: 33px;
+}
+.roulet_block .games_left_top {
+    background-image: url('../images/games_fast/games_left_top.png');
+    width: 52px;
+    height: 186px;
+    position: absolute;
+    left: -18px;
+    top: 64px;
+}
+.roulet_block .games_right_top {
+    background-image: url('../images/games_fast/games_right_top.png');
+    width: 100px;
+    height: 99px;
+    position: absolute;
+    right: 2px;
+    top: 47px;
+}
+.roulet_block .roulette_games_left_bottom {
+    background-image: url('../images/games_fast/rulette_games_left_bottom.png');
+    width: 158px;
+    height: 30px;
+    position: absolute;
+    left: 0;
+    bottom: -48px;
+}
+.roulet_block .roulette_games_right_bottom {
+    background-image: url('../images/games_fast/rulette_games_right_bottom.png');
+    width: 327px;
+    height: 99px;
+    position: absolute;
+    right: 0;
+    bottom: -48px;
+}
+.roulet_block .point_bank p {
+    font-size:14px;
+}
+.roulet_block .point_bank span {
+    font-size: 24px;
+}
+.roulet_block .seconds60 {
+    font-size:24px;
+}
+.roulet_block .timeIcon {
+    transform: scale(0.66);
+}
+.roulet_block .point_bank {
+    top: 109px;
+    left: 31px;
+    font-weight: bold;
+}
+.roulet_block .pb_players {
+    right: 35px;
+}
+.roulet_block .pb_players{
+    text-align:right;
+}
+.roulet_block .igrok {
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-bottom: 7px;
+    max-width: 63px;
+    margin-right: 2px;
+}
+    .roulet_block .ruletka {
+        max-height: 120px;
+        max-width: 456px;
+        margin-top: 154px;
+    }
+.roulet_block .igrok img {
+    width: 100%;
+}
+.roulet_block .igrok h3 {
+    font-size: 13.89px;
+}
+.roulet_block .igrok h4 {
+    font-size: 13.89px;
+    margin-top: 3px;
+}
+.roulet_block .timeIconHren {
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 26px;
+    top: -20px;
+    left: -2px;
+}
+.roulet_block .buttonsGroup input[type="button"] {
+    padding: 14px 13px;
+    font-size: 8.67px;
+}
+.roulet_block .stavka input[type="number"] {
+    font-size: 12.64px;
+    padding: 7px 60px;
+    margin-bottom: 0;
+}
+.roulet_block .roulet_block {
+    display: inline-block;
+}
+.roulet_block .stavka {
+    display: inline-block;
+}
+.roulet_block .buttonsGroup {
+    display: inline-block;
+}
+.roulet_block .stavka input[type="number"] {
+    font-size: 12.64px;
+    max-width: 184px;
+    background-position: 9px center;
+    background-size: 9%;
+    padding: 7px 42px;
+    margin-top: 7px;
+}
+.roulet_block .sub_buttonsGroup {
+    margin-top:0;
+}
+.roulet_block .stavka input[type="reset"] {
+    width: 10px;
+    height: 13px;
+    top: 16px;
+    right: 12px;
+}
+.roulet_block .make_a_bet {
+    padding: 20px 38px;
+    font-size: 14.17px;
+    margin-top: 15px;
+}
+/*end roulet_block*/
+/*duel_block*/
+.duel_block {
+    position: relative;
+    padding-top: 33px;
+}
+.duel_block .game_left_top {
+    background-image: url('../images/games_fast/games_left_top.png');
+    position: absolute;
+    top: 62px;
+    left: -4px;
+    width: 52px;
+    height: 186px;
+}
+.duel_block .game_right_top {
+    background-image: url('../images/games_fast/duel_games_right_top.png');
+    position: absolute;
+    top: 43px;
+    right: 0px;
+    width: 112px;
+    height: 112px;
+}
+.duel_block .game_left_bottom {
+    background-image: url('../images/games_fast/duel_games_left_bottom.png');
+    position: absolute;
+    bottom: -64px;
+    left: 12px;
+    width: 368px;
+    height: 112px;
+}
+.duel_block .game_right_bottom {
+    background-image: url('../images/games_fast/duel_games_right_bottom.png');
+    position: absolute;
+    bottom: -64px;
+    right: 0px;
+    width: 178px;
+    height: 207px;
+}
+.duel_block .make_your_bet {
+    position: relative;
+    margin: 0 auto;
+    margin-top: 26px;
+    margin-bottom: 100px;
+    text-align: center;
+    left: 0;
+    right: 0;
+}
+.duel_block .make_your_bet p {
+    font-weight: bold;
+}
+.duel_block .make_your_bet ul li:last-child{
+    margin:0;
+}
+.duel_block .make_your_bet li a.active,
+.duel_block .make_your_bet li a:hover {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+.duel_block .block_user_avatar {
+    padding-top: 7px;
+    padding-right: 8px;
+    padding-bottom: 8px;
+    padding-left: 8px;
+    width: 113px;
+    height: 113px;
+    background-size: contain;
+}
+.duel_block .duel_vs {
+    width: 65px;
+    height: 88px;
+    top: 190px;
+}
+.duel_block .duel_bg {
+    bottom: 60px;
+}
+.duel_block .duel_left .block_user {
+    margin-left: 78px;
+}
+.duel_block .duel_right .block_user {
+    margin-right: 100px;
+}
+.duel_block .hoose {
+    font-size: 14px;
+    margin-top: 4px;
+}
+/*end duel_block*/
+/*cells_block*/
+.cells_block {
+    position: relative;
+    padding-top: 33px;
+    background-image: url('../images/games_fast/cells_block_bg.png');
+    background-repeat: no-repeat;
+    background-position: 50px 70px;
+}
+.cells_block .c-ava-block.active .cells-winner{
+    display:none;
+}
+    .cells_block .cells_min {
+        width: 570px;
+        margin: 0 auto;
+    }
+.cells_block .sells-scale {
+    transform: scale(0.7);
+    margin-left: -24px;
+}
+.cells_block .roulette_left_top {
+    background-image: url('../images/games_fast/games_left_top.png');
+    width: 52px;
+    height: 186px;
+    top: 64px;
+    left: 0px;
+}
+.cells_block .roulette_right_top {
+    background-image: url('../images/games_fast/games_right_top.png');
+    width: 100px;
+    height: 99px;
+    top: 47px;
+    right: 21px;
+}
+.cells_block .roulette_bottom2 {
+    background-image: url('../images/games_fast/cells_games_bottom.png');
+    width: 560px;
+    height: 31px;
+    bottom: -34px;
+}
+.cells_block .make_your_bet {
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    left: 0;
+    right: 0;
+}
+.cells_block h2 {
+    margin-bottom: 31px;
+}
+.cells_block .playersfrom10 {
+    position:relative;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    float:left;
+}
+.cells_block .count_points {
+    float: right;
+    color: #000000;
+    font-size: 16.5px;
+    font-family: 'OpenSans-Regular';
+    font-weight: bold;
+}
+.cells_block .name_ninja {
+    color: #f33600;
+    font-family: 'OpenSans-Regular';
+    font-size: 14.72px;
+    line-height: 40px;
+}
+.cells_block .info_cells {
+    margin-left: 35px;
+}
+.cells_min .make_your_bet li a.active,
+.cells_min .make_your_bet li a:hover {
+    font-weight: bold;
+}
+/*end cells_block*/
+
+@media only screen and (max-width: 1800px) {
+    .games_fast_blocks {
+        transform: scale(0.9);
+        transform-origin: left;
+        margin-left: 30px;
+    }
+}
+@media only screen and (max-width: 1650px) {
+    .games_fast_blocks {
+        transform: scale(0.8);
+        transform-origin: left;
+    }
+}
+@media only screen and (max-width: 1450px) {
+    .games_fast_blocks {
+        transform: scale(1);
+        transform-origin: center;
+        width: 100%;
+        margin:0;
+    }
+    .games_fast_block {
+        min-width: 608px;
+        float: none;
+        margin-bottom: 60px;
+        margin-top: 30px;
+    }
+    .games_fast_block:last-child {
+        margin-bottom: 0px;
+    }
+    .body_games_fast {
+        background-size: 100% 100%;
+        background-image: url('../images/games_fast/games_fast_bg_resp.png');
+    }
+    .body_games_fast .wrap{
+        background:none;
+    }
+}
+@media only screen and (max-width: 1250px) {
+    .games_fast .roulette_bottom2,
+    .games_fast .roulette_left_top,
+    .games_fast .roulette_right_top {
+        display: block;
+    }
+    .games_fast .make_your_bet li a {
+        font-size: 21px;
+    }
+    .games_fast .make_your_bet p {
+        font-size: 14px;
+    }
+    .games_fast .make_your_bet {
+        top: 0;
+    }
+    .games_fast .sells-scale {
+        margin: 0;
+    }
+    .games_fast .block_user {
+        max-width: 200px;
+        text-align: center;
+        margin-top: -60px;
+        position: relative;
+        transform: scale(1);
+        width: auto;
+    }
+    .games_fast .duel {
+        transform: scale(1);
+        margin:0;
+    }
+    .games_fast .sub_buttonsGroup {
+        max-width: 100%;
+    }
+    .games_fast .stavka {
+        position: relative;
+        top: 0;
+        right: 0;
+    }
+    .games_fast .sub_buttonsGroup {
+        text-align:center;
+    }
+    .games_fast .c-line-h {
+        width: 857px;
+    }
+    .games_fast .make_a_bet {
+        position: relative;
+    }
+}

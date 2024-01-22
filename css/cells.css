@@ -1,0 +1,3267 @@
+.cells-winner-close {
+    position: absolute;
+    top: -21px;
+    right: 15px;
+    transform: rotateZ(130deg);
+    cursor: pointer;
+    transition: all 0.5s;
+    color: rgb(51, 51, 51);
+}
+.cells-winner-close:hover {
+    transform: rotateZ(310deg);
+    color: red;
+}
+.cells-winner {
+    position: absolute;
+    top:0%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'ChinaCyr';
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 90px;
+    background-color: rgba(255, 255, 255, 0.96);
+    max-width: 80%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(35, 31, 32, 0.59);
+    z-index:1000;
+    opacity:0;
+    transition:all 1s;
+    transition-delay:8s;
+}
+.cells-winner span{
+    color:red;
+    margin-right:10px;
+}
+
+.c-ava-block.active .cells-winner {
+    top: 28%;
+    animation-delay: 8s;
+    animation-name: cells-winner;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes cells-winner {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+.optimize1 {
+    background-image: url('../images/cells/c-ninja1-gun.png');
+}
+.optimize2 {
+    background-image: url('../images/cells/c-ninja2-gun.png');
+}
+.optimize3 {
+    background-image: url('../images/cells/c-ninja3-gun.png');
+}
+.optimize4 {
+    background-image: url('../images/cells/c-ninja4-gun.png');
+}
+.optimize5 {
+    background-image: url('../images/cells/c-ninja5_gun.png');
+}
+.optimize6 {
+    background-image: url('../images/cells/c-ninja6-gun.png');
+}
+
+.optimize8 {
+    background-image: url('../images/cells/c-ninja8-gun.png');
+}
+.optimize9 {
+    background-image: url('../images/cells/c-ninja9-gun.png');
+}
+.optimize10 {
+    background-image: url('../images/cells/c-ninja10-gun.png');
+}
+.cells{
+    width:1170px;
+    margin:0 auto;
+}
+.playersfrom10 {
+    color: #000000;
+    font-size: 16.5px;
+    font-family: 'OpenSans-Regular';
+    font-weight: bold;
+    position: absolute;
+    top: 73px;
+    left: 57px;
+}
+.roulette_bottom2 {
+    position: absolute;
+    bottom: -30px;
+    background-image: url(../images/roulette_bottom2.png);
+    width: 1171px;
+    height: 42px;
+}
+.wrap_lavel{
+    overflow:hidden;
+}
+.make_your_bet {
+    position: absolute;
+    top: 0;
+    right: 70px;
+    z-index:2;
+}
+.make_your_bet p {
+    color: #000;
+    font-size: 14px;
+    font-family: 'OpenSans-Regular';
+    line-height: 38px;
+}
+.make_your_bet li {
+    display: inline-block;
+    margin-right: 32px;
+}
+.make_your_bet li a {
+    color: #aaaaaa;
+    font-size: 21px;
+    font-family: 'HanZi';
+    position: relative;
+    -webkit-transition: color 0.5s;
+    transition: color 0.5s;
+}
+.make_your_bet li a.active,
+.make_your_bet li a:hover {
+    color: #000;
+    text-decoration: none;
+}
+.make_your_bet li a.active:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: #f23600;
+}
+
+/**/
+.ninjas {
+    width: calc(100% + 10%);
+    margin-left: -5%;
+    position:relative;
+}
+.c-ninja > div {
+    height: 247px;
+    background-repeat:no-repeat;
+    background-position:bottom;
+}
+.c-ninja h3 {
+    font-family: 'OpenSans-Regular';
+    font-size: 11px;
+    line-height: 35px;
+    margin: 0 auto;
+    margin-top: 20px;
+    max-width: 100px;
+    word-break: break-all;
+    white-space: normal;
+    text-align: center;
+}
+.c-ninja {
+    text-align: center;
+    float: left;
+    position: relative;
+    margin-left:-16px;
+}
+.c-ninja.sub-c-ninja4 {
+    margin-left: -40px;
+}
+
+.c-ninja.sub-c-ninja8 {
+    margin-left: -40px;
+}
+
+.c-ninja.sub-c-ninja10 {
+    margin-left: -45px;
+}
+.c-ninja.sub-c-ninja10 .death2 {
+    background-size: 80%;
+}
+.c-ninja.sub-c-ninja2 {
+    margin-left: -12px;
+}
+
+.death {
+    background-image: url('../images/cells/death.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    transform:scale(0.5);
+}
+.c-ninja.active .death {
+    animation-delay: 1.5s;
+    animation-name: death;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes death {
+    0% {
+        top: 100px;
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        top: -100px;
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+.death2 {
+    background-image: url('../images/cells/death2.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    transform: scale(0.5);
+}
+
+.c-ninja.active .death2 {
+    animation-delay: 2.5s;
+    animation-name: death2;
+    animation-duration: 2.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes death2 {
+    0% {
+        top: 0px;
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    25% {
+        opacity: 1;
+        transform: scale(0.7);
+    }
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        top: 0px;
+        opacity: 1;
+        transform: scale(0.7);
+    }
+}
+
+
+#pattern {
+    width: 150px;
+    height: 140px;
+}
+.imageStroke {
+    stroke: #979898;
+    stroke-width: 3px;
+    animation-duration: 1s;
+    stroke-dasharray: 584px;
+    cursor:pointer;
+}
+.imageStroke:hover {
+    stroke-width: 3px;
+    stroke-dashoffset: 0px;
+    animation-name: imageStroke;
+    animation-fill-mode:forwards;
+}
+@keyframes imageStroke{
+    from {
+        stroke-dasharray: 584px;
+        stroke-dashoffset: 584px;
+        stroke: #979898;
+    }
+    to {
+        stroke-dashoffset: 0px;
+        stroke: #171615;
+    }
+
+}
+
+.imageHex {
+    fill: url(#image);
+}
+
+.imageHex2 {
+    fill: url(#image2);
+}
+.imageHex3 {
+    fill: url(#image3);
+}
+
+.imageHex4 {
+    fill: url(#image4);
+}
+
+.imageHex5 {
+    fill: url(#image5);
+}
+
+.imageHex6 {
+    fill: url(#image6);
+}
+
+.imageHex7 {
+    fill: url(#image7);
+}
+
+.imageHex8 {
+    fill: url(#image8);
+}
+
+.imageHex9 {
+    fill: url(#image9);
+}
+
+.imageHex10 {
+    fill: url(#image10);
+}
+
+#imageBg {
+
+}
+.c-ava {
+    float: left;
+    width: 174px;
+    margin-left: -45px;
+    position: relative;
+    transition: transform 1s;
+}
+.c-ava-top {
+    margin-left: 64px;
+}
+.c-ava-bottom {
+    margin-top: -32px;
+    float: left
+}
+.c-ava-block {
+    width: 750px;
+    margin: 0 auto;
+}
+.lavel h2 {
+    margin-bottom: 79px;
+}
+.c-ava-numeric {
+    position: absolute;
+    font-size: 36px;
+    font-family: 'HanZi';
+    color: #000000;
+    width: 100%;
+    text-align: center;
+    top: 37%;
+}
+
+/*=====================================*/
+/* NINJA ANIMATION */
+/*=====================================*/
+
+/*ninja1*/
+.c-ninja1 {
+    background-image: url('../images/cells/c-ninja1.png');
+    width: 149px;
+}
+.c-ninja.active .c-ninja1 {
+    animation-delay: 0.6s;
+    animation-name: c-ninja1;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes c-ninja1 {
+    0% {
+        background-image: url('../images/cells/c-ninja1.png');
+    }
+
+    50% {
+        background-image: url('../images/cells/c-ninja1_dead.png');
+        opacity: 1;
+    }
+
+    100% {
+        background-image: url('../images/cells/c-ninja1_dead.png');
+        opacity: 0;
+    }
+}
+
+.c-ninja1-blick {
+    background-image: url('../images/cells/blick.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: -10px;
+    left: -40px;
+    opacity: 0;
+    z-index: 1;
+}
+
+.c-ninja.active .c-ninja1-blick {
+    animation-delay: 0.7s;
+    animation-name: c-ninja1-blick;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes c-ninja1-blick {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.c-ninja1-gun {
+    background-image: url('../images/cells/c-ninja1-gun.png');
+    width: 140px;
+    height: 140px!important;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 600px;
+    left: 0;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.c-ninja.active .c-ninja1-gun {
+    animation-delay:0.1s;
+    animation-name: c-ninja1-gun;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes c-ninja1-gun {
+    0% {
+        top: 600px;
+        left: 0;
+        transform: scale(5) rotateZ(0deg);
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    100% {
+        top: 20px;
+        left: 10px;
+        transform: scale(0) rotateZ(-660deg);
+        opacity: 0;
+    }
+}
+.c-ninja1-flag {
+    background-image: url('../images/cells/c-ninja1-flag.png');
+    width:50px;
+    height:105px!important;
+    position:absolute;
+    top:0;
+    left:0;
+    opacity:0;
+}
+.c-ninja.active .c-ninja1-flag {
+    animation-delay: 0.5s;
+    animation-name: c-ninja1-flag;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+@keyframes c-ninja1-flag{
+    0% {
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transform: scale(1) rotateZ(0deg);
+    }
+    10% {
+        opacity: 1;
+    }
+    100% {
+        top: 200px;
+        left: -10px;
+        transform: scale(0.9) rotateZ(-70deg);
+        opacity: 0;
+    }
+}
+
+/*end ninja1*/
+/*ninja2*/
+.c-ninja2 {
+    background-image: url('../images/cells/c-ninja2.png');
+    width: 138px;
+    z-index: 2;
+}
+.c-ninja.active .c-ninja2 {
+    animation-delay: 0.6s;
+    animation-name: c-ninja2;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+@keyframes c-ninja2 {
+    0% {
+        background-image: url('../images/cells/c-ninja2.png');
+    }
+
+    50% {
+        background-image: url('../images/cells/c-ninja2_dead.png');
+        opacity: 1;
+    }
+
+    100% {
+        background-image: url('../images/cells/c-ninja2_dead.png');
+        opacity: 0;
+        background-position-y:-7px;
+    }
+}
+.c-ninja2-blick {
+    background-image: url('../images/cells/blick2.png');
+    background-repeat:no-repeat;
+    background-size:contain;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 20px;
+    left: 0px;
+    opacity: 0;
+    z-index: 0;
+}
+
+.c-ninja.active .c-ninja2-blick {
+    animation-delay: 0.7s;
+    animation-name: c-ninja2-blick;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes c-ninja2-blick {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.c-ninja2-gun {
+    background-image: url('../images/cells/c-ninja2-gun.png');
+    width: 140px;
+    height: 140px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 600px;
+    left: 0;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.c-ninja.active .c-ninja2-gun {
+    animation-name: c-ninja2-gun;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes c-ninja2-gun {
+    0% {
+        top: 600px;
+        left: 0;
+        transform: scale(5) rotateZ(0deg);
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    100% {
+        top: 50px;
+        left: -40px;
+        transform: scale(0.1) rotateZ(-360deg);
+        opacity: 0;
+    }
+}
+/*end ninja2*/
+
+/*ninja3*/
+.c-ninja3 {
+    background-image: url('../images/cells/c-ninja3.png');
+    width: 158px;
+    transition: all 0.2s;
+}
+.c-ninja.active .c-ninja3 {
+    animation-delay: 0.6s;
+    animation-name: c-ninja3;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+@keyframes c-ninja3 {
+    0% {
+        background-image: url('../images/cells/c-ninja3.png');
+    }
+
+    10% {
+        background-image: url('../images/cells/c-ninja3_dead.png');
+        opacity: 1;
+    }
+
+    50% {
+        background-image: url('../images/cells/c-ninja3_dead.png');
+        opacity: 1;
+    }
+
+    100% {
+        background-image: url('../images/cells/c-ninja3_dead.png');
+        opacity: 0;
+    }
+}
+.c-ninja3-blick {
+    background-image: url('../images/cells/blick.png');
+    width: 208px;
+    height: 204px;
+    position: absolute;
+    top: -18px;
+    left: -45px;
+    opacity: 0;
+    z-index: 1;
+}
+.c-ninja.active .c-ninja3-blick {
+    animation-delay: 0.5s;
+    animation-name: c-ninja3-blick;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes c-ninja3-blick {
+    0% {
+        opacity: 0;
+        transform: rotateZ(0deg);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: rotateZ(180deg);
+    }
+}
+.c-ninja3-gun {
+    background-image: url('../images/cells/c-ninja3-gun.png');
+    width: 276px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 600px;
+    left: 0;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.c-ninja.active .c-ninja3-gun {
+    animation-name: c-ninja3-gun;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes c-ninja3-gun {
+    0% {
+        top: 600px;
+        left: 0;
+        transform: scale(6) rotateZ(0deg) rotateX(0deg) rotateY(0deg);
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    100% {
+        top: 0px;
+        left: -90px;
+        transform: scale(0.2) rotateZ(200deg) rotateX(5deg) rotateY(90deg);
+        opacity: 0;
+    }
+}
+/*end ninja3*/
+
+/*ninja4*/
+
+.c-ninja4 {
+    background-image: url('../images/cells/c-ninja4.png');
+    width: 129px;
+}
+.c-ninja.active .c-ninja4 {
+    animation-delay: 0.6s;
+    animation-name: c-ninja4;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes c-ninja4 {
+    0% {
+        background-image: url('../images/cells/c-ninja4.png');
+    }
+
+    10% {
+        background-image: url('../images/cells/c-ninja4_dead.png');
+        opacity: 1;
+    }
+
+    50% {
+        background-image: url('../images/cells/c-ninja4_dead.png');
+        opacity: 1;
+    }
+
+    100% {
+        background-image: url('../images/cells/c-ninja4_dead.png');
+        opacity: 0;
+    }
+}
+
+.c-ninja4-blick {
+    background-image: url('../images/cells/blick.png');
+    width: 208px;
+    height: 204px;
+    position: absolute;
+    top: 35px;
+    left: -70px;
+    opacity: 0;
+    z-index: 1;
+}
+
+.c-ninja.active .c-ninja4-blick {
+    animation-delay: 0.5s;
+    animation-name: c-ninja4-blick;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes c-ninja4-blick {
+    0% {
+        opacity: 0;
+        transform: rotateZ(0deg);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: rotateZ(180deg);
+    }
+}
+
+.c-ninja4-gun {
+    background-image: url('../images/cells/c-ninja4-gun.png');
+    width: 276px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 600px;
+    left: -50px;
+    opacity: 0;
+    transition: all 0.5s;
+    z-index:1;
+}
+
+.c-ninja.active .c-ninja4-gun {
+    animation-name: c-ninja4-gun;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes c-ninja4-gun {
+    0% {
+        top: 600px;
+        left: 0;
+        transform: scale(4) rotateZ(37deg) rotateX(0deg) rotateY(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 1;
+    }
+    100% {
+        top: 0px;
+        left: -100px;
+        transform: scale(0) rotateZ(37deg) rotateX(1180deg) rotateY(1140deg);
+        opacity: 0;
+    }
+}
+/*end ninja4*/
+
+/*ninja5*/
+.c-ninja5 {
+    background-image: url('../images/cells/c-ninja5.png');
+    width: 107px;
+}
+
+.c-ninja.active .c-ninja5 {
+    animation-delay: 0.6s;
+    animation-name: c-ninja5;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes c-ninja5 {
+    0% {
+        background-image: url('../images/cells/c-ninja5.png');
+    }
+
+    10% {
+        background-image: url('../images/cells/c-ninja5_dead.png');
+        opacity: 1;
+    }
+
+    50% {
+        background-image: url('../images/cells/c-ninja5_dead.png');
+        opacity: 1;
+    }
+
+    100% {
+        background-image: url('../images/cells/c-ninja5_dead.png');
+        opacity: 0;
+    }
+}
+
+.c-ninja5-blick {
+    background-image: url('../images/cells/blick5.png');
+    width: 79px;
+    height: 56px;
+    position: absolute;
+    top: -152px;
+    left: 45px;
+    opacity: 0;
+    z-index: 1;
+}
+
+.c-ninja.active .c-ninja5-blick {
+    animation-delay: 0.5s;
+    animation-name: c-ninja5-blick;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes c-ninja5-blick {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.c-ninja5-gun {
+    background-image: url('../images/cells/c-ninja5_gun.png');
+    width: 276px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 600px;
+    left: -50px;
+    opacity: 0;
+    transition: all 0.5s;
+    z-index: 1;
+}
+
+.c-ninja.active .c-ninja5-gun {
+    animation-name: c-ninja5-gun;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes c-ninja5-gun {
+    0% {
+        top: 600px;
+        left: 0;
+        transform: scale(4) rotateZ(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    100% {
+        top: -100px;
+        left: -100px;
+        transform: scale(0) rotateZ(460deg);
+        opacity: 0;
+    }
+}
+.c-ninja5-shapka {
+    background-image: url('../images/cells/c-ninja5-shapka.png');
+    width: 41px;
+    height: 76px !important;
+    position: absolute;
+    top: 70px;
+    right: 0px;
+    transform: rotateZ(-80deg);
+    opacity: 0;
+    z-index:1;
+}
+.c-ninja.active .c-ninja5-shapka {
+    animation-delay:0.6s;
+    animation-name: c-ninja5-shapka;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+@keyframes c-ninja5-shapka{
+    0% {
+        top: 70px;
+        right: 0px;
+        transform: scale(1) rotateZ(-80deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    50% {
+        top: -50px;
+        right: -50px;
+        opacity: 1;
+    }
+    100% {
+        top: -50px;
+        right: -50px;
+        opacity: 0;
+        transform: scale(0.2) rotateZ(0deg);
+    }
+}
+/*end ninja5*/
+/*ninja6*/
+.c-ninja6 {
+    background-image: url('../images/cells/c-ninja6.png');
+    width: 106px;
+}
+
+.c-ninja.active .c-ninja6 {
+    animation-delay: 0.5s;
+    animation-name: c-ninja6;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes c-ninja6 {
+    0% {
+        background-image: url('../images/cells/c-ninja6.png');
+    }
+
+    10% {
+        background-image: url('../images/cells/c-ninja6-dead.png');
+        opacity: 1;
+    }
+
+    50% {
+        background-image: url('../images/cells/c-ninja6-dead.png');
+        opacity: 1;
+    }
+
+    100% {
+        background-image: url('../images/cells/c-ninja6-dead.png');
+        opacity: 0;
+    }
+}
+
+.c-ninja6-blick {
+    background-image: url('../images/cells/blick.png');
+    width: 79px;
+    height: 56px;
+    position: absolute;
+    top: -55px;
+    left: 15px;
+    opacity: 0;
+    z-index: 1;
+}
+
+.c-ninja.active .c-ninja6-blick {
+    animation-delay: 0.4s;
+    animation-name: c-ninja6-blick;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes c-ninja6-blick {
+    0% {
+        opacity: 0;
+        transform: scale(4) rotateZ(37deg) rotateX(0deg);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0) rotateZ(37deg) rotateX(180deg);
+    }
+}
+
+.c-ninja6-gun {
+    background-image: url('../images/cells/c-ninja6-gun.png');
+    width: 276px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: -55px;
+    left: -700px;
+    opacity: 0;
+    transition: all 0.5s;
+    z-index: 1;
+}
+
+.c-ninja.active .c-ninja6-gun {
+    animation-name: c-ninja6-gun;
+    animation-duration: 0.6s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes c-ninja6-gun {
+    0% {
+        left: -700px;
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    100% {
+        left: -70px;
+        transform: scale(0) ;
+        opacity: 0;
+    }
+}
+
+/*end ninja6*/
+
+/*ninja7*/
+.c-ninja7 {
+    background-image: url('../images/cells/c-ninja7.png');
+    width:194px;
+}
+.c-ninja.active .c-ninja7 {
+    animation-delay: 1.1s;
+    animation-name: c-ninja7;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+.c-ninja7-dead-up {
+    background-image: url('../images/cells/c-ninja7-dead-up.png');
+    width: 186px;
+    height: 194px !important;
+    position: absolute;
+    top: 50px;
+    left: 4px;
+    opacity:0;
+}
+.c-ninja.active .c-ninja7-dead-up {
+    animation-delay: 1.1s;
+    animation-name: c-ninja7-dead-up;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+@keyframes c-ninja7-dead-up{
+    0% {
+        opacity: 0;
+        transform: scale(1) rotateZ(0deg) rotateY(0deg);
+    }
+    10% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.9) rotateZ(20deg) rotateY(20deg);
+    }
+}
+@keyframes c-ninja7 {
+    0% {
+        background-image: url('../images/cells/c-ninja7.png');
+    }
+    20% {
+        
+        background-image: url('../images/cells/c-ninja7-dead-down.png');
+    }
+    50% {
+        background-image: url('../images/cells/c-ninja7-dead-down.png');
+        opacity: 1;
+    }
+    100% {
+        background-image: url('../images/cells/c-ninja7-dead-down.png');
+        opacity: 0;
+    }
+}
+.c-ninja7-blood {
+    background-image: url('../images/cells/c-ninja7-blood.png');
+    width: 39px;
+    height: 15px !important;
+    position: absolute;
+    top: 140px;
+    left: 79px;
+    opacity: 0;
+    z-index: 1;
+}
+.c-ninja.active .c-ninja7-blood {
+    animation-delay: 1.1s;
+    animation-name: c-ninja7-blood;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+@keyframes c-ninja7-blood {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 1;
+    }
+    1000% {
+        opacity: 0;
+    }
+
+}
+.c-ninja7-blick {
+    background-image: url('../images/cells/blick.png');
+    width: 79px;
+    height: 156px!important;
+    position: absolute;
+    top: 110px;
+    left: 15px;
+    opacity: 0;
+    z-index: 1;
+}
+
+.c-ninja.active .c-ninja7-blick {
+    animation-delay: 1s;
+    animation-name: c-ninja7-blick;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes c-ninja7-blick {
+    0% {
+        opacity: 0;
+        left: 15px;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        left: 80px;
+    }
+}
+
+.c-ninja7-gun {
+    background-image: url('../images/cells/c-ninja3-gun.png');
+    width: 276px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 50px;
+    left: -150px;
+    opacity: 0;
+    transition: all 0.5s;
+    z-index: 1;
+}
+
+.c-ninja.active .c-ninja7-gun {
+    animation-name: c-ninja7-gun;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes c-ninja7-gun {
+    0% {
+        left: -150px;
+        transform: scale(0.2) rotateZ(0deg) rotateY(0deg);
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 1;
+        transform: scale(1.5)rotateZ(50deg) rotateY(45deg);
+    }
+
+    100% {
+        left: 90px;
+        transform: scale(0.2) rotateZ(100deg) rotateY(90deg);
+        opacity: 0;
+    }
+}
+/*end ninja7*/
+
+/*ninja8*/
+.c-ninja8 {
+    background-image: url('../images/cells/c-ninja8.png');
+    background-position-y: 0px;
+    width: 138px;
+    z-index:0;
+}
+.c-ninja.active .c-ninja8 {
+    animation-delay: 0.5s;
+    animation-name: c-ninja8;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes c-ninja8 {
+    0% {
+        background-image: url('../images/cells/c-ninja8.png');
+        background-position-y: 0px;
+    }
+
+    10% {
+        background-image: url('../images/cells/c-ninja8_dead.png');
+        background-position-y:80px;
+        opacity: 1;
+    }
+    80% {
+        background-image: url('../images/cells/c-ninja8_dead.png');
+        background-position-y: 80px;
+        opacity: 1;
+    }
+
+    100% {
+        background-image: url('../images/cells/c-ninja8_dead.png');
+        background-position-y: 80px;
+        opacity: 0;
+    }
+}
+
+.c-ninja1-blick {
+    background-image: url('../images/cells/blick.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: -10px;
+    left: -40px;
+    opacity: 0;
+    z-index: 1;
+}
+
+.c-ninja.active .c-ninja8-blick {
+    animation-delay: 0.7s;
+    animation-name: c-ninja8-blick;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes c-ninja8-blick {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.c-ninja8-gun {
+    background-image: url('../images/cells/c-ninja8-gun.png');
+    width: 140px;
+    height: 140px !important;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 600px;
+    left: 10px;
+    opacity: 0;
+    transition: all 0.5s;
+    z-index: 2;
+}
+
+.c-ninja.active .c-ninja8-gun {
+    animation-delay: 0.1s;
+    animation-name: c-ninja8-gun;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-timing-function:linear;
+}
+
+@keyframes c-ninja8-gun {
+    0% {
+        top: -600px;
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 1;
+        top: 75px;
+    }
+    70% {
+        opacity: 1;
+        top: 75px;
+    }
+
+    80% {
+        top: 75px;
+        opacity: 0;
+    }
+    100% {
+        top: 75px;
+        opacity: 0;
+    }
+}
+
+.c-ninja8-dust {
+    background-image: url('../images/cells/c-ninja8-dust.png');
+    width: 227px;
+    height: 49px !important;
+    position: absolute;
+    top: 175px;
+    left: -35px;
+    opacity: 0;
+    z-index: 0;
+}
+
+.c-ninja.active .c-ninja8-dust {
+    animation-delay: 0.5s;
+    animation-name: c-ninja8-dust;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes c-ninja8-dust {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.c-ninja8-blood {
+    background-image: url('../images/cells/c-ninja8-blood.png');
+    width: 103px;
+    height: 28px !important;
+    position: absolute;
+    top: 185px;
+    left: 12px;
+    opacity: 0;
+    z-index:1;
+}
+
+.c-ninja.active .c-ninja8-blood {
+    animation-delay: 0.5s;
+    animation-name: c-ninja8-blood;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes c-ninja8-blood {
+    0% {
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+/*end ninja8*/
+
+/*ninja9*/
+.c-ninja9 {
+    background-image: url('../images/cells/c-ninja9.png');
+    width: 181px;
+}
+
+.c-ninja.active .c-ninja9 {
+    animation-delay: 0.5s;
+    animation-name: c-ninja9;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes c-ninja9 {
+    0% {
+        background-image: url('../images/cells/c-ninja9.png');
+    }
+
+    10% {
+        background-image: url('../images/cells/c-ninja9-dead.png');
+        opacity: 1;
+    }
+
+    50% {
+        background-image: url('../images/cells/c-ninja9-dead.png');
+        opacity: 1;
+    }
+
+    100% {
+        background-image: url('../images/cells/c-ninja9-dead.png');
+        opacity: 0;
+    }
+}
+
+.c-ninja9-blick1{
+    background-image: url('../images/cells/blick.png');
+    width: 79px;
+    height: 56px;
+    position: absolute;
+    top: 70px;
+    left: -10px;
+    opacity: 0;
+    z-index: 1;
+}
+
+.c-ninja.active .c-ninja9-blick1 {
+    animation-delay: 0.4s;
+    animation-name: c-ninja9-blick1;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes c-ninja9-blick1 {
+    0% {
+        opacity: 0;
+        transform: scale(4) rotateZ(37deg) rotateX(0deg);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0) rotateZ(37deg) rotateX(180deg);
+    }
+}
+.c-ninja9-blick2 {
+    background-image: url('../images/cells/blick.png');
+    width: 79px;
+    height: 56px;
+    position: absolute;
+    top: -50px;
+    left: 40px;
+    opacity: 0;
+    z-index: 1;
+}
+
+.c-ninja.active .c-ninja9-blick2 {
+    animation-delay: 0.4s;
+    animation-name: c-ninja9-blick2;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes c-ninja9-blick2 {
+    0% {
+        opacity: 0;
+        transform: scale(4) rotateZ(37deg) rotateX(0deg);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0) rotateZ(37deg) rotateX(180deg);
+    }
+}
+
+.c-ninja9-gun1 {
+    background-image: url('../images/cells/c-ninja9-gun.png');
+    width: 276px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 55px;
+    left: -700px;
+    opacity: 0;
+    transition: all 0.5s;
+    z-index: 1;
+}
+
+.c-ninja.active .c-ninja9-gun1 {
+    animation-name: c-ninja9-gun1;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes c-ninja9-gun1 {
+    0% {
+        left: -700px;
+        opacity: 0;
+        transform: scale(3) rotateZ(0deg) rotateX(0deg);
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    100% {
+        left: -80px;
+        transform: scale(0) rotateZ(3000deg) rotateX(45deg);
+        opacity: 0;
+    }
+}
+
+.c-ninja9-gun2 {
+    background-image: url('../images/cells/c-ninja9-gun.png');
+    width: 276px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: -15px;
+    left: -800px;
+    opacity: 0;
+    transition: all 0.5s;
+    z-index: 1;
+}
+
+.c-ninja.active .c-ninja9-gun2 {
+    animation-name: c-ninja9-gun2;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes c-ninja9-gun2 {
+    0% {
+        left: -700px;
+        opacity: 0;
+        transform: scale(3) rotateZ(0deg) rotateX(0deg);
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    100% {
+        top: -60px;
+        left: -50px;
+        transform: scale(0) rotateZ(3000deg) rotateX(45deg);
+        opacity: 0;
+    }
+}
+
+/*end ninja9*/
+
+/*ninja10*/
+.c-ninja10 {
+    background-image: url('../images/cells/c-ninja10.png');
+    width: 184px;
+}
+.c-ninja.active .c-ninja10 {
+    animation-delay: 0.5s;
+    animation-name: c-ninja10;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes c-ninja10 {
+    0% {
+        background-image: url('../images/cells/c-ninja10.png');
+    }
+
+    10% {
+        background-image: url('../images/cells/c-ninja10-dead.png');
+        opacity: 1;
+    }
+
+    50% {
+        background-image: url('../images/cells/c-ninja10-dead.png');
+        opacity: 1;
+    }
+
+    100% {
+        background-image: url('../images/cells/c-ninja10-dead.png');
+        opacity: 0;
+    }
+}
+
+.c-ninja10-blick {
+    background-image: url('../images/cells/blick.png');
+    width: 79px;
+    height: 56px;
+    position: absolute;
+    top: 65px;
+    left: 75px;
+    opacity: 0;
+    z-index: 1;
+}
+
+.c-ninja.active .c-ninja10-blick {
+    animation-delay: 0.4s;
+    animation-name: c-ninja6-blick;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes c-ninja10-blick {
+    0% {
+        opacity: 0;
+        transform: scale(4) rotateZ(37deg) rotateX(0deg);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0) rotateZ(37deg) rotateX(180deg);
+    }
+}
+
+.c-ninja10-gun {
+    background-image: url('../images/cells/c-ninja10-gun.png');
+    width: 276px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 100px;
+    left: -1000px;
+    opacity: 0;
+    transition: all 0.5s;
+    z-index: 1;
+}
+
+.c-ninja.active .c-ninja10-gun {
+    animation-name: c-ninja10-gun;
+    animation-duration: 0.6s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes c-ninja10-gun {
+    0% {
+        left: -1000px;
+        opacity: 0;
+        transform: scale(0) rotateZ(0deg);
+    }
+
+    10% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    40% {
+        top: -90px;
+        opacity: 1;
+        transform: scale(0.7) rotateZ(60deg);
+    }
+
+    100% {
+        left: -70px;
+        top: -10px;
+        transform: scale(0);
+        opacity: 0;
+        transform: scale(0.7) rotateZ(90deg);
+    }
+}
+.c-ninja10-flag {
+    background-image: url('../images/cells/c-ninja10-flag.png');
+    width: 98px;
+    height: 32px !important;
+    position: absolute;
+    top: 20px;
+    right: 60px;
+    opacity: 0;
+}
+.c-ninja.active .c-ninja10-flag {
+    animation-delay: 0.5s;
+    animation-name: c-ninja10-flag;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes c-ninja10-flag {
+    0% {
+        top: 20px;
+        left: 60px;
+        opacity: 0;
+        transform: scale(1) rotateZ(-60deg);
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    100% {
+        top: 200px;
+        left: 160px;
+        transform: scale(0.9) rotateZ(20deg);
+        opacity: 0;
+    }
+}
+/*end ninja10*/
+/*=====================================*/
+/* END NINJA ANIMATION */
+/*=====================================*/
+.active1 .c-ava1 {
+    transform: scale(1.1);
+    transition-delay: 7s;
+}
+.active1 .c-ava1 .imageStroke {
+    stroke-width: 3px;
+    stroke-dashoffset: 0px;
+    animation-name: imageStroke;
+    animation-fill-mode: forwards;
+    animation-delay:7s;
+}
+.active2 .c-ava2 {
+    transform: scale(1.1);
+    transition-delay: 7s;
+}
+.active2 .c-ava2 .imageStroke {
+    stroke-width: 3px;
+    stroke-dashoffset: 0px;
+    animation-name: imageStroke;
+    animation-fill-mode: forwards;
+    animation-delay: 7s;
+}
+.active3 .c-ava3 {
+    transform: scale(1.1);
+    transition-delay: 7s;
+}
+.active3 .c-ava3 .imageStroke {
+    stroke-width: 3px;
+    stroke-dashoffset: 0px;
+    animation-name: imageStroke;
+    animation-fill-mode: forwards;
+    animation-delay: 7s;
+}
+.active4 .c-ava4 {
+    transform: scale(1.1);
+    transition-delay: 7s;
+}
+.active4 .c-ava4 .imageStroke {
+    stroke-width: 3px;
+    stroke-dashoffset: 0px;
+    animation-name: imageStroke;
+    animation-fill-mode: forwards;
+    animation-delay: 7s;
+}
+.active5 .c-ava5 {
+    transform: scale(1.1);
+    transition-delay: 7s;
+}
+.active5 .c-ava5 .imageStroke {
+    stroke-width: 3px;
+    stroke-dashoffset: 0px;
+    animation-name: imageStroke;
+    animation-fill-mode: forwards;
+    animation-delay: 7s;
+}
+.active6 .c-ava6 {
+    transform: scale(1.1);
+    transition-delay: 7s;
+}
+.active6 .c-ava6 .imageStroke {
+    stroke-width: 3px;
+    stroke-dashoffset: 0px;
+    animation-name: imageStroke;
+    animation-fill-mode: forwards;
+    animation-delay: 7s;
+}
+.active7 .c-ava7 {
+    transform: scale(1.1);
+    transition-delay: 7s;
+}
+.active7 .c-ava7 .imageStroke {
+    stroke-width: 3px;
+    stroke-dashoffset: 0px;
+    animation-name: imageStroke;
+    animation-fill-mode: forwards;
+    animation-delay: 7s;
+}
+.active8 .c-ava8 {
+    transform: scale(1.1);
+    transition-delay: 7s;
+}
+.active8 .c-ava8 .imageStroke {
+    stroke-width: 3px;
+    stroke-dashoffset: 0px;
+    animation-name: imageStroke;
+    animation-fill-mode: forwards;
+    animation-delay: 7s;
+}
+.active9 .c-ava9 {
+    transform: scale(1.1);
+    transition-delay: 7s;
+}
+.active9 .c-ava9 .imageStroke {
+    stroke-width: 3px;
+    stroke-dashoffset: 0px;
+    animation-name: imageStroke;
+    animation-fill-mode: forwards;
+    animation-delay: 7s;
+}
+.active10 .c-ava10 {
+    transform: scale(1.1);
+    transition-delay: 7s;
+}
+.active10 .c-ava10 .imageStroke {
+    stroke-width: 3px;
+    stroke-dashoffset: 0px;
+    animation-name: imageStroke;
+    animation-fill-mode: forwards;
+    animation-delay: 7s;
+}
+/*=====================================*/
+/* NUMERIC ANIMATION 
+    horizontal position:
+        top: 70px - top
+        top: 180px - bottom
+    vertical position:
+        1 top -> left: 105px
+        2 top -> left: 235px;
+        3 top -> left: 365px;
+        4 top -> left: 492px;
+        5 top -> left: 622px;
+        6 bottom -> left: 41px;
+        7 bottom -> left: 171px;
+        8 bottom -> left: 299px;
+        9 bottom -> left: 428px;
+        10 bottom -> left: 557px;
+=====================================*/
+.c-line-h {
+    background-image: url('../images/cells/c-line-h.png');
+    width: 967px;
+    height: 1px;
+    position: absolute;
+    top: 70px;
+    left: -129px;
+    z-index: 1;
+}
+
+.c-line-v {
+    background-image: url('../images/cells/c-line-v.png');
+    width: 1px;
+    height: 479px;
+    position: absolute;
+    top: -110px;
+    left: 105px;
+    z-index: 1;
+}
+
+/*number1*/
+.c-ava-block.active1 .c-line-h {
+    animation-name: c-line-h1;
+    animation-duration: 7s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes c-line-h1 {
+    0% {
+        top: 70px; /*top*/
+    }
+
+    10% {
+        top: 70px; /*top*/
+    }
+
+    20% {
+        top: 70px; /*top*/
+    }
+
+    30% {
+        top: 180px; /*bottom*/
+    }
+
+    40% {
+        top: 180px; /*bottom*/
+    }
+
+    50% {
+        top: 180px; /*bottom*/
+    }
+
+    60% {
+        top: 180px; /*bottom*/
+    }
+
+    70% {
+        top: 70px; /*top*/
+    }
+
+    80% {
+        top: 70px; /*top*/
+    }
+
+    90% {
+        top: 180px; /*bottom*/
+    }
+
+    100% {
+        top: 70px; /*top*/
+    }
+}
+
+.c-ava-block.active1 .c-line-v {
+    animation-name: c-line-v1;
+    animation-duration: 7s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes c-line-v1 {
+    0% {
+        left: 105px; /*1 - top*/
+    }
+
+    10% {
+        left: 622px; /*5 - top*/
+    }
+
+    20% {
+        left: 492px; /*4 - top*/
+    }
+
+    30% {
+        left: 299px; /*8 - bottom*/
+    }
+
+    40% {
+        left: 557px; /*10 - bottom*/
+    }
+
+    50% {
+        left: 299px; /*8 - bottom*/
+    }
+
+    60% {
+        left: 251px; /*6 - bottom*/
+    }
+
+    70% {
+        left: 105px; /*1 - top*/
+    }
+
+    80% {
+        left: 235px; /*2 - top*/
+    }
+
+    90% {
+        left: 171px; /*7 - bottom*/
+    }
+
+    100% {
+        left: 105px; /*1 - top*/
+    }
+}
+/*end number1*/
+/*number2*/
+.c-ava-block.active2 .c-line-h {
+    animation-name: c-line-h2;
+    animation-duration: 7s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes c-line-h2 {
+    0% {
+        top: 70px; /*top*/
+    }
+
+    10% {
+        top: 70px; /*top*/
+    }
+
+    20% {
+        top: 70px; /*top*/
+    }
+
+    30% {
+        top: 70px; /*bottom*/
+    }
+
+    40% {
+        top: 180px; /*bottom*/
+    }
+
+    50% {
+        top: 180px; /*bottom*/
+    }
+
+    60% {
+        top: 180px; /*bottom*/
+    }
+
+    70% {
+        top: 70px; /*top*/
+    }
+
+    80% {
+        top: 70px; /*top*/
+    }
+
+    90% {
+        top: 70px; /*top*/
+    }
+
+    100% {
+        top: 70px; /*top*/
+    }
+}
+
+.c-ava-block.active2 .c-line-v {
+    animation-name: c-line-v2;
+    animation-duration: 7s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes c-line-v2 {
+    0% {
+        left: 105px; /*1 - top*/
+    }
+
+    10% {
+        left: 235px; /*2 - top*/
+    }
+
+    20% {
+        left: 492px; /*4 - top*/
+    }
+
+    30% {
+        left: 428px; /*9 - bottom*/
+    }
+
+    40% {
+        left: 557px; /*10 - bottom*/
+    }
+
+    50% {
+        left: 299px; /*8 - bottom*/
+    }
+
+    60% {
+        left: 428px; /*9 - bottom*/
+    }
+
+    70% {
+        left: 365px; /*3 - top*/
+    }
+
+    80% {
+        left: 235px; /*2 - top*/
+    }
+
+    90% {
+        left: 622px; /*5 - top*/
+    }
+
+    100% {
+        left: 235px; /*2 - top*/
+    }
+}
+/*end number2*/
+/*number3*/
+.c-ava-block.active3 .c-line-h {
+    animation-name: c-line-h3;
+    animation-duration: 7s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes c-line-h3 {
+    0% {
+        top: 70px; /*top*/
+    }
+
+    10% {
+        top: 70px; /*top*/
+    }
+
+    20% {
+        top: 70px; /*top*/
+    }
+
+    30% {
+        top: 180px; /*bottom*/
+    }
+
+    40% {
+        top: 180px; /*bottom*/
+    }
+
+    50% {
+        top: 180px; /*bottom*/
+    }
+
+    60% {
+        top: 180px; /*bottom*/
+    }
+
+    70% {
+        top: 180px; /*bottom*/
+    }
+
+    80% {
+        top: 180px; /*bottom*/
+    }
+
+    90% {
+        top: 180px; /*bottom*/
+    }
+
+    100% {
+        top: 70px; /*top*/
+    }
+}
+
+.c-ava-block.active3 .c-line-v {
+    animation-name: c-line-v3;
+    animation-duration: 7s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes c-line-v3 {
+    0% {
+        left: 105px; /*1 - top*/
+    }
+
+    10% {
+        left: 365px; /*3 - top*/
+    }
+
+    20% {
+        left: 492px; /*4 - top*/
+    }
+
+    30% {
+        left: 299px; /*8 - bottom*/
+    }
+
+    40% {
+        left: 557px; /*10 - bottom*/
+    }
+
+    50% {
+        left: 299px; /*8 - bottom*/
+    }
+
+    60% {
+        left: 251px; /*6 - bottom*/
+    }
+
+    70% {
+        left: 557px; /*10 - bottom*/
+    }
+
+    80% {
+        left: 251px; /*6 - bottom*/
+    }
+
+    90% {
+        left: 557px; /*10 - bottom*/
+    }
+
+    100% {
+        left: 365px; /*3 - top*/
+    }
+}
+/*end number3*/
+/*number4*/
+.c-ava-block.active4 .c-line-h {
+    animation-name: c-line-h4;
+    animation-duration: 7s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes c-line-h4 {
+    0% {
+        top: 70px; /*top*/
+    }
+
+    10% {
+        top: 70px; /*top*/
+    }
+
+    20% {
+        top: 180px; /*bottom*/
+    }
+
+    30% {
+        top: 180px; /*bottom*/
+    }
+
+    40% {
+        top: 70px; /*top*/
+    }
+
+    50% {
+        top: 70px; /*top*/
+    }
+
+    60% {
+        top: 70px; /*top*/
+    }
+
+    70% {
+        top: 180px; /*bottom*/
+    }
+
+    80% {
+        top: 180px; /*bottom*/
+    }
+
+    90% {
+        top: 180px; /*bottom*/
+    }
+
+    100% {
+        top: 70px; /*top*/
+    }
+}
+.c-ava-block{
+    position:relative;
+}
+.c-ava-block.active4 .c-line-v {
+    animation-name: c-line-v4;
+    animation-duration: 7s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes c-line-v4 {
+    0% {
+        left: 105px; /*1 - top*/
+    }
+
+    10% {
+        left: 622px; /*5 - top*/
+    }
+
+    20% {
+        left: 251px; /*6 - bottom*/
+    }
+
+    30% {
+        left: 557px; /*10 - bottom*/
+    }
+
+    40% {
+        left: 105px; /*1 - top*/
+    }
+
+    50% {
+        left: 235px; /*2 - top*/
+    }
+
+    60% {
+        left: 365px; /*3 - top*/
+    }
+
+    70% {
+        left: 428px; /*9 - bottom*/
+    }
+
+    80% {
+        left: 251px; /*6 - bottom*/
+    }
+
+    90% {
+        left: 557px; /*10 - bottom*/
+    }
+
+    100% {
+        left: 492px; /*4 - top*/
+    }
+}
+/*end number4*/
+/*number5*/
+.c-ava-block.active5 .c-line-h {
+    animation-name: c-line-h5;
+    animation-duration: 7s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes c-line-h5 {
+    0% {
+        top: 70px; /*top*/
+    }
+
+    10% {
+        top: 180px; /*bottom*/
+    }
+
+    20% {
+        top: 180px; /*bottom*/
+    }
+
+    30% {
+        top: 70px; /*top*/
+    }
+
+    40% {
+        top: 70px; /*top*/
+    }
+
+    50% {
+        top: 180px; /*bottom*/
+    }
+
+    60% {
+        top: 70px; /*top*/
+    }
+
+    70% {
+        top: 70px; /*top*/
+    }
+
+    80% {
+        top: 70px; /*top*/
+    }
+
+    90% {
+        top: 180px; /*bottom*/
+    }
+
+    100% {
+        top: 70px; /*top*/
+    }
+}
+
+.c-ava-block.active5 .c-line-v {
+    animation-name: c-line-v5;
+    animation-duration: 7s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes c-line-v5 {
+    0% {
+        left: 105px; /*1 - top*/
+    }
+
+    10% {
+        left: 171px; /*7 - bottom*/
+    }
+
+    20% {
+        left: 251px; /*6 - bottom*/
+    }
+
+    30% {
+        left: 105px; /*1 - top*/
+    }
+
+    40% {
+        left: 622px; /*5 - top*/
+    }
+
+    50% {
+        left: 557px; /*10 - bottom*/
+    }
+
+    60% {
+        left: 492px; /*4 - top*/
+    }
+
+    70% {
+        left: 365px; /*3 - top*/
+    }
+
+    80% {
+        left: 622px; /*5 - top*/
+    }
+
+    90% {
+        left: 171px; /*7 - bottom*/
+    }
+
+    100% {
+        left: 622px; /*5 - top*/
+    }
+}
+/*end number5*/
+/*number6*/
+.c-ava-block.active6 .c-line-h {
+    animation-name: c-line-h6;
+    animation-duration: 7s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes c-line-h6 {
+    0% {
+        top: 70px; /*top*/
+    }
+
+    10% {
+        top: 180px; /*bottom*/
+    }
+
+    20% {
+        top: 180px; /*bottom*/
+    }
+
+    30% {
+        top: 70px; /*top*/
+    }
+
+    40% {
+        top: 70px; /*top*/
+    }
+
+    50% {
+        top: 180px; /*bottom*/
+    }
+
+    60% {
+        top: 70px; /*top*/
+    }
+
+    70% {
+        top: 70px; /*top*/
+    }
+
+    80% {
+        top: 70px; /*top*/
+    }
+
+    90% {
+        top: 180px; /*bottom*/
+    }
+
+    100% {
+        top: 180px; /*bottom*/
+    }
+}
+
+.c-ava-block.active6 .c-line-v {
+    animation-name: c-line-v6;
+    animation-duration: 7s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes c-line-v6 {
+    0% {
+        left: 105px; /*1 - top*/
+    }
+
+    10% {
+        left: 299px; /*8 - bottom*/
+    }
+
+    20% {
+        left: 299px; /*8 - bottom*/
+    }
+
+    30% {
+        left: 105px; /*1 - top*/
+    }
+
+    40% {
+        left: 105px; /*1 - top*/
+    }
+
+    50% {
+        left: 299px; /*8 - bottom*/
+    }
+
+    60% {
+        left: 105px; /*1 - top*/
+    }
+
+    70% {
+        left: 235px; /*2 - top*/
+    }
+
+    80% {
+        left: 105px; /*1 - top*/
+    }
+
+    90% {
+        left: 557px; /*10 - bottom*/
+    }
+
+    100% {
+        left: 251px; /*6 - bottom*/
+    }
+}
+/*end number6*/
+/*number7*/
+.c-ava-block.active7 .c-line-h {
+    animation-name: c-line-h7;
+    animation-duration: 7s;
+    animation-fill-mode: forwards;
+}
+@keyframes c-line-h7 {
+    0% {
+        top: 70px; /*top*/
+    }
+
+    10% {
+        top: 180px; /*bottom*/
+    }
+
+    20% {
+        top: 70px; /*top*/
+    }
+
+    30% {
+        top: 70px; /*top*/
+    }
+
+    40% {
+        top: 180px; /*bottom*/
+    }
+
+    50% {
+        top: 70px; /*top*/
+    }
+
+    60% {
+        top: 180px; /*bottom*/
+    }
+
+    70% {
+        top: 70px; /*top*/
+    }
+
+    80% {
+        top: 70px; /*top*/
+    }
+
+    90% {
+        top: 180px; /*bottom*/
+    }
+
+    100% {
+        top: 180px; /*bottom*/
+    }
+}
+.c-ava-block.active7 .c-line-v {
+    animation-name: c-line-v7;
+    animation-duration: 7s;
+    animation-fill-mode: forwards;
+}
+@keyframes c-line-v7 {
+    0% {
+        left: 315px; /*2 - top*/
+    }
+
+    10% {
+        left: 770px; /*10 - bottom*/
+    }
+
+    20% {
+        left: 235px; /*2 - top*/
+    }
+
+    30% {
+        left: 105px; /*1 - top*/
+    }
+
+    40% {
+        left: 251px; /*6 - bottom*/
+    }
+
+    50% {
+        left: 492px; /*4 - top*/
+    }
+
+    60% {
+        left: 251px; /*6 - bottom*/
+    }
+
+    70% {
+        left: 622px; /*5 - top*/
+    }
+
+    80% {
+        left: 492px; /*4 - top*/
+    }
+
+    90% {
+        left: 251px; /*6 - bottom*/
+    }
+
+    100% {
+        left: 171px; /*7 - bottom*/
+    }
+}
+/*end number7*/
+/*number8*/
+.c-ava-block.active8 .c-line-h {
+    animation-name: c-line-h8;
+    animation-duration: 7s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes c-line-h8 {
+    0% {
+        top: 70px; /*top*/
+    }
+
+    10% {
+        top: 180px; /*bottom*/
+    }
+
+    20% {
+        top: 180px; /*bottom*/
+    }
+
+    30% {
+        top: 70px; /*top*/
+    }
+
+    40% {
+        top: 180px; /*bottom*/
+    }
+
+    50% {
+        top: 180px; /*bottom*/
+    }
+
+    60% {
+        top: 180px; /*bottom*/
+    }
+
+    70% {
+        top: 180px; /*bottom*/
+    }
+
+    80% {
+        top: 180px; /*bottom*/
+    }
+
+    90% {
+        top: 70px; /*top*/
+    }
+
+    100% {
+        top: 180px; /*bottom*/
+    }
+}
+
+.c-ava-block.active8 .c-line-v {
+    animation-name: c-line-v8;
+    animation-duration: 7s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes c-line-v8 {
+    0% {
+        left: 105px; /*1 - top*/
+    }
+
+    10% {
+        left: 509px; /*6 - bottom*/
+    }
+
+    20% {
+        left: 251px; /*6 - bottom*/
+    }
+
+    30% {
+        left: 105px; /*1 - top*/
+    }
+
+    40% {
+        left: 428px; /*9 - bottom*/
+    }
+
+    50% {
+        left: 557px; /*10 - bottom*/
+    }
+
+    60% {
+        left: 428px; /*9 - bottom*/
+    }
+
+    70% {
+        left: 557px; /*10 - bottom*/
+    }
+
+    80% {
+        left: 171px; /*7 - bottom*/
+    }
+
+    90% {
+        left: 235px; /*2 - top*/
+    }
+
+    100% {
+        left: 299px; /*8 - bottom*/
+    }
+}
+/*end number8*/
+/*number9*/
+.c-ava-block.active9 .c-line-h {
+    animation-name: c-line-h9;
+    animation-duration: 7s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes c-line-h9 {
+    0% {
+        top: 70px; /*top*/
+    }
+
+    10% {
+        top: 180px; /*bottom*/
+    }
+
+    20% {
+        top: 180px; /*bottom*/
+    }
+
+    30% {
+        top: 70px; /*top*/
+    }
+
+    40% {
+        top: 180px; /*bottom*/
+    }
+
+    50% {
+        top: 180px; /*bottom*/
+    }
+
+    60% {
+        top: 180px; /*bottom*/
+    }
+
+    70% {
+        top: 180px; /*bottom*/
+    }
+
+    80% {
+        top: 180px; /*bottom*/
+    }
+
+    90% {
+        top: 70px; /*top*/
+    }
+
+    100% {
+        top: 180px; /*bottom*/
+    }
+}
+
+.c-ava-block.active9 .c-line-v {
+    animation-name: c-line-v9;
+    animation-duration: 7s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes c-line-v9 {
+    0% {
+        left: 105px; /*1 - top*/
+    }
+
+    10% {
+        left: 428px; /*9 - bottom*/
+    }
+
+    20% {
+        left: 251px; /*6 - bottom*/
+    }
+
+    30% {
+        left: 622px; /*5 - top*/
+    }
+
+    40% {
+        left: 428px; /*9 - bottom*/
+    }
+
+    50% {
+        left: 557px; /*10 - bottom*/
+    }
+
+    60% {
+        left: 428px; /*9 - bottom*/
+    }
+
+    70% {
+        left: 557px; /*10 - bottom*/
+    }
+
+    80% {
+        left: 171px; /*7 - bottom*/
+    }
+
+    90% {
+        left: 235px; /*2 - top*/
+    }
+
+    100% {
+        left: 428px; /*9 - bottom*/
+    }
+}
+/*end number9*/
+/*number10*/
+.c-ava-block.active10 .c-line-h {
+    animation-name: c-line-h10;
+    animation-duration: 7s;
+    animation-fill-mode: forwards;
+}
+@keyframes c-line-h10 {
+    0% {
+        top: 70px; /*top*/
+    }
+
+    10% {
+        top: 70px; /*top*/
+    }
+
+    20% {
+        top: 70px; /*top*/
+    }
+
+    30% {
+        top: 70px; /*top*/
+    }
+
+    40% {
+        top: 70px; /*top*/
+    }
+
+    50% {
+        top: 180px; /*bottom*/
+    }
+
+    60% {
+        top: 70px; /*top*/
+    }
+
+    70% {
+        top: 70px; /*top*/
+    }
+
+    80% {
+        top: 70px; /*top*/
+    }
+
+    90% {
+        top: 70px; /*top*/
+    }
+
+    100% {
+        top: 180px; /*bottom*/
+    }
+}
+
+.c-ava-block.active10 .c-line-v {
+    animation-name: c-line-v10;
+    animation-duration: 7s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes c-line-v10 {
+    0% {
+        left: 105px; /*1 - top*/
+    }
+
+    10% {
+        left: 622px; /*5 - top*/
+    }
+
+    20% {
+        left: 105px; /*1 - top*/
+    }
+
+    30% {
+        left: 492px; /*4 - top*/
+    }
+
+    40% {
+        left: 235px; /*2 - top*/
+    }
+
+    50% {
+        left: 251px; /*6 - bottom*/
+    }
+
+    60% {
+        left: 365px; /*3 - top*/
+    }
+
+    70% {
+        left: 105px; /*1 - top*/
+    }
+
+    80% {
+        left: 622px; /*5 - top*/
+    }
+
+    90% {
+        left: 235px; /*2 - top*/
+    }
+
+    100% {
+        left: 557px; /*10 - bottom*/
+    }
+}
+/*end number10*/
+/*=====================================*/
+/* END NUMERIC ANIMATION */
+/*=====================================*/
+
+@media only screen and (max-width: 1300px), screen and (max-height: 850px) {
+    .cells {
+        transform: scale(0.9);
+    }
+}
+@media only screen and (max-width: 1250px) {
+    .playersfrom10 {
+        left: 123px;
+    }
+}
+@media only screen and (max-width: 1200px), screen and (max-height: 800px) {
+    .cells {
+        transform: scale(0.8);
+        margin-top: -30px;
+    }
+}
+@media only screen and (max-height: 750px) {
+    .cells {
+        transform: scale(0.7);
+    }
+}
+@media only screen and (max-height: 700px) {
+    .cells {
+        transform: scale(0.6);
+        margin-top:-100px;
+    }
+}
+@media only screen and (max-width: 1100px) {
+    .cells {
+        transform: scale(0.7);
+        margin-left: -50px;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .c-ninja h3 {
+        font-size: 16px;
+    }
+    .fairGameModals a {
+        font-size: 15px;
+    }
+    .make_your_bet p {
+        font-size: 17px;
+    }
+    .make_your_bet li a {
+        color: #aaaaaa;
+        font-size: 25px;
+    }
+    .playersfrom10 {
+        color: #000000;
+        font-size: 18px;
+    }
+    .cells {
+        margin-top: -70px;
+    }
+}
+@media only screen and (max-width: 1023px) {
+    .cells {
+        margin-left: -100px;
+    }
+}
+@media only screen and (max-width: 962px){
+    .cells {
+        transform: scale(0.5);
+        margin-top: -200px;
+    }
+}
+@media only screen and (max-width: 961px) {
+    .cells {
+        transform: scale(0.7);
+        margin-top: -70px;
+    }
+}
+@media only screen and (max-width: 930px) {
+    .cells {
+        transform: scale(0.6);
+        margin-left: -100px;
+    }
+}
+@media only screen and (max-width: 850px) {
+    .cells {
+        margin-left: -150px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .cells {
+        transform: scale(0.55);
+        margin-left: -200px;
+        margin-top: -200px;
+    }
+    .c-ninja h3 {
+        font-size: 22px;
+    }
+    .fairGameModals a {
+        font-size: 20px;
+    }
+    .make_your_bet p {
+        font-size: 22px;
+    }
+    .make_your_bet li a {
+        color: #aaaaaa;
+        font-size: 30px;
+    }
+    .playersfrom10 {
+        color: #000000;
+        font-size: 22px;
+    }
+    .cells .history h2 {
+        padding-top: 268px;
+        margin-bottom: 39px;
+    }
+    .sells-scale {
+        margin-top: 100px;
+    }
+}
+@media only screen and (max-width: 767px){
+    .cells {
+        transform: scale(0.6);
+        margin-left: -200px;
+        margin-top: 0px;
+    }
+    .cells .history h2 {
+        padding-top: 68px;
+    }
+    .sells-scale {
+        margin-top: 0px;
+    }
+}
+@media only screen and (max-width: 736px){
+    .cells {
+        transform: scale(0.4);
+        margin-top: -254px;
+        margin-left: -240px;
+    }
+    .make_your_bet p {
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+    .make_your_bet li a {
+        font-size: 34px;
+    }
+    .sells-scale {
+        transform: scale(0.9);
+        margin-top:-50px;
+    }
+    .c-ninja h3 {
+        margin-top: 5px;
+        font-size: 24px;
+    }
+    .fairGameModals {
+        top: 43px;
+    }
+    .playersfrom10 {
+        top: 100px;
+        left: 13px;
+    }
+    .make_your_bet {
+        top: 34px;
+        right: -120px;
+    }
+    .lavel h2 {
+        font-size: 41px;
+    }
+}
+@media only screen and (max-width: 667px){
+    .cells-winner {
+        max-width: 100%;
+        font-size: 28px;
+        padding: 15px;
+    }
+    .cells-winner-close {
+        font-size: 60px;
+        top: -86px;
+        right: -45px;
+        color: #000000;
+    }
+}
+@media only screen and (max-width: 601px){
+    .cells {
+        transform: scale(0.43);
+        margin-top: -214px;
+        margin-left: -290px;
+    }
+    .cells .history h2 {
+        padding-top: 218px;
+    }
+    .sells-scale {
+        margin-top: 50px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .cells {
+        transform: scale(0.4);
+        margin-top: -254px;
+        margin-left: -240px;
+    }
+    .cells .history h2 {
+        padding-top: 68px;
+    }
+    .sells-scale {
+        margin-top: -50px;
+    }
+}
+
+
+@media only screen and (max-width: 568px){
+    .cells {
+        transform: scale(0.36);
+        margin-left: -280px;
+    }
+}
+@media only screen and (max-width: 414px){
+    .cells-winner {
+        right: 90px;
+    }
+    .cells {
+        transform: scale(0.35);
+        margin-top: -440px;
+        margin-left: -387px;
+    }
+    .cells .history h2 {
+        padding-top: 230px;
+        font-size: 60px;
+    }
+    .fairGameModals {
+        left: 10px;
+    }
+    .playersfrom10 {
+        left: 23px;
+    }
+    .sells-scale {
+        transform: scale(0.85);
+        margin-top: 150px;
+        margin-right: -60px;
+    }
+    .make_your_bet {
+        top: 34px;
+        right: 130px;
+    }
+    .make_your_bet p {
+        font-size: 28px;
+    }
+    .make_your_bet li a {
+        font-size: 44px;
+    }
+    .fairGameModals a {
+        font-size: 24px;
+    }
+    .playersfrom10 {
+        color: #000000;
+        font-size: 30px;
+        top: 110px;
+    }
+    .ninjas {
+        margin-top: 200px;
+        margin-left: -6%;
+    }
+    .c-ava-block {
+        transform: scale(1.4);
+    }
+}
+@media only screen and (max-width: 320px){
+    .cells {
+        transform: scale(0.3);
+        margin-top: -464px;
+        margin-left: -417px;
+    }
+}

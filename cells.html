@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=100% width=device-width, initial-scale=1">
+    <title>Cells</title>
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="css/animate.css" rel="stylesheet" />
+    <link href="css/fonts.css" rel="stylesheet" />
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="css/history.css" rel="stylesheet" />
+    <link href="css/cells.css" rel="stylesheet" />
+
+    <link href="css/media.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/device.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.backstretch.js"></script>
+    <script>
+        $(document).ready(function () {
+            $.backstretch("images/cells/games_cells_bg.jpg");
+        });
+    </script>
+</head>
+<body class="body-cells">
+        <div class="optimize_blick1"></div>
+        <div class="optimize_blick2"></div>
+        <div class="optimize_blick3"></div>
+
+        <div class="optimize_gun1"></div>
+        <div class="optimize_gun2"></div>
+        <div class="optimize_gun3"></div>
+        <div class="optimize_gun4"></div>
+        <div class="optimize_gun5"></div>
+        <div class="optimize_gun6"></div>
+        <div class="optimize_gun7"></div>
+        <div class="optimize_gun8"></div>
+        <div class="optimize_gun9"></div>
+        <div class="optimize_gun10"></div>
+        <!-- Modal fairGame-->
+        <div class="modal fade game_rules" id="fairGame" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span></span></button>
+                        <div class="clear"></div>
+                        <div>
+                            <img src="images/mkModal.png" />
+                            <h2>Fair game</h2>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            As each round begins the service will generate a random number from 0 to 1 (for example, 0.21492) + salt. Salt is a random set of symbols (for example: iGwpMtsYs). These symbols are used to prevent the round's number decryption.
+                            The round's number and salt are encrypted by the service through algorithm <a href="#"> sha224 </a> and are shown as each round begins.
+                        </p>
+                        <p>
+                            In the end of the round previously encrypted number is multiplied by the total bank of the round points, thus getting the number of the winning point.
+                        </p>
+                        <p>
+                            Pls see the example: In the end the total round bank is 83657 points, and the random number was 0.21492. So the service multiplies this number by 83657 points and gets the number 17979, that’s will be the winning point. The winner of the round will be the player, who deposited this point.
+                        </p>
+                        <p>
+                            The fair play stands at the principle that we cannot know what exactly the points bank will be in the end of the round, and the random number for multiplication is given right in the beginning of the game. That's why you can be sure that we have no ability to influence the game results .
+                        </p>
+                        <p>
+                            You can check that the result of the game wasn’t prearranged. For this, use any of the online services, for example,<a href="#"> http://www.miniwebtool.com/sha224-hash-generator/. </a> In the end of the round take the round's number+salt, which was encrypted, and repeatedly encrypt it at the service. You will see the same hash value as the one specified in the beginning of the round. This will prove the accuracy of determining the winning point.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End modal fairGame-->
+        <!-- Modal fairRules-->
+        <div class="modal fade game_rules" id="fairRules" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span></span></button>
+                        <div class="clear"></div>
+                        <div>
+                            <img src="images/mkModal.png" />
+                            <h2>Fair game</h2>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <h3>How I can play Roulette?</h3>
+                        <p>
+                            The players deposit certain amount of points into the game. After each spin there is only one winner who gets all the points. The spin lasts 60 seconds. The more points you deposit, the higher winning chances you have. But there is the real chance to win even with the smallest bet!
+                        </p>
+                        <p>
+                            The winner is determined by our fair play system. Read more in the <a href="#">“Fair Game”</a> tab.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End modal fairRules-->
+        <div class="wrap_lavel">
+            <!-- menu -->
+            <div id="menue" class="navbar navbar-default navbar-static-top" role="navigation">
+                <a href="index.html" class="logo"></a>
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="index.html">Home</a></li>
+                            <li>
+                                <a class="dropdown" data-toggle="dropdown" href="#">
+                                    games<span style="display:none;" class="iconBlock glyphicon glyphicon-menu-down"></span>
+                                </a>
+                                <ul class="dropdown-menu multi-level" role="menu">
+                                    <!-- aria-labelledby="dropdownMenu"-->
+                                    <li class="dropdown-submenu">
+                                        <a tabindex="-1" href="games.html">User & user</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a tabindex="-1" href="roulette.html">Roulette</a></li>
+                                            <li><a href="#">Duel</a></li>
+                                            <li><a href="#">Cells</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Cash roulette</a></li>
+                                    <li><a href="#">Pyramid game</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">history</a></li>
+                            <li><a href="#" class="active">top</a></li>
+                            <li><a href="#">faq</a></li>
+                            <li><a href="#">free points</a></li>
+                            <li style="display: none;">
+                                <div class="userNameExit">
+                                    <div class="userNameExit-userNme">
+                                        <div class="userNameExit-usernameBlock">
+                                            <a href="#" class="userNameExit__userNme">user name</a>
+                                            <img src="images/kabinet/userNameExit__delimiter.png" class="userNameExit__delimiter" />
+                                            <div class="userNameExit__balance">0</div>
+                                        </div>
+                                        <div class="userNameExit_wrap-border">
+                                            <div class="userNameExit-border">
+                                                <a href="#">
+                                                    <img src="images/kabinet/userNameExit-ava.png" class="userNameExit-ava" alt="Alternate Text" />
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="line_for_menue"></div>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
+            <!-- end menu -->
+
+            <div class="cells">
+                
+                <div class="history lavel">
+                    <div class="roulette_left_top"></div>
+                    <div class="roulette_right_top"></div>
+                    <div class="roulette_bottom2"></div>
+                    <div class="fairGameModals">
+                        <a href="#" data-toggle="modal" data-target="#fairGame">Fair game</a>
+                        <a href="#" data-toggle="modal" data-target="#fairRules">Rules</a>
+                    </div>
+                    <div class="playersfrom10">1 players from 10</div>
+                    <div class="make_your_bet">
+                        <p>
+                            Choose the amount of points to make your bet
+                        </p>
+                        <ul>
+                            <li><a href="#" class="active">100</a></li>
+                            <li><a href="#">500</a></li>
+                            <li><a href="#">1000</a></li>
+                            <li><a href="#">5000</a></li>
+                        </ul>
+                    </div>
+                    <h2>Cells</h2>
+                    <div class="sells-scale">
+                        
+                        <div class="c-ava-block">
+                            <div class="cells-winner">
+                                <div class="cells-winner-close">+</div>
+                                <span>Nameameameame</span> is the winner!
+                            </div>
+                            <div class="c-line-h"></div>
+                            <div class="c-line-v"></div>
+                            <div class="c-ava-top">
+                                <div class="c-ava c-ava1">
+                                    <svg id='pattern' xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                        <defs>
+                                            <pattern id='image' width="1" height="1" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                                <image id="imageBg" xlink:href='images/cells/cat.jpg' width="100" height="100" preserveAspectRatio="none"></image>
+                                            </pattern>
+                                        </defs>
+                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="174" height="140" viewbox="0 0 173.20508075688772 200" class="imageStroke imageHex">
+                                            <path d="M73.61215932167728 7.499999999999999Q86.60254037844386 0 99.59292143521044 7.499999999999999L160.21469970012114 42.5Q173.20508075688772 50 173.20508075688772 65L173.20508075688772 135Q173.20508075688772 150 160.21469970012114 157.5L99.59292143521044 192.5Q86.60254037844386 200 73.61215932167728 192.5L12.99038105676658 157.5Q0 150 0 135L0 65Q0 50 12.99038105676658 42.5Z"></path>
+                                        </svg>
+                                    </svg>
+                                </div>
+
+                                <div class="c-ava c-ava2">
+                                    <svg id='pattern' xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                        <defs>
+                                            <pattern id='image2' width="1" height="1" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                                <image id="imageBg" xlink:href='images/cells/c-ava.png' width="100" height="100" preserveAspectRatio="none"></image>
+                                            </pattern>
+                                        </defs>
+                                        <svg version="1.2" xmlns="http://www.w3.org/2000/svg" width="174" height="140" viewbox="0 0 173.20508075688772 200" class="imageStroke imageHex2">
+                                            <path d="M73.61215932167728 7.499999999999999Q86.60254037844386 0 99.59292143521044 7.499999999999999L160.21469970012114 42.5Q173.20508075688772 50 173.20508075688772 65L173.20508075688772 135Q173.20508075688772 150 160.21469970012114 157.5L99.59292143521044 192.5Q86.60254037844386 200 73.61215932167728 192.5L12.99038105676658 157.5Q0 150 0 135L0 65Q0 50 12.99038105676658 42.5Z"></path>
+                                        </svg>
+                                    </svg>
+                                </div>
+                                <div class="c-ava c-ava3">
+                                    <svg id='pattern' xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                        <defs>
+                                            <pattern id='image3' width="1" height="1" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                                <image id="imageBg" xlink:href='images/cells/sells_3.jpg' width="100" height="100" preserveAspectRatio="none"></image>
+                                            </pattern>
+                                        </defs>
+                                        <svg version="1.2" xmlns="http://www.w3.org/2000/svg" width="174" height="140" viewbox="0 0 173.20508075688772 200" class="imageStroke imageHex3">
+                                            <path d="M73.61215932167728 7.499999999999999Q86.60254037844386 0 99.59292143521044 7.499999999999999L160.21469970012114 42.5Q173.20508075688772 50 173.20508075688772 65L173.20508075688772 135Q173.20508075688772 150 160.21469970012114 157.5L99.59292143521044 192.5Q86.60254037844386 200 73.61215932167728 192.5L12.99038105676658 157.5Q0 150 0 135L0 65Q0 50 12.99038105676658 42.5Z"></path>
+                                        </svg>
+                                    </svg>
+                                </div>
+                                <div class="c-ava c-ava4">
+                                    <svg id='pattern' xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                        <defs>
+                                            <pattern id='image4' width="1" height="1" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                                <image id="imageBg" xlink:href='images/cells/sells_4.jpg' width="100" height="100" preserveAspectRatio="none"></image>
+                                            </pattern>
+                                        </defs>
+                                        <svg version="1.2" xmlns="http://www.w3.org/2000/svg" width="174" height="140" viewbox="0 0 173.20508075688772 200" class="imageStroke imageHex4">
+                                            <path d="M73.61215932167728 7.499999999999999Q86.60254037844386 0 99.59292143521044 7.499999999999999L160.21469970012114 42.5Q173.20508075688772 50 173.20508075688772 65L173.20508075688772 135Q173.20508075688772 150 160.21469970012114 157.5L99.59292143521044 192.5Q86.60254037844386 200 73.61215932167728 192.5L12.99038105676658 157.5Q0 150 0 135L0 65Q0 50 12.99038105676658 42.5Z"></path>
+                                        </svg>
+                                    </svg>
+                                </div>
+                                <div class="c-ava c-ava5">
+                                    <svg id='pattern' xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                        <defs>
+                                            <pattern id='image5' width="1" height="1" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                                <image id="imageBg" xlink:href='images/cells/sells_5.jpg' width="100" height="100" preserveAspectRatio="none"></image>
+                                            </pattern>
+                                        </defs>
+                                        <svg version="1.2" xmlns="http://www.w3.org/2000/svg" width="174" height="140" viewbox="0 0 173.20508075688772 200" class="imageStroke imageHex5">
+                                            <path d="M73.61215932167728 7.499999999999999Q86.60254037844386 0 99.59292143521044 7.499999999999999L160.21469970012114 42.5Q173.20508075688772 50 173.20508075688772 65L173.20508075688772 135Q173.20508075688772 150 160.21469970012114 157.5L99.59292143521044 192.5Q86.60254037844386 200 73.61215932167728 192.5L12.99038105676658 157.5Q0 150 0 135L0 65Q0 50 12.99038105676658 42.5Z"></path>
+                                        </svg>
+                                    </svg>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="c-ava-bottom">
+                                <div class="c-ava c-ava6">
+                                    <svg id='pattern' xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                        <defs>
+                                            <pattern id='image6' width="1" height="1" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                                <image id="imageBg" xlink:href='images/cells/sells_6.jpg' width="100" height="100" preserveAspectRatio="none"></image>
+                                            </pattern>
+                                        </defs>
+                                        <svg version="1.2" xmlns="http://www.w3.org/2000/svg" width="174" height="140" viewbox="0 0 173.20508075688772 200" class="imageStroke imageHex6">
+                                            <path d="M73.61215932167728 7.499999999999999Q86.60254037844386 0 99.59292143521044 7.499999999999999L160.21469970012114 42.5Q173.20508075688772 50 173.20508075688772 65L173.20508075688772 135Q173.20508075688772 150 160.21469970012114 157.5L99.59292143521044 192.5Q86.60254037844386 200 73.61215932167728 192.5L12.99038105676658 157.5Q0 150 0 135L0 65Q0 50 12.99038105676658 42.5Z"></path>
+                                        </svg>
+                                    </svg>
+                                </div>
+                                <div class="c-ava c-ava7">
+                                    <svg id='pattern' xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                        <defs>
+                                            <pattern id='image7' width="1" height="1" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                                <image id="imageBg" xlink:href='images/cells/sells_7.jpg' width="100" height="100" preserveAspectRatio="none"></image>
+                                            </pattern>
+                                        </defs>
+                                        <svg version="1.2" xmlns="http://www.w3.org/2000/svg" width="174" height="140" viewbox="0 0 173.20508075688772 200" class="imageStroke imageHex7">
+                                            <path d="M73.61215932167728 7.499999999999999Q86.60254037844386 0 99.59292143521044 7.499999999999999L160.21469970012114 42.5Q173.20508075688772 50 173.20508075688772 65L173.20508075688772 135Q173.20508075688772 150 160.21469970012114 157.5L99.59292143521044 192.5Q86.60254037844386 200 73.61215932167728 192.5L12.99038105676658 157.5Q0 150 0 135L0 65Q0 50 12.99038105676658 42.5Z"></path>
+                                        </svg>
+                                    </svg>
+                                </div>
+                                <div class="c-ava c-ava8">
+                                    <svg id='pattern' xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                        <defs>
+                                            <pattern id='image8' width="1" height="1" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                                <image id="imageBg" xlink:href='images/cells/sells_8.jpg' width="100" height="100" preserveAspectRatio="none"></image>
+                                            </pattern>
+                                        </defs>
+                                        <svg version="1.2" xmlns="http://www.w3.org/2000/svg" width="174" height="140" viewbox="0 0 173.20508075688772 200" class="imageStroke imageHex8">
+                                            <path d="M73.61215932167728 7.499999999999999Q86.60254037844386 0 99.59292143521044 7.499999999999999L160.21469970012114 42.5Q173.20508075688772 50 173.20508075688772 65L173.20508075688772 135Q173.20508075688772 150 160.21469970012114 157.5L99.59292143521044 192.5Q86.60254037844386 200 73.61215932167728 192.5L12.99038105676658 157.5Q0 150 0 135L0 65Q0 50 12.99038105676658 42.5Z"></path>
+                                        </svg>
+                                    </svg>
+                                </div>
+                                <div class="c-ava c-ava9">
+                                    <svg id='pattern' xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                        <defs>
+                                            <pattern id='image9' width="1" height="1" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                                <image id="imageBg" xlink:href='images/cells/sells_9.jpg' width="100" height="100" preserveAspectRatio="none"></image>
+                                            </pattern>
+                                        </defs>
+                                        <svg version="1.2" xmlns="http://www.w3.org/2000/svg" width="174" height="140" viewbox="0 0 173.20508075688772 200" class="imageStroke imageHex9">
+                                            <path d="M73.61215932167728 7.499999999999999Q86.60254037844386 0 99.59292143521044 7.499999999999999L160.21469970012114 42.5Q173.20508075688772 50 173.20508075688772 65L173.20508075688772 135Q173.20508075688772 150 160.21469970012114 157.5L99.59292143521044 192.5Q86.60254037844386 200 73.61215932167728 192.5L12.99038105676658 157.5Q0 150 0 135L0 65Q0 50 12.99038105676658 42.5Z"></path>
+                                        </svg>
+                                    </svg>
+                                </div>
+                                <div class="c-ava c-ava10">
+                                    <svg id='pattern' xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                        <defs>
+                                            <pattern id='image10' width="1" height="1" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                                <image id="imageBg" xlink:href='images/cells/sells_10.jpg' width="100" height="100" preserveAspectRatio="none"></image>
+                                            </pattern>
+                                        </defs>
+                                        <svg version="1.2" xmlns="http://www.w3.org/2000/svg" width="174" height="140" viewbox="0 0 173.20508075688772 200" class="imageStroke imageHex10">
+                                            <path d="M73.61215932167728 7.499999999999999Q86.60254037844386 0 99.59292143521044 7.499999999999999L160.21469970012114 42.5Q173.20508075688772 50 173.20508075688772 65L173.20508075688772 135Q173.20508075688772 150 160.21469970012114 157.5L99.59292143521044 192.5Q86.60254037844386 200 73.61215932167728 192.5L12.99038105676658 157.5Q0 150 0 135L0 65Q0 50 12.99038105676658 42.5Z"></path>
+                                        </svg>
+                                    </svg>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="ninjas">
+                            <div class="clear"></div>
+                            <div class="c-ninja  sub-c-ninja1">
+                                <div class="c-ninja1-gun"></div>
+                                <div class="c-ninja1-blick"></div>
+                                <div class="c-ninja1-flag"></div>
+                                <div class="death"></div>
+                                <div class="death2"></div>
+                                <div class="c-ninja1"></div>
+                                <h3 class="c-ninja-name">ninja1</h3>
+                            </div>
+                            <div class="c-ninja sub-c-ninja2">
+                                <div class="c-ninja2-gun"></div>
+                                <div class="c-ninja2-blick"></div>
+                                <div class="death"></div>
+                                <div class="death2"></div>
+                                <div class="c-ninja2"></div>
+                                <h3 class="c-ninja-name">ninja2</h3>
+                            </div>
+                            <div class="c-ninja sub-c-ninja3">
+                                <div class="c-ninja3-gun"></div>
+                                <div class="c-ninja3-blick"></div>
+                                <div class="death"></div>
+                                <div class="death2"></div>
+                                <div class="c-ninja3"></div>
+                                <h3 class="c-ninja-name">ninja3</h3>
+                            </div>
+                            <div class="c-ninja sub-c-ninja4">
+                                <div class="c-ninja4-gun"></div>
+                                <div class="c-ninja4-blick"></div>
+                                <div class="death"></div>
+                                <div class="death2"></div>
+                                <div class="c-ninja4"></div>
+                                <h3 class="c-ninja-name">ninja4</h3>
+                            </div>
+                            <div class="c-ninja sub-c-ninja5">
+                                <div class="c-ninja5-gun"></div>
+                                <div class="c-ninja5-blick"></div>
+                                <div class="c-ninja5-shapka"></div>
+                                <div class="death"></div>
+                                <div class="death2"></div>
+                                <div class="c-ninja5"></div>
+                                <h3 class="c-ninja-name">ninja5</h3>
+                            </div>
+                            <div class="c-ninja sub-c-ninja6">
+                                <div class="c-ninja6-gun"></div>
+                                <div class="c-ninja6-blick"></div>
+                                <div class="death"></div>
+                                <div class="death2"></div>
+                                <div class="c-ninja6"></div>
+                                <h3 class="c-ninja-name">ninja6</h3>
+                            </div>
+                            <div class="c-ninja sub-c-ninja7">
+                                <div class="c-ninja7-gun"></div>
+                                <div class="c-ninja7-blick"></div>
+                                <div class="c-ninja7-blood"></div>
+                                <div class="c-ninja7-dead-up"></div>
+                                <div class="death"></div>
+                                <div class="death2"></div>
+                                <div class="c-ninja7"></div>
+                                <h3 class="c-ninja-name">ninja7</h3>
+                            </div>
+                            <div class="c-ninja sub-c-ninja8">
+                                <div class="c-ninja8-dust"></div>
+                                <div class="c-ninja8-gun"></div>
+                                <div class="c-ninja8-blood"></div>
+                                <div class="death"></div>
+                                <div class="death2"></div>
+                                <div class="c-ninja8"></div>
+                                <h3 class="c-ninja-name">ninja8</h3>
+                            </div>
+                            <div class="c-ninja sub-c-ninja9">
+                                <div class="c-ninja9-gun1"></div>
+                                <div class="c-ninja9-gun2"></div>
+                                <div class="c-ninja9-blick1"></div>
+                                <div class="c-ninja9-blick2"></div>
+                                <div class="death"></div>
+                                <div class="death2"></div>
+                                <div class="c-ninja9"></div>
+                                <h3 class="c-ninja-name">ninja-ninja-ninja9</h3>
+                            </div>
+                            <div class="c-ninja sub-c-ninja10">
+                                <div class="c-ninja10-gun"></div>
+                                <div class="c-ninja10-blick"></div>
+                                <div class="c-ninja10-flag"></div>
+                                <div class="c-ninja10"></div>
+                                <div class="death"></div>
+                                <div class="death2"></div>
+                                <h3 class="c-ninja-name">ninja10</h3>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                           
+                    </div>
+                </div>
+                
+            </div>
+
+        </div>
+        <script src="js/wow.min.js"></script>
+        <script src="js/script.js"></script>
+</body>
+</html>

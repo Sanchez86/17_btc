@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- -->
+    <!-- -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BTC Ninja</title>
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="css/animate.css" rel="stylesheet" />
+    <link href="css/fonts.css" rel="stylesheet" />
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet">
+	<link href="css/media.css" rel="stylesheet">
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/device.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.gsap.js"></script>
+    <script src="js/TweenMax.js"></script>
+    <script src="js/TextPlugin.js"></script>
+</head>
+<body>
+    <!-- Modal  login-->
+    <div class="modal fade" id="myModalLogIn" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/loginImage.png" alt="loginImage" />
+                    <h4>login</h4>
+                    <form name="login" action="#">
+                        <p>
+                            <input type="email" placeholder="Email" required />
+                            <input type="password" placeholder="Password" required />
+                        </p>
+                        <a href="#" class="forgot_pass">Forgot your password?</a>
+                        <p>
+                            <input type="submit" class="submit" value="login" />
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end  Modal  login-->
+    <!-- Modal  sign up-->
+    <div class="modal fade" id="myModalSignUp" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/loginImage.png" alt="loginImage" />
+                    <h4>Sign Up</h4>
+                    <form name="signUp" action="#">
+                        <p>
+                            <input type="text" placeholder="Login" required />
+                            <input type="email" placeholder="Email" required />
+                            <input type="password" placeholder="Password" required />
+                        </p>
+                        <p>
+                            <input type="submit" class="submit" value="Sign Up" />
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end  Modal  sign up-->
+    <div id="wrap_home" class="wrap">
+        <!-- menu -->
+        <div id="menue" class="navbar navbar-default navbar-static-top" role="navigation">
+            <a href="index.html" class="logo"></a>
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li>
+                            <a class="dropdown" data-toggle="dropdown" href="#">
+                                games<span style="display:none;" class="iconBlock glyphicon glyphicon-menu-down"></span>
+                            </a>
+                            <ul class="dropdown-menu multi-level" role="menu"><!-- aria-labelledby="dropdownMenu"-->
+                                <li class="dropdown-submenu">
+                                    <a tabindex="-1" href="games.html">User & user</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a tabindex="-1" href="roulette.html">Roulette</a></li>
+                                        <li><a href="#">Duel</a></li>
+                                        <li><a href="#">Cells</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Cash roulette</a></li>
+                                <li><a href="#">Pyramid game</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">history</a></li>
+                        <li><a href="#">top</a></li>
+                        <li><a href="#">faq</a></li>
+                        <li><a href="#">free points</a></li>
+                        <li>
+                            <div class="logIn_signUp">
+                                <a href="#" class="logIn wow fadeInDown" data-wow-delay="0.5s" data-toggle="modal" data-target="#myModalLogIn">login</a>
+                                <a href="#" class="signUp wow fadeInDown" data-wow-delay="0.7s" data-toggle="modal" data-target="#myModalSignUp">Sign&nbsp;Up</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="line_for_menue"></div>
+                </div><!--/.nav-collapse -->
+            </div>
+        </div>
+        <!-- end menu -->
+        <div id="one">
+            <div class="container">
+                <div class="row">
+                    <!-- slider -->
+                    <div id="slider1" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner" role="listbox">
+                            <!-- slide1 -->
+                            <div class="item item1 active">
+                                <div class="inner_item1">
+                                    <div class="resp sl1_ninja1 wow fadeIn" data-wow-delay="0.7s"></div>
+                                    
+                                    <div class="item1_right">
+                                        <h2 class="wow fadeInDown" data-wow-delay="1.5s">
+                                            PLAY FOR REAL BITCOIN
+                                            WITH BTC NINJA
+                                        </h2>
+                                        <h3 class="block_h3 wow fadeInDown" data-wow-delay="2s">
+                                            110010010101001010110100101
+                                        </h3>
+                                        <div class="resp_992baner">
+                                            <img src="images/resp_992baner.png" alt="resp_992baner" />
+                                        </div>
+                                        <span class="for_block_h3">
+                                            online gaming without limits.
+                                        </span>
+                                        <div class="resp sl1_bitcoin wow flipInY" data-wow-delay="1s"></div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                            <!--end slide1 -->
+                            <!-- slide2 -->
+                            <div class="item item_2">
+                                <div class="item2">
+                                    <div class="resp sl2_bg wow fadeIn" data-wow-delay="0.5s"></div>
+                                    <div class="resp sl2_v wow fadeIn" data-wow-delay="0.7s"></div>
+                                    <div class="resp sl2_s wow fadeIn" data-wow-delay="1s"></div>
+                                    <div class="resp sl2_n1 wow fadeInLeft" data-wow-delay="1.5s"></div>
+                                    <div class="resp sl2_n2 wow fadeInRight" data-wow-delay="1.5s"></div>
+                                    <a href="#" class="duel wow fadeInDown" data-wow-delay="1.6s"><span></span>Duel</a>
+                                    <a href="#" class="roulette wow fadeInDown" data-wow-delay="1.8s"><span></span>Roulette</a>
+                                    <a href="#" class="cells wow fadeInDown" data-wow-delay="2s"><span></span>Cells</a>
+                                    <div class="resp_992user">
+                                        <img src="images/resp_992user.png" alt="resp_992user"/>
+                                    </div>
+                                </div>
+                               
+                                <h2 class="wow fadeInDown" data-wow-delay="2.2s">
+                                    PLAY AGAINST REAL PEOPLE
+                                </h2>
+                                <h3 class="block_h3_2 wow fadeIn" data-wow-delay="2.5s">
+                                    110010010101001010110100101101
+                                </h3>
+                                <h3 class="for_block_h3_2">
+                                    FIGHT YOUR WAY TO THE VICTORY!
+                                </h3>
+                            </div>
+                            <!--end slide2 -->
+                            <!-- slide3 -->
+                            <div class="item item_3">
+                                <div class="resp sl3_bg"></div>
+                                <div class="resp sl3_n wow fadeInLeft" data-wow-delay="0.6s"></div>
+                                <div class="resp sl3_m wow fadeInRight" data-wow-delay="0.2s"></div>
+                                <div class="resp sl3_ sl3_z1"></div>
+                                <div class="resp sl3_ sl3_z2"></div>
+                                <div class="resp sl3_ sl3_z3"></div>
+                                <div class="resp sl3_ sl3_z4"></div>
+
+                                <div class="item_3_twxt_block">
+                                    <h2 class="wow fadeInDown" data-wow-delay="2s">
+                                        BTC ROULETTE
+                                    </h2>
+                                    <h4 class="item_3_h4 wow fadeInDown" data-wow-delay="2.2s">
+                                        1100100101010010101101101
+                                    </h4>
+                                    <h4 class="for_item_3_h4 wow fadeInDown" data-wow-delay="2.4s">
+                                        HEY NINJA, HIT THAT TARGET!
+                                    </h4>
+                                    <p class="wow fadeInDown" data-wow-delay="2.6s">
+                                        See what others are betting and make you best move.
+                                    </p>
+                                    <p class="wow fadeInDown" data-wow-delay="2.8s">
+                                        Fight against other ninjas to win big!
+                                    </p>
+                                    <div class="resp_992target wow fadeInDown" data-wow-delay="1s">
+                                        <img src="images/resp_992target.png" alt="resp_992target" />
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!--end slide3 -->
+                            <!-- slide4 -->
+                            <div class="item item_4">
+                                <div class="inner_item_4">
+                                    <div class="resp_992pyramid">
+                                        <img src="images/resp_992pyramid.png" alt="resp_992pyramid" />
+                                    </div>
+                                    <div class="text_block_pyramid">
+                                        <h2 id="text_block_pyramid_h2" class="wow slideInDown" data-wow-delay="1.5s">BTC PYRAMID</h2>
+                                        <h4 class="text_block_pyramid_h4 wow fadeInDown" data-wow-delay="1.8s">1100100101010010101101101</h4>
+                                        <h4 class="for_text_block_pyramid_h4">COME TRY YOUR LUCK TODAY!</h4>
+                                    </div>
+                                    <div class="text_block_pyramid_2">
+                                        <h4 class="text_block_pyramid_2_h4 wow fadeInDown" data-wow-delay="2s">MULTIPLAYER FAIR GAMING</h4>
+                                    </div>
+                                    <div class="sl4_bg wow fadeIn" data-wow-delay="0.5s"></div>
+                                    <div class="resp">
+                                        <div class="row_1">
+                                            <div class="absolute wow slideInDown row1_1" data-wow-delay="1.5s"></div>
+                                            <div class="absolute wow slideInDown row1_p1" data-wow-delay="1.6s"></div>
+                                            <div class="absolute wow slideInDown row1_p2" data-wow-delay="1.7s"></div>
+                                            <div class="absolute wow slideInDown row1_p1_2" data-wow-delay="1.8s"></div>
+                                        </div>
+                                        <div class="row_2">
+                                            <div class="absolute wow slideInDown row2_p1" data-wow-delay="1.9s"></div>
+                                            <div class="absolute wow slideInDown row2_p2" data-wow-delay="2s"></div>
+                                            <div class="absolute wow slideInDown row2_p3" data-wow-delay="2.1s"></div>
+                                        </div>
+                                        <div class="row_3">
+                                            <div class="absolute wow slideInDown row3_p1" data-wow-delay="2.2s"></div>
+                                            <div class="absolute wow slideInDown row3_p2" data-wow-delay="2.3s"></div>
+                                        </div>
+                                        <div class="row_4">
+                                            <div class="absolute wow slideInDown row4_p1" data-wow-delay="2.4s"></div>
+                                            <div class="absolute wow slideInDown row4_p2" data-wow-delay="2.5s"></div>
+                                        </div>
+                                        <div class="row_5">
+                                            <div class="absolute wow slideInDown row5_p1" data-wow-delay="2.6s"></div>
+                                        </div>
+                                        <div class="row_6">
+                                            <div class="absolute wow slideInDown row6_p1" data-wow-delay="2.7s"></div>
+                                            <div class="absolute wow slideInDown row6_p2" data-wow-delay="2.8s"></div>
+                                        </div>
+                                        <div class="row_7">
+                                            <div class="absolute wow slideInDown row7_p1" data-wow-delay="2.9s"></div>
+                                            <div class="absolute wow slideInDown row7_p2" data-wow-delay="3s"></div>
+                                        </div>
+                                        <div class="row_8">
+                                            <div class="absolute wow slideInDown row8_p1" data-wow-delay="3.1s"></div>
+                                            <div class="absolute wow slideInDown row8_p2" data-wow-delay="3.2s"></div>
+                                        </div>
+                                        <div class="row_9">
+                                            <div class="absolute wow slideInDown row9_p1" data-wow-delay="3.3s"></div>
+                                            <div class="absolute wow slideInDown row9_p2" data-wow-delay="3.4s"></div>
+                                            <div class="absolute wow slideInDown row9_p3" data-wow-delay="3.5s"></div>
+                                        </div>
+                                        <div class="absolute sl4_n1 wow fadeInDown" data-wow-delay="1s"></div>
+                                        <div class="absolute sl4_n2 wow fadeInDown" data-wow-delay="1.2s"></div>
+                                        <div class="absolute sl4_n3 wow fadeInDown" data-wow-delay="1.4s"></div>
+                                    </div>
+                                </div>
+                            </div>  
+                            <!--end slide4 -->
+
+                        </div><!--carousel-inner-->
+
+                        <a class="left carousel-control" href="#slider1" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#slider1" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                    <!--end slider -->
+                </div>
+            </div>
+        </div><!--end one-->
+        <div class="footer">
+            <div class="copy">
+                Copyright 2017
+            </div>
+            <a href="#" class="chat"><span>Chat</span></a>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <div class="bottomLogo">
+                            <a href="games.html">
+                                <img src="images/bottomLogo1.png" alt="bottomLogo1" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="bottomLogo bottomLogo2">
+                            <a href="#">
+                                <img src="images/bottomLogo2.png" alt="bottomLogo2" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="bottomLogo bottomLogo3">
+                            <a href="#">
+                                <img src="images/bottomLogo3.png" alt="bottomLogo3" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--end footer-->
+    </div><!--end wrap-->
+    <script src="js/wow.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

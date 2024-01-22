@@ -1,0 +1,1719 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+body.isIE .ninja-start,
+body.isIE .ninja-start.active,
+body.isEdge .ninja-start,
+body.isEdge .ninja-start.active {
+    display: none !important;
+    opacity: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+.pyramid_game_optimize1 {
+    background-image: url('../images/piramida/ninja-start1.png');
+}
+
+.pyramid_game_optimize2 {
+    background-image: url('../images/piramida/ninja-start2.png');
+}
+
+.pyramid_game_optimize3 {
+    background-image: url('../images/piramida/ninja-start3.png');
+}
+
+.pyramid_game_optimize4 {
+    background-image: url('../images/piramida/ninja-start4.png');
+}
+
+.pyramid_game_optimize5 {
+    background-image: url('../images/piramida/ninja-start5.png');
+}
+
+.pyramid_game_optimize6 {
+    background-image: url('../images/piramida/ninja-start-gun.png');
+}
+.pyramid_game .lavel h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+/*pg-left*/
+.pg-left h2 {
+    color: #878686;
+    font-size: 16px!important;
+    font-family: 'ChinaCyr';
+    padding-top: 0;
+    margin-bottom: 18px;
+}
+
+.pg-left table {
+    background-color: #fff;
+    border-radius: 6px;
+    margin-bottom: 2px;
+    border: 1px solid #fff;
+    border-collapse: separate;
+    padding-left: 8px;
+    padding-right: 8px;
+    -webkit-transition: border 0.5s;
+    transition: border 0.5s;
+}
+
+    .pg-left table:hover {
+        border: 1px solid #171718;
+    }
+
+    .pg-left table tr td {
+        color: #000000;
+        font-size: 11px;
+        font-family: 'OpenSans-Regular';
+        line-height: 30px;
+    }
+
+    .pg-left table:nth-child(2) .pg-left-number {
+        color: #f53800;
+        background-repeat: no-repeat;
+        background-position: 12px center;
+        background-image: url('../images/piramida/pg-left-top1.png');
+    }
+
+    .pg-left table:nth-child(3) .pg-left-number {
+        color: #f53800;
+        background-repeat: no-repeat;
+        background-position: 12px center;
+        background-image: url('../images/piramida/pg-left-top2.png');
+    }
+
+    .pg-left table:nth-child(4) .pg-left-number {
+        color: #f53800;
+        background-repeat: no-repeat;
+        background-position: 12px center;
+        background-image: url('../images/piramida/pg-left-top3.png');
+    }
+
+    .pg-left table:nth-child(2) td,
+    .pg-left table:nth-child(3) td,
+    .pg-left table:nth-child(4) td {
+        color: #f53800;
+    }
+
+.pg-left table {
+    width: 100%;
+}
+
+.pg-left-name {
+    text-transform: uppercase;
+    text-align: center;
+    width: 65%;
+}
+
+.pg-left-number {
+    width: 15%;
+}
+
+.pg-left-money {
+    text-align: right;
+    width: 20%;
+}
+
+.pg-left table tr th:nth-child(1) {
+    text-align: left;
+    width: 15%;
+}
+
+.pg-left table tr th:nth-child(2) {
+    text-align: center;
+    width: 65%;
+}
+
+.pg-left table tr th:nth-child(3) {
+    text-align: right;
+    width: 20%;
+}
+
+.pg-left table tr th {
+    color: #5d5d5d;
+    font-size: 12px;
+    font-family: 'OpenSans-Regular';
+}
+
+.pg-left .pg-left-header {
+    background-color: rgba(255, 255, 255, 0.00);
+    border: 0;
+    line-height: 32px;
+}
+
+    .pg-left .pg-left-header:hover {
+        border: 0;
+    }
+
+.pg-tables {
+    padding-top: 4px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgba(185, 184, 184, 0.56);
+    border-radius: 10px;
+}
+/*end pg-left*/
+
+/*pg-right*/
+.pg-right table {
+    background-color: #fff;
+    border-radius: 6px;
+    margin-bottom: 2px;
+    border: 1px solid #fff;
+    border-collapse: separate;
+    padding-left: 8px;
+    padding-right: 8px;
+    -webkit-transition: border 0.5s;
+    transition: border 0.5s;
+    width: 100%;
+}
+
+.pg-right .pg-right-header {
+    background-color: rgba(255, 255, 255, 0.00);
+    border: 0;
+    line-height: 32px;
+}
+
+.pg-right table:hover {
+    border: 1px solid #171718;
+}
+
+.pg-right .pg-right-header:hover {
+    border: 0;
+}
+
+.pg-right table tr th {
+    color: #5d5d5d;
+    font-size: 12px;
+    font-family: 'OpenSans-Regular';
+    line-height: 30px;
+}
+
+.pg-right table tr td {
+    color: #000000;
+    font-size: 11px;
+    font-family: 'OpenSans-Regular';
+    line-height: 30px;
+}
+
+.pg-right-name {
+    width: 35%;
+    text-align: left;
+}
+
+.pg-right-bet {
+    width: 20%;
+    text-align: left;
+}
+
+.pg-right-profit {
+    width: 20%;
+    text-align: center;
+}
+
+.pg-right-step {
+    width: 15%;
+    text-align: center;
+}
+
+.pg-right-lavel {
+    width: 10%;
+    text-align: center;
+}
+
+.pg-right-tabs {
+    border: 0;
+    background-color: rgba(185, 184, 184, 0.56);
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 14px;
+}
+
+    .pg-right-tabs.nav-tabs > li a {
+        color: #000000;
+        background-color: rgba(255, 255, 255, 0.00);
+        text-transform: uppercase;
+        font-size: 12px;
+        font-family: 'ChinaCyr';
+        font-weight: bold;
+        border: 0;
+        position: relative;
+    }
+
+        .pg-right-tabs.nav-tabs > li a:hover,
+        .pg-right-tabs.nav-tabs > li.active > a,
+        .pg-right-tabs.nav-tabs > li.active > a:hover,
+        .pg-right-tabs.nav-tabs > li.active > a:focus {
+            background-color: rgba(255, 255, 255, 0.00);
+            color: #f53800;
+            border: 0;
+        }
+
+.pg-right-tab-content {
+    padding-top: 2px !important;
+}
+
+.pg-right-tabs.nav-tabs > li {
+    width: 33.3%;
+}
+
+    .pg-right-tabs.nav-tabs > li.active:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 0%;
+        height: 5px;
+        background-color: #f53800;
+        border-radius: 7px;
+        margin: 0 auto;
+        -webkit-animation-name: pg-right-border;
+        animation-name: pg-right-border;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+        -webkit-animation-duration: 0.5s;
+        animation-duration: 0.5s;
+    }
+
+@-webkit-keyframes pg-right-border {
+    0% {
+        width: 0%;
+        -webkit-transform: rotateZ(0deg);
+        transform: rotateZ(0deg);
+    }
+
+    50% {
+        -webkit-transform: rotateZ(360deg);
+        transform: rotateZ(360deg);
+        width: 20%;
+    }
+
+    100% {
+        width: 97%;
+        background-color: #f53800;
+        -webkit-transform: rotateZ(360deg);
+        transform: rotateZ(360deg);
+    }
+}
+
+@keyframes pg-right-border {
+    0% {
+        width: 0%;
+        -webkit-transform: rotateZ(0deg);
+        transform: rotateZ(0deg);
+    }
+
+    50% {
+        -webkit-transform: rotateZ(360deg);
+        transform: rotateZ(360deg);
+        width: 20%;
+    }
+
+    100% {
+        width: 97%;
+        background-color: #f53800;
+        -webkit-transform: rotateZ(360deg);
+        transform: rotateZ(360deg);
+    }
+}
+
+.pg-right-gamePlayed {
+    float: left;
+}
+
+.pg-right-maxPayout {
+    float: right;
+}
+
+.pg-gs {
+    width: 50%;
+    text-align: center;
+}
+
+    .pg-gs p {
+        color: #6d5f56;
+        font-size: 20px;
+        font-family: 'ChinaCyr';
+        font-weight: bold;
+    }
+
+    .pg-gs span {
+        color: #f53800;
+        font-size: 12px;
+        font-family: 'OpenSans-Regular';
+        line-height: 21px;
+    }
+/*end pg-right*/
+
+/*pg-center*/
+.pg-center {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgba(185, 184, 184, 0.56);
+    border-radius: 10px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    position: relative;
+}
+
+.pg-center-row {
+    text-align: center;
+    margin-bottom: 3px;
+}
+
+    .pg-center-row button {
+        background-image: url('../images/piramida/pg-icon.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 104px;
+        height: 37px;
+        border: 0px;
+        border-radius: 7px;
+        outline: 0;
+        text-align: center;
+        color: #ffffff;
+        font-size: 14px;
+        font-family: 'OpenSans-Regular';
+        box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.5);
+        -webkit-transition: -webkit-transform 1s;
+        transition: -webkit-transform 1s;
+        transition: transform 1s;
+        transform: rotateZ(0deg);
+    }
+
+        .pg-center-row button.rotate {
+            -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+        }
+
+        .pg-center-row button.hover {
+            color: #362407;
+            background-image: url('../images/piramida/pg-icon_hover.png');
+        }
+
+        .pg-center-row button.disabled:hover {
+            color: #fff;
+        }
+
+        .pg-center-row button.active {
+            background-color: #fff;
+            background-image: url('../images/piramida/pg-icon_active_easy.png');
+            background-position: center;
+            background-size: initial;
+            color: rgba(255, 255, 255, 0.00);
+        }
+
+.count-controller {
+    text-align: center;
+}
+
+.count-controller-btn {
+    text-align: center;
+    width: 100%;
+    max-width: 40px;
+    color: #c1c1c1;
+    font-size: 12.5px;
+    font-family: 'OpenSans-Regular';
+    background-color: #444444;
+    border: 0;
+    line-height: 26px;
+    border-radius: 5px;
+    margin-top: 10px;
+    outline: 0;
+    box-shadow: inset 0 0 15px 3px rgba(0, 0, 0, 0.58);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+}
+
+    .count-controller-btn:hover {
+        box-shadow: inset 0 0 10px 3px rgba(0, 0, 0, 0.9);
+    }
+
+.count-controller-rate {
+    max-width: 138px;
+}
+
+.count-controller-submit {
+    width: 100%;
+    max-width: 318px;
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    color: #171717;
+    font-size: 19px;
+    font-family: 'ChinaCyr';
+    font-weight: bold;
+    background: #e7dc97; /* Old browsers */ /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #e7dc97 0%,#dfaf34 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #e7dc97 0%,#dfaf34 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e7dc97', endColorstr='#dfaf34',GradientType=0 ); /* IE6-9 */
+    line-height: 34px;
+    margin-top: 10px;
+    box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.3);
+    -webkit-transition: box-shadow 0.5s;
+    transition: box-shadow 0.5s;
+}
+
+    .count-controller-submit:hover {
+        box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.6);
+    }
+
+.set-lavel {
+    text-align: center;
+}
+
+.set-lavel_easy,
+.set-lavel_middle,
+.set-lavel_hard {
+    width: 100%;
+    max-width: 101px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-color: rgba(255, 255, 255, 0);
+    border: 0;
+    outline: 0;
+    line-height: 46px;
+    margin-top: 5px;
+    font-size: 11px;
+    font-family: 'ChinaCyr';
+    font-weight: bold;
+    text-align: center;
+    padding: 0;
+    -webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+}
+
+.set-lavel_easy {
+    background-image: url('../images/piramida/set-lavel_easy.png');
+    color: #444444;
+}
+
+.set-lavel_middle {
+    background-image: url('../images/piramida/set-lavel_middle.png');
+    color: #cacaca;
+}
+
+.set-lavel_hard {
+    background-image: url('../images/piramida/set-lavel_hard.png');
+    color: #cacaca;
+}
+
+    .set-lavel_easy:hover,
+    .set-lavel_middle:hover,
+    .set-lavel_hard:hover {
+        opacity: 0.8;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+    }
+
+    .set-lavel_easy img,
+    .set-lavel_middle img,
+    .set-lavel_hard img {
+        vertical-align: middle;
+        margin-right: 5px;
+    }
+
+.check_the_ticket_btn {
+    text-align: center;
+    width: 100%;
+    background-color: #acacac;
+    line-height: 31px;
+    border-radius: 10px;
+    margin-top: -10px;
+    margin-bottom: 50px;
+}
+
+    .check_the_ticket_btn button {
+        color: #ffffff;
+        font-family: 'OpenSans-Regular';
+        font-size: 11px;
+        background-color: rgba(255, 255, 255, 0.00);
+        border: 0;
+        outline: 0;
+        background-image: url('../images/piramida/check_the_ticket_btn.png');
+        background-repeat: no-repeat;
+        background-position: right center;
+        padding-right: 20px;
+        background-size: 10%;
+    }
+
+.content-box-04 {
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.content-box-04-wrapp {
+    background-color: rgba(185, 184, 184, 0.56);
+    overflow: hidden;
+    border-radius: 10px;
+    font-family: 'OpenSans-Regular';
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    -webkit-transition-timing-function: linear;
+    transition-timing-function: linear;
+    text-align: left;
+    margin-bottom: 10px
+}
+
+.info-box-01 {
+    padding: 20px;
+    float: left;
+    width: 100%;
+}
+
+.info-box-02 {
+    background-color: rgba(185, 184, 184, 0.56);
+    float: right;
+    width: 100%;
+    padding: 20px;
+    padding-bottom: 30px;
+}
+
+.info-title {
+    color: #000000;
+    font-size: 16px;
+    font-family: 'ChinaCyr';
+    font-weight: bold;
+    line-height: 30px;
+}
+
+.block-form-01 {
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+
+.block-form-02 {
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+
+.block-form-01__text-01,
+.block-form-02__text-01,
+.block-form-03__text-01 {
+    color: #aaa9a9;
+    width: 100%;
+    border: none;
+    border-radius: 9px;
+    padding: 14px 21px;
+    height: 60px;
+    overflow: hidden;
+    resize: none;
+    outline: 0;
+    font-family: 'OpenSans-Regular';
+    font-size: 12px;
+    box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.3);
+}
+
+.form-box-01 {
+    float: left;
+    width: 50%;
+    padding: 5px;
+}
+
+.form-box-02 {
+    float: left;
+    width: 50%;
+    padding: 5px;
+}
+
+.block-form-01__wrapp-02:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.block-form-01__text-02,
+.block-form-02__text-02,
+.block-form-03__text-02 {
+    outline: 0;
+    color: #aaa9a9;
+    border-radius: 9px;
+    width: 100%;
+    border: none;
+    height: 40px;
+    padding: 0px 10px;
+    font-family: 'OpenSans-Regular';
+    font-size: 12px;
+    box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.3);
+}
+
+.block-form-01__label,
+.block-form-02__label,
+.block-form-03__label {
+    font-family: 'OpenSans-Regular';
+    font-size: 12px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: left;
+}
+
+.block-form-03__text-02 {
+    max-width: 200px;
+}
+
+.block-form-02__btn {
+    width: 100%;
+    max-width: 318px;
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    color: #171717;
+    font-size: 16px;
+    font-family: 'OpenSans-Regular';
+    font-weight: bold;
+    background: #e7dc97;
+    background: -webkit-linear-gradient(top, #e7dc97 0%,#dfaf34 100%);
+    background: linear-gradient(to bottom, #e7dc97 0%,#dfaf34 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e7dc97', endColorstr='#dfaf34',GradientType=0 );
+    line-height: 38px;
+    box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.3);
+    -webkit-transition: box-shadow 0.5s;
+    transition: box-shadow 0.5s;
+    margin-top: 19px;
+}
+
+    .block-form-02__btn:hover {
+        box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.6);
+    }
+
+.block-form-03 {
+    padding: 10px;
+}
+
+.content-box-04-wrapp.active {
+    margin-top: 0%;
+}
+
+.modal-dialog-width {
+    max-width: 100%;
+    padding-left: 370px;
+    padding-right: 370px;
+}
+
+    .modal-dialog-width .modal-body {
+        padding: 0;
+        padding-bottom: 0;
+        padding-top: 0;
+        margin-top: 0px;
+    }
+
+        .modal-dialog-width .modal-body > .container {
+            max-width: 100%;
+        }
+
+    .modal-dialog-width .modal-header {
+        padding: 0;
+        padding-right: 15px;
+        padding-top: 15px;
+        border: 0;
+    }
+
+    .modal-dialog-width .modal-content {
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+
+.pg-center-row {
+    position: relative;
+}
+
+    .pg-center-row:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 20px;
+        height: 20px;
+    }
+
+    .pg-center-row .try_again {
+        background-image: url('../images/piramida/try_again.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: auto;
+        background-color: #f53800;
+        color: rgba(255, 255, 255, 0.00) !important;
+    }
+
+        .pg-center-row .try_again:hover {
+            color: rgba(255, 255, 255, 0.00) !important;
+        }
+
+.ninja-start {
+    position: absolute;
+    left: -380px;
+    bottom: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../images/piramida/ninja-start1.png');
+    width: 240px;
+    height: 321px;
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    z-index: 100000;
+}
+
+.ninja-start.active {
+    -webkit-animation-name: ninja-start;
+    animation-name: ninja-start;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-duration: 5s;
+    animation-duration: 5s
+}
+
+@-webkit-keyframes ninja-start {
+    0% {
+        background-image: url('../images/piramida/ninja-start2.png');
+    }
+
+    10% {
+        background-image: url('../images/piramida/ninja-start3.png');
+    }
+
+    20% {
+        background-image: url('../images/piramida/ninja-start4.png');
+    }
+
+    30% {
+        background-image: url('../images/piramida/ninja-start5.png');
+    }
+
+    40% {
+        background-image: url('../images/piramida/ninja-start2.png');
+    }
+
+    50% {
+        background-image: url('../images/piramida/ninja-start3.png');
+    }
+
+    60% {
+        background-image: url('../images/piramida/ninja-start4.png');
+    }
+
+    70% {
+        background-image: url('../images/piramida/ninja-start5.png');
+    }
+
+    80% {
+        background-image: url('../images/piramida/ninja-start2.png');
+    }
+
+    90% {
+        background-image: url('../images/piramida/ninja-start3.png');
+    }
+
+    100% {
+        background-image: url('../images/piramida/ninja-start1.png');
+    }
+}
+
+@keyframes ninja-start {
+    0% {
+        background-image: url('../images/piramida/ninja-start2.png');
+    }
+
+    10% {
+        background-image: url('../images/piramida/ninja-start3.png');
+    }
+
+    20% {
+        background-image: url('../images/piramida/ninja-start4.png');
+    }
+
+    30% {
+        background-image: url('../images/piramida/ninja-start5.png');
+    }
+
+    40% {
+        background-image: url('../images/piramida/ninja-start2.png');
+    }
+
+    50% {
+        background-image: url('../images/piramida/ninja-start3.png');
+    }
+
+    60% {
+        background-image: url('../images/piramida/ninja-start4.png');
+    }
+
+    70% {
+        background-image: url('../images/piramida/ninja-start5.png');
+    }
+
+    80% {
+        background-image: url('../images/piramida/ninja-start2.png');
+    }
+
+    90% {
+        background-image: url('../images/piramida/ninja-start3.png');
+    }
+
+    100% {
+        background-image: url('../images/piramida/ninja-start1.png');
+    }
+}
+
+.ninja-start-gun {
+    background-image: url('../images/piramida/ninja-start-gun.png');
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 50px;
+    top: 80px;
+    -webkit-transform: rotateZ(0);
+    transform: rotateZ(0);
+    z-index: 1000;
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+}
+
+.ninja-start.active .ninja-start-gun1 {
+    -webkit-animation-name: ninja-start-gun1;
+    animation-name: ninja-start-gun1;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+}
+
+.ninja-start.active .ninja-start-gun2 {
+    -webkit-animation-name: ninja-start-gun2;
+    animation-name: ninja-start-gun2;
+    -webkit-animation-duration: 0.7s;
+    animation-duration: 0.7s;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+}
+
+.ninja-start.active .ninja-start-gun3 {
+    -webkit-animation-name: ninja-start-gun3;
+    animation-name: ninja-start-gun3;
+    -webkit-animation-duration: 0.7s;
+    animation-duration: 0.7s;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+}
+
+.ninja-start.active .ninja-start-gun4 {
+    -webkit-animation-name: ninja-start-gun4;
+    animation-name: ninja-start-gun4;
+    -webkit-animation-duration: 0.7s;
+    animation-duration: 0.7s;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+}
+
+.ninja-start.active .ninja-start-gun5 {
+    -webkit-animation-name: ninja-start-gun5;
+    animation-name: ninja-start-gun5;
+    -webkit-animation-duration: 0.7s;
+    animation-duration: 0.7s;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+}
+
+.ninja-start.active .ninja-start-gun6 {
+    -webkit-animation-name: ninja-start-gun6;
+    animation-name: ninja-start-gun6;
+    -webkit-animation-duration: 0.7s;
+    animation-duration: 0.7s;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+}
+
+.ninja-start.active .ninja-start-gun7 {
+    -webkit-animation-name: ninja-start-gun7;
+    animation-name: ninja-start-gun7;
+    -webkit-animation-duration: 0.7s;
+    animation-duration: 0.7s;
+    -webkit-animation-delay: 3s;
+    animation-delay: 3s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+}
+
+.ninja-start.active .ninja-start-gun8 {
+    -webkit-animation-name: ninja-start-gun8;
+    animation-name: ninja-start-gun8;
+    -webkit-animation-duration: 0.7s;
+    animation-duration: 0.7s;
+    -webkit-animation-delay: 3s;
+    animation-delay: 3s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+}
+
+.ninja-start.active .ninja-start-gun9 {
+    -webkit-animation-name: ninja-start-gun9;
+    animation-name: ninja-start-gun9;
+    -webkit-animation-duration: 0.7s;
+    animation-duration: 0.7s;
+    -webkit-animation-delay: 4s;
+    animation-delay: 4s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+}
+
+.ninja-start.active .ninja-start-gun10 {
+    -webkit-animation-name: ninja-start-gun10;
+    animation-name: ninja-start-gun10;
+    -webkit-animation-duration: 0.7s;
+    animation-duration: 0.7s;
+    -webkit-animation-delay: 4s;
+    animation-delay: 4s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+}
+
+@-webkit-keyframes ninja-start-gun1 {
+    0% {
+        -webkit-transform: rotateZ(0);
+        transform: rotateZ(0);
+    }
+
+    10% {
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+
+    99% {
+        -webkit-transform: rotateZ(1000deg);
+        transform: rotateZ(1000deg);
+        right: -330px;
+        top: 137px;
+    }
+
+    100% {
+        display: none;
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+}
+
+@keyframes ninja-start-gun1 {
+    0% {
+        -webkit-transform: rotateZ(0);
+        transform: rotateZ(0);
+    }
+
+    10% {
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+
+    99% {
+        -webkit-transform: rotateZ(1000deg);
+        transform: rotateZ(1000deg);
+        right: -330px;
+        top: 137px;
+    }
+
+    100% {
+        display: none;
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+}
+
+@-webkit-keyframes ninja-start-gun2 {
+    0% {
+        -webkit-transform: rotateZ(0);
+        transform: rotateZ(0);
+    }
+
+    10% {
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+
+    99% {
+        -webkit-transform: rotateZ(1000deg);
+        transform: rotateZ(1000deg);
+        right: -440px;
+        top: 97px;
+    }
+
+    100% {
+        display: none;
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+}
+
+@keyframes ninja-start-gun2 {
+    0% {
+        -webkit-transform: rotateZ(0);
+        transform: rotateZ(0);
+    }
+
+    10% {
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+
+    99% {
+        -webkit-transform: rotateZ(1000deg);
+        transform: rotateZ(1000deg);
+        right: -440px;
+        top: 97px;
+    }
+
+    100% {
+        display: none;
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+}
+
+@-webkit-keyframes ninja-start-gun3 {
+    0% {
+        -webkit-transform: rotateZ(0);
+        transform: rotateZ(0);
+    }
+
+    10% {
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+
+    99% {
+        -webkit-transform: rotateZ(1000deg);
+        transform: rotateZ(1000deg);
+        right: -220px;
+        top: 57px;
+    }
+
+    100% {
+        display: none;
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+}
+
+@keyframes ninja-start-gun3 {
+    0% {
+        -webkit-transform: rotateZ(0);
+        transform: rotateZ(0);
+    }
+
+    10% {
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+
+    99% {
+        -webkit-transform: rotateZ(1000deg);
+        transform: rotateZ(1000deg);
+        right: -220px;
+        top: 57px;
+    }
+
+    100% {
+        display: none;
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+}
+
+@-webkit-keyframes ninja-start-gun4 {
+    0% {
+        -webkit-transform: rotateZ(0);
+        transform: rotateZ(0);
+    }
+
+    10% {
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+
+    99% {
+        -webkit-transform: rotateZ(1000deg);
+        transform: rotateZ(1000deg);
+        right: -350px;
+        top: 13px;
+    }
+
+    100% {
+        display: none;
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+}
+
+@keyframes ninja-start-gun4 {
+    0% {
+        -webkit-transform: rotateZ(0);
+        transform: rotateZ(0);
+    }
+
+    10% {
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+
+    99% {
+        -webkit-transform: rotateZ(1000deg);
+        transform: rotateZ(1000deg);
+        right: -350px;
+        top: 13px;
+    }
+
+    100% {
+        display: none;
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+}
+
+@-webkit-keyframes ninja-start-gun5 {
+    0% {
+        -webkit-transform: rotateZ(0);
+        transform: rotateZ(0);
+    }
+
+    10% {
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+
+    99% {
+        -webkit-transform: rotateZ(1000deg);
+        transform: rotateZ(1000deg);
+        right: -430px;
+        top: -27px;
+    }
+
+    100% {
+        display: none;
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+}
+
+@keyframes ninja-start-gun5 {
+    0% {
+        -webkit-transform: rotateZ(0);
+        transform: rotateZ(0);
+    }
+
+    10% {
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+
+    99% {
+        -webkit-transform: rotateZ(1000deg);
+        transform: rotateZ(1000deg);
+        right: -430px;
+        top: -27px;
+    }
+
+    100% {
+        display: none;
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+}
+
+@-webkit-keyframes ninja-start-gun6 {
+    0% {
+        -webkit-transform: rotateZ(0);
+        transform: rotateZ(0);
+    }
+
+    10% {
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+
+    99% {
+        -webkit-transform: rotateZ(1000deg);
+        transform: rotateZ(1000deg);
+        right: -220px;
+        top: -67px;
+    }
+
+    100% {
+        display: none;
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+}
+
+@keyframes ninja-start-gun6 {
+    0% {
+        -webkit-transform: rotateZ(0);
+        transform: rotateZ(0);
+    }
+
+    10% {
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+
+    99% {
+        -webkit-transform: rotateZ(1000deg);
+        transform: rotateZ(1000deg);
+        right: -220px;
+        top: -67px;
+    }
+
+    100% {
+        display: none;
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+}
+
+@-webkit-keyframes ninja-start-gun7 {
+    0% {
+        -webkit-transform: rotateZ(0);
+        transform: rotateZ(0);
+    }
+
+    10% {
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+
+    99% {
+        -webkit-transform: rotateZ(1000deg);
+        transform: rotateZ(1000deg);
+        right: -330px;
+        top: -110px;
+    }
+
+    100% {
+        display: none;
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+}
+
+@keyframes ninja-start-gun7 {
+    0% {
+        -webkit-transform: rotateZ(0);
+        transform: rotateZ(0);
+    }
+
+    10% {
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+
+    99% {
+        -webkit-transform: rotateZ(1000deg);
+        transform: rotateZ(1000deg);
+        right: -330px;
+        top: -110px;
+    }
+
+    100% {
+        display: none;
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+}
+
+@-webkit-keyframes ninja-start-gun8 {
+    0% {
+        -webkit-transform: rotateZ(0);
+        transform: rotateZ(0);
+    }
+
+    10% {
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+
+    99% {
+        -webkit-transform: rotateZ(1000deg);
+        transform: rotateZ(1000deg);
+        right: -330px;
+        top: -150px;
+    }
+
+    100% {
+        display: none;
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+}
+
+@keyframes ninja-start-gun8 {
+    0% {
+        -webkit-transform: rotateZ(0);
+        transform: rotateZ(0);
+    }
+
+    10% {
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+
+    99% {
+        -webkit-transform: rotateZ(1000deg);
+        transform: rotateZ(1000deg);
+        right: -330px;
+        top: -150px;
+    }
+
+    100% {
+        display: none;
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+}
+
+@-webkit-keyframes ninja-start-gun9 {
+    0% {
+        -webkit-transform: rotateZ(0);
+        transform: rotateZ(0);
+    }
+
+    10% {
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+
+    99% {
+        -webkit-transform: rotateZ(1000deg);
+        transform: rotateZ(1000deg);
+        right: -330px;
+        top: -190px;
+    }
+
+    100% {
+        display: none;
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+}
+
+@keyframes ninja-start-gun9 {
+    0% {
+        -webkit-transform: rotateZ(0);
+        transform: rotateZ(0);
+    }
+
+    10% {
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+
+    99% {
+        -webkit-transform: rotateZ(1000deg);
+        transform: rotateZ(1000deg);
+        right: -330px;
+        top: -190px;
+    }
+
+    100% {
+        display: none;
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+}
+
+@-webkit-keyframes ninja-start-gun10 {
+    0% {
+        -webkit-transform: rotateZ(0);
+        transform: rotateZ(0);
+    }
+
+    10% {
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+
+    99% {
+        -webkit-transform: rotateZ(1000deg);
+        transform: rotateZ(1000deg);
+        right: -440px;
+        top: -230px;
+    }
+
+    100% {
+        display: none !important;
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+}
+
+@keyframes ninja-start-gun10 {
+    0% {
+        -webkit-transform: rotateZ(0);
+        transform: rotateZ(0);
+    }
+
+    10% {
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+
+    99% {
+        -webkit-transform: rotateZ(1000deg);
+        transform: rotateZ(1000deg);
+        right: -440px;
+        top: -230px;
+    }
+
+    100% {
+        display: none !important;
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+}
+/*end pg-center*/
+.pg-center-winer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-family: 'ChinaCyr';
+    text-align: center;
+    color: red;
+    background-color: #fff;
+    padding: 31px;
+    display: none;
+    z-index: 1;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 38px;
+    border-radius: 5px;
+    box-shadow: 0 0 20px 1px rgba(72, 16, 16, 0.62);
+}
+
+    .pg-center-winer.active {
+        display: block;
+    }
+
+@media screen and (max-width: 1600px) {
+    .modal-dialog-width {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .pg-center {
+        min-width: 340px;
+        margin-left: -23px;
+    }
+
+    .pyramid_game .history {
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .pg-center {
+        min-width: 0;
+        margin-left: 0px;
+    }
+
+    .lavel h2 {
+        font-size: 36px;
+        margin-bottom: 50px;
+    }
+
+    .fairGameModals {
+        top: 20px;
+    }
+
+    .pg-left h2 {
+        margin-top: 60px;
+    }
+
+    .pg-left {
+        margin-bottom: 30px;
+    }
+}
+@media screen and (max-width: 768px){
+    .fairGameModals {
+        top: 60px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .info-box-01,
+    .info-box-02 {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .info-title {
+        text-align: center;
+    }
+
+    .block-form-01,
+    .block-form-02 {
+        float: none;
+        width: 100%;
+    }
+
+    .modal-body input {
+        padding-left: 7px;
+        padding-right: 7px;
+    }
+    .pyramid_game .history h2 {
+        padding-top: 48px;
+        font-size: 32px;
+    }
+    .pg-left h2 {
+        font-size: 28px;
+    }
+    
+}
+@media screen and (max-width: 667px){
+    .pyramid_game .lavel h2 {
+        font-size: 18px;
+        margin-bottom: 0px;
+        padding-top: 16px;
+    }
+    .pg-center {
+        transform: scale(0.75);
+        margin-top: -60px;
+        background:none;
+    }
+    .fairGameModals {
+        top: 12px;
+        z-index: 2;
+    }
+    .fairGameModals a {
+        font-size: 10px;
+        padding: 6px 14px;
+    }
+    .check_the_ticket_btn {
+        width: 40%;
+        margin: auto;
+        margin-top: -71px;
+    }
+    .pyramid_game .pg-left h2 {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        padding: 0;
+    }
+    .pg-right {
+        margin-bottom: 30px;
+    }
+    .count-controller-min,
+    .count-controller-max {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+@media screen and (max-width: 375px) {
+    .pyramid_game .lavel h2 {
+        font-size: 18px;
+        margin-bottom: 0px;
+        padding-top: 16px;
+    }
+
+    .pg-center {
+        transform: scale(0.75);
+        margin-top: -60px;
+    }
+
+    .fairGameModals {
+        top: 0px;
+    }
+
+        .fairGameModals a {
+            font-size: 10px;
+            padding: 6px 14px;
+        }
+
+    .check_the_ticket_btn {
+        margin-top: -71px;
+    }
+
+    .pg-left h2 {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        padding: 0;
+    }
+
+    .pg-right {
+        margin-bottom: 30px;
+    }
+
+    .count-controller-min,
+    .count-controller-max {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .pg-center-row button {
+        width: 94px;
+        height: 34px;
+    }
+    .pg-center {
+        padding-left: 0;
+        padding-right: 0;   
+    }
+    .count-controller-rate {
+        max-width: 114px;
+    }
+    .set-lavel_easy, .set-lavel_middle, .set-lavel_hard {
+        max-width: 94px;
+    }
+}
+
+@media (min-width: 1000px) and (max-height: 850px) {
+    .pyramid_game .history {
+        transform: scale(0.9);
+        margin-top: -20px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .count-controller-min,
+    .count-controller-max {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+@media (min-width: 1000px) and (max-height: 750px) {
+    .pyramid_game .history {
+        transform: scale(0.8);
+        margin-top: -50px;
+    }
+}
+@media (min-width: 1000px) and (max-height: 750px) {
+    .pyramid_game .history {
+        transform: scale(0.7);
+        margin-top: -90px;
+    }
+}
+.z-index-1{
+    z-index:1;
+}

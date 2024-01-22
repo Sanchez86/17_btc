@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=100% width=device-width, initial-scale=1">
+    <title>Games</title>
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="css/animate.css" rel="stylesheet" />
+    <link href="css/fonts.css" rel="stylesheet" />
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="css/games.css" rel="stylesheet" />
+	<link href="css/media.css" rel="stylesheet">
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/device.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.gsap.js"></script>
+    <script src="js/jquery.lazylinepainter-1.7.0.min.js"></script>
+</head>
+<body>
+    <!-- Modal  login-->
+    <div class="modal fade" id="myModalLogIn" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/loginImage.png" alt="loginImage" />
+                    <h4>login</h4>
+                    <form name="login" action="#">
+                        <p>
+                            <input type="email" placeholder="Email" />
+                            <input type="password" placeholder="Password" />
+                        </p>
+                        <a href="#" class="forgot_pass">Forgot your password?</a>
+                        <p>
+                            <input type="submit" class="submit" value="login" />
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end  Modal  login-->
+    <!-- Modal  sign up-->
+    <div class="modal fade" id="myModalSignUp" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/loginImage.png" alt="loginImage" />
+                    <h4>Sign Up</h4>
+                    <form name="signUp" action="#">
+                        <p>
+                            <input type="text" placeholder="Login" />
+                            <input type="email" placeholder="Email" />
+                            <input type="password" placeholder="Password" />
+                        </p>
+                        <p>
+                            <input type="submit" class="submit" value="Sign Up" />
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end  Modal  sign up-->
+    <div class="wrap wrap_games">
+        <!-- menu -->
+        <div id="menue" class="navbar navbar-default navbar-static-top" role="navigation">
+            <a href="index.html" class="logo"></a>
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li>
+                            <a class="dropdown active" data-toggle="dropdown" href="#">
+                                games<span style="display:none;" class="iconBlock glyphicon glyphicon-menu-down"></span>
+                            </a>
+                            <ul class="dropdown-menu multi-level" role="menu"><!-- aria-labelledby="dropdownMenu"-->
+                                <li class="dropdown-submenu">
+                                    <a tabindex="-1" href="games.html">User & user</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a tabindex="-1" href="roulette.html">Roulette</a></li>
+                                        <li><a href="#">Duel</a></li>
+                                        <li><a href="#">Cells</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Cash roulette</a></li>
+                                <li><a href="#">Pyramid game</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">history</a></li>
+                        <li><a href="#">top</a></li>
+                        <li><a href="#">faq</a></li>
+                        <li><a href="#">free points</a></li>
+                        <li>
+                            <div class="logIn_signUp">
+                                <a href="#" class="logIn wow fadeInDown" data-wow-delay="0.5s" data-toggle="modal" data-target="#myModalLogIn">login</a>
+                                <a href="#" class="signUp wow fadeInDown" data-wow-delay="0.7s" data-toggle="modal" data-target="#myModalSignUp">Sign&nbsp;Up</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="line_for_menue"></div>
+                </div><!--/.nav-collapse -->
+            </div>
+        </div>
+        <!-- end menu -->
+        <div id="games">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4 playBlock">
+                        <h2>roulette</h2>
+                        <div class="img_for_play">
+                            <img src="images/player1.png" alt="player1" />
+                        </div>
+                        <div class="svg_line" id="line_for_svg"></div>
+                        <a href="roulette.html" class="games_playe">Play</a>
+                    </div>
+                    <div class="col-sm-4 playBlock">
+                        <h2>duel</h2>
+                        <div class="img_for_play">
+                            <img src="images/player2.png" alt="player2" />
+                        </div>
+                        <div class="svg_line" id="line_for_svg2"></div>
+                        <a href="#" class="games_playe">Play</a>
+                    </div>
+                    <div class="col-sm-4 playBlock">
+                        <h2>СELLS</h2>
+                        <div class="img_for_play img_for_play_castom">
+                            <img src="images/player3.png" alt="player3" />
+                        </div>
+                        <div class="svg_line" id="line_for_svg3"></div>
+                        <a href="#" class="games_playe">Play</a>
+                    </div>
+                </div>
+                <div class="row subfastGame">
+                    <a href="#">fast game</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="copy">
+                Copyright 2017
+            </div>
+            <a href="#" class="chat"><span>Chat</span></a>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <div class="bottomLogo">
+                            <a href="#">
+                                <img src="images/bottomLogo1.png" alt="bottomLogo1" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="bottomLogo bottomLogo2">
+                            <a href="#">
+                                <img src="images/bottomLogo2.png" alt="bottomLogo2" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="bottomLogo bottomLogo3">
+                            <a href="#">
+                                <img src="images/bottomLogo3.png" alt="bottomLogo3" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/wow.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

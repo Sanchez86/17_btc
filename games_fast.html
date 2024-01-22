@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Games fast</title>
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="css/animate.css" rel="stylesheet" />
+    <link href="css/fonts.css" rel="stylesheet" />
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="css/roulette.css" rel="stylesheet" />
+    <link href="css/duel.css" rel="stylesheet" />
+    <link href="css/cells.css" rel="stylesheet" />
+    <link href="css/games_fast.css" rel="stylesheet" />
+	<link href="css/media.css" rel="stylesheet">
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/device.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+
+</head>
+<body class="body_games_fast">
+    <div class="g_border_left"></div>
+    <div class="g_border_right"></div>
+    <div class="g_border_top"></div>
+    <div class="g_border_bottom"></div>
+    <div class="games_fast">
+        <div class="wrap">
+            <!-- menu -->
+            <div id="menue" class="navbar navbar-default navbar-static-top" role="navigation">
+                <a href="index.html" class="logo"></a>
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="index.html">Home</a></li>
+                            <li>
+                                <a class="dropdown active" data-toggle="dropdown" href="#">
+                                    games<span style="display:none;" class="iconBlock glyphicon glyphicon-menu-down"></span>
+                                </a>
+                                <ul class="dropdown-menu multi-level" role="menu">
+                                    <!-- aria-labelledby="dropdownMenu"-->
+                                    <li class="dropdown-submenu">
+                                        <a tabindex="-1" href="games.html">User & user</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a tabindex="-1" href="roulette.html">Roulette</a></li>
+                                            <li><a href="#">Duel</a></li>
+                                            <li><a href="#">Cells</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Cash roulette</a></li>
+                                    <li><a href="#">Pyramid game</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">history</a></li>
+                            <li><a href="#">top</a></li>
+                            <li><a href="#">faq</a></li>
+                            <li><a href="#">free points</a></li>
+                            <li>
+                                <div class="logIn_signUp">
+                                    <a href="#" class="logIn wow fadeInDown" data-wow-delay="0.5s" data-toggle="modal" data-target="#myModalLogIn">login</a>
+                                    <a href="#" class="signUp wow fadeInDown" data-wow-delay="0.7s" data-toggle="modal" data-target="#myModalSignUp">Sign&nbsp;Up</a>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="line_for_menue"></div>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
+            <!-- end menu -->
+            <div class="games_fast_blocks">
+                <div class="games_fast_block">
+                    <div class="roulet_block">
+                        <div class="games_left_top"></div>
+                        <div class="games_right_top"></div>
+                        <div class="roulette_games_left_bottom"></div>
+                        <div class="roulette_games_right_bottom"></div>
+                        <div class="fairGameModals">
+                            <a href="#" data-toggle="modal" data-target="#fairGame">Fair game</a>
+                            <span>/</span>
+                            <a href="#" data-toggle="modal" data-target="#fairRules">Rules</a>
+                        </div>
+                        <div class="point_bank">
+                            <p>Point bank</p>
+                            <img src="images/point_bank.png" />
+                            <span>50</span>
+                        </div>
+                        <div class="point_bank pb_players">
+                            <p>Players</p>
+                            <span>5</span>
+                            <img src="images/point_bank.png" />
+                        </div>
+                        <h2>roulette</h2>
+                        <div class="timeIcon">
+                            <div class="innerTimeIcon"></div>
+                            <div class="seconds60"><span class="seconds60_count">60</span> seconds</div>
+                        </div>
+                        <div class="sub_ruletka">
+                            <div class="timeIconHren"></div>
+                            <div class="ruletka">
+                                <div class="igrok">
+                                    <h3>21</h3>
+                                    <img src="images/igrok.png" />
+                                    <h4>21.43%</h4>
+                                </div>
+                                <div class="igrok">
+                                    <h3>21</h3>
+                                    <img src="images/igrok.png" />
+                                    <h4>21.43%</h4>
+                                </div>
+                                <div class="igrok">
+                                    <h3>21</h3>
+                                    <img src="images/igrok.png" />
+                                    <h4>21.43%</h4>
+                                </div>
+                                <div class="igrok">
+                                    <h3>21</h3>
+                                    <img src="images/igrok.png" />
+                                    <h4>21.43%</h4>
+                                </div>
+                                <div class="igrok">
+                                    <h3>21</h3>
+                                    <img src="images/igrok.png" />
+                                    <h4>21.43%</h4>
+                                </div>
+                                <div class="igrok">
+                                    <h3>21</h3>
+                                    <img src="images/igrok.png" />
+                                    <h4>21.43%</h4>
+                                </div>
+                                <div class="igrok">
+                                    <h3>21</h3>
+                                    <img src="images/igrok.png" />
+                                    <h4>21.43%</h4>
+                                </div>
+                                <div class="igrok">
+                                    <h3>21</h3>
+                                    <img src="images/igrok.png" />
+                                    <h4>21.43%</h4>
+                                </div>
+                                <div class="igrok">
+                                    <h3>21</h3>
+                                    <img src="images/igrok.png" />
+                                    <h4>21.43%</h4>
+                                </div>
+                                <div class="igrok">
+                                    <h3>21</h3>
+                                    <img src="images/igrok.png" />
+                                    <h4>21.43%</h4>
+                                </div>
+                                <div class="igrok">
+                                    <h3>21</h3>
+                                    <img src="images/igrok.png" />
+                                    <h4>21.43%</h4>
+                                </div>
+                                <div class="igrok">
+                                    <h3>21</h3>
+                                    <img src="images/igrok.png" />
+                                    <h4>21.43%</h4>
+                                </div>
+                                <div class="igrok">
+                                    <h3>21</h3>
+                                    <img src="images/igrok.png" />
+                                    <h4>21.43%</h4>
+                                </div>
+                                <div class="igrok">
+                                    <h3>21</h3>
+                                    <img src="images/igrok.png" />
+                                    <h4>21.43%</h4>
+                                </div>
+                                <div class="igrok">
+                                    <h3>21</h3>
+                                    <img src="images/igrok.png" />
+                                    <h4>21.43%</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sub_buttonsGroup">
+                            <form action="#" method="post">
+                                <div class="buttonsGroup">
+                                    <input type="button" value="+10" name="10" />
+                                    <input type="button" value="+100" name="100" />
+                                    <input type="button" value="+1k" name="1k" />
+                                    <input type="button" value="+10k" name="10k" class="resp_buttonsGroup" />
+                                    <input type="button" value="x2" name="x2" />
+                                    <input type="button" value="1/2" name="1_2" />
+                                    <input type="button" value="all in" name="all_in" class="all_in resp_buttonsGroup" />
+                                </div>
+                                <div class="stavka">
+                                    <input type="number" min="0" placeholder="0" />
+                                    <input type="reset" value="" />
+                                </div>
+                                <div class="sub_make_a_bet">
+                                    <input type="submit" value="make a bet" class="make_a_bet" />
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="games_fast_block">
+                    <div class="duel_block">
+                        <div class="game_left_top"></div>
+                        <div class="game_right_top"></div>
+                        <div class="game_left_bottom"></div>
+                        <div class="game_right_bottom"></div>
+                        <div class="fairGameModals">
+                            <a href="#" data-toggle="modal" data-target="#fairGame">Fair game</a>
+                            <span>/</span>
+                            <a href="#" data-toggle="modal" data-target="#fairRules">Rules</a>
+                        </div>
+                        <h2>Duel</h2>
+                        <div class="duel_vs"></div>
+                        <div class="duel_bg"></div>
+                        <div class="duel">
+                            <div class="make_your_bet">
+                                <p>
+                                    Choose the amount of points to make your bet
+                                </p>
+                                <ul>
+                                    <li><a href="#" class="active">100</a></li>
+                                    <li><a href="#">500</a></li>
+                                    <li><a href="#">1000</a></li>
+                                    <li><a href="#">5000</a></li>
+                                </ul>
+                            </div>
+                            <div class="cells-winner">
+                                <div class="cells-winner-close">+</div>
+                                <span>Name</span>Victory is Yours!
+                            </div>
+                            <div class="duel_left">
+                                <div class="block_user">
+                                    <div class="block_user_avatar">
+                                        <img src="images/duel/duel_ava1.png" />
+                                    </div>
+                                    <div class="block_user_name">
+                                        <a href="#">Name</a>
+                                    </div>
+                                    <div class="take_this_place">
+                                        <a href="#">take this place</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="duel_right">
+                                <div class="block_user">
+                                    <div class="block_user_avatar">
+                                        <img src="images/duel/duel_ava_defoult.png" />
+                                    </div>
+                                    <div class="block_user_name">
+                                        <a href="#">Name</a>
+                                    </div>
+                                    <div class="take_this_place">
+                                        <a href="#">take this place</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="hoose">
+                                CHOOSE THE SIDE AND TAKE your PLACE FOR 100 POINTS
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="games_fast_block">
+                    <div class="cells_block">
+                        <div class="cells_min">
+
+                            <div>
+                                <div class="roulette_left_top"></div>
+                                <div class="roulette_right_top"></div>
+                                <div class="roulette_bottom2"></div>
+                                <div class="fairGameModals">
+                                    <a href="#" data-toggle="modal" data-target="#fairGame">Fair game</a>
+                                    <span>/</span>
+                                    <a href="#" data-toggle="modal" data-target="#fairRules">Rules</a>
+                                </div>
+                                <h2>Cells</h2>
+                                <div class="make_your_bet">
+                                    <p>
+                                        Choose the amount of points to make your bet
+                                    </p>
+                                    <ul>
+                                        <li><a href="#" class="active">100</a></li>
+                                        <li><a href="#">500</a></li>
+                                        <li><a href="#">1000</a></li>
+                                        <li><a href="#">5000</a></li>
+                                    </ul>
+                                </div>
+                                <div class="sells-scale">
+
+                                    <div class="c-ava-block">
+                                        <div class="cells-winner">
+                                            <div class="cells-winner-close">+</div>
+                                            <span>Nameameameame</span> is the winner!
+                                        </div>
+                                        <div class="c-line-h"></div>
+                                        <div class="c-line-v"></div>
+                                        <div class="c-ava-top">
+                                            <div class="c-ava c-ava1">
+                                                <svg id='pattern' xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                                    <defs>
+                                                        <pattern id='image' width="1" height="1" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                                            <image id="imageBg" xlink:href='images/cells/cat.jpg' width="100" height="100" preserveAspectRatio="none"></image>
+                                                        </pattern>
+                                                    </defs>
+                                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="174" height="140" viewbox="0 0 173.20508075688772 200" class="imageStroke imageHex">
+                                                        <path d="M73.61215932167728 7.499999999999999Q86.60254037844386 0 99.59292143521044 7.499999999999999L160.21469970012114 42.5Q173.20508075688772 50 173.20508075688772 65L173.20508075688772 135Q173.20508075688772 150 160.21469970012114 157.5L99.59292143521044 192.5Q86.60254037844386 200 73.61215932167728 192.5L12.99038105676658 157.5Q0 150 0 135L0 65Q0 50 12.99038105676658 42.5Z"></path>
+                                                    </svg>
+                                                </svg>
+                                            </div>
+
+                                            <div class="c-ava c-ava2">
+                                                <svg id='pattern' xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                                    <defs>
+                                                        <pattern id='image2' width="1" height="1" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                                            <image id="imageBg" xlink:href='images/cells/c-ava.png' width="100" height="100" preserveAspectRatio="none"></image>
+                                                        </pattern>
+                                                    </defs>
+                                                    <svg version="1.2" xmlns="http://www.w3.org/2000/svg" width="174" height="140" viewbox="0 0 173.20508075688772 200" class="imageStroke imageHex2">
+                                                        <path d="M73.61215932167728 7.499999999999999Q86.60254037844386 0 99.59292143521044 7.499999999999999L160.21469970012114 42.5Q173.20508075688772 50 173.20508075688772 65L173.20508075688772 135Q173.20508075688772 150 160.21469970012114 157.5L99.59292143521044 192.5Q86.60254037844386 200 73.61215932167728 192.5L12.99038105676658 157.5Q0 150 0 135L0 65Q0 50 12.99038105676658 42.5Z"></path>
+                                                    </svg>
+                                                </svg>
+                                            </div>
+                                            <div class="c-ava c-ava3">
+                                                <svg id='pattern' xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                                    <defs>
+                                                        <pattern id='image3' width="1" height="1" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                                            <image id="imageBg" xlink:href='images/cells/sells_3.jpg' width="100" height="100" preserveAspectRatio="none"></image>
+                                                        </pattern>
+                                                    </defs>
+                                                    <svg version="1.2" xmlns="http://www.w3.org/2000/svg" width="174" height="140" viewbox="0 0 173.20508075688772 200" class="imageStroke imageHex3">
+                                                        <path d="M73.61215932167728 7.499999999999999Q86.60254037844386 0 99.59292143521044 7.499999999999999L160.21469970012114 42.5Q173.20508075688772 50 173.20508075688772 65L173.20508075688772 135Q173.20508075688772 150 160.21469970012114 157.5L99.59292143521044 192.5Q86.60254037844386 200 73.61215932167728 192.5L12.99038105676658 157.5Q0 150 0 135L0 65Q0 50 12.99038105676658 42.5Z"></path>
+                                                    </svg>
+                                                </svg>
+                                            </div>
+                                            <div class="c-ava c-ava4">
+                                                <svg id='pattern' xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                                    <defs>
+                                                        <pattern id='image4' width="1" height="1" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                                            <image id="imageBg" xlink:href='images/cells/sells_4.jpg' width="100" height="100" preserveAspectRatio="none"></image>
+                                                        </pattern>
+                                                    </defs>
+                                                    <svg version="1.2" xmlns="http://www.w3.org/2000/svg" width="174" height="140" viewbox="0 0 173.20508075688772 200" class="imageStroke imageHex4">
+                                                        <path d="M73.61215932167728 7.499999999999999Q86.60254037844386 0 99.59292143521044 7.499999999999999L160.21469970012114 42.5Q173.20508075688772 50 173.20508075688772 65L173.20508075688772 135Q173.20508075688772 150 160.21469970012114 157.5L99.59292143521044 192.5Q86.60254037844386 200 73.61215932167728 192.5L12.99038105676658 157.5Q0 150 0 135L0 65Q0 50 12.99038105676658 42.5Z"></path>
+                                                    </svg>
+                                                </svg>
+                                            </div>
+                                            <div class="c-ava c-ava5">
+                                                <svg id='pattern' xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                                    <defs>
+                                                        <pattern id='image5' width="1" height="1" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                                            <image id="imageBg" xlink:href='images/cells/sells_5.jpg' width="100" height="100" preserveAspectRatio="none"></image>
+                                                        </pattern>
+                                                    </defs>
+                                                    <svg version="1.2" xmlns="http://www.w3.org/2000/svg" width="174" height="140" viewbox="0 0 173.20508075688772 200" class="imageStroke imageHex5">
+                                                        <path d="M73.61215932167728 7.499999999999999Q86.60254037844386 0 99.59292143521044 7.499999999999999L160.21469970012114 42.5Q173.20508075688772 50 173.20508075688772 65L173.20508075688772 135Q173.20508075688772 150 160.21469970012114 157.5L99.59292143521044 192.5Q86.60254037844386 200 73.61215932167728 192.5L12.99038105676658 157.5Q0 150 0 135L0 65Q0 50 12.99038105676658 42.5Z"></path>
+                                                    </svg>
+                                                </svg>
+                                            </div>
+                                            <div class="clear"></div>
+                                        </div>
+                                        <div class="c-ava-bottom">
+                                            <div class="c-ava c-ava6">
+                                                <svg id='pattern' xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                                    <defs>
+                                                        <pattern id='image6' width="1" height="1" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                                            <image id="imageBg" xlink:href='images/cells/sells_6.jpg' width="100" height="100" preserveAspectRatio="none"></image>
+                                                        </pattern>
+                                                    </defs>
+                                                    <svg version="1.2" xmlns="http://www.w3.org/2000/svg" width="174" height="140" viewbox="0 0 173.20508075688772 200" class="imageStroke imageHex6">
+                                                        <path d="M73.61215932167728 7.499999999999999Q86.60254037844386 0 99.59292143521044 7.499999999999999L160.21469970012114 42.5Q173.20508075688772 50 173.20508075688772 65L173.20508075688772 135Q173.20508075688772 150 160.21469970012114 157.5L99.59292143521044 192.5Q86.60254037844386 200 73.61215932167728 192.5L12.99038105676658 157.5Q0 150 0 135L0 65Q0 50 12.99038105676658 42.5Z"></path>
+                                                    </svg>
+                                                </svg>
+                                            </div>
+                                            <div class="c-ava c-ava7">
+                                                <svg id='pattern' xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                                    <defs>
+                                                        <pattern id='image7' width="1" height="1" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                                            <image id="imageBg" xlink:href='images/cells/sells_7.jpg' width="100" height="100" preserveAspectRatio="none"></image>
+                                                        </pattern>
+                                                    </defs>
+                                                    <svg version="1.2" xmlns="http://www.w3.org/2000/svg" width="174" height="140" viewbox="0 0 173.20508075688772 200" class="imageStroke imageHex7">
+                                                        <path d="M73.61215932167728 7.499999999999999Q86.60254037844386 0 99.59292143521044 7.499999999999999L160.21469970012114 42.5Q173.20508075688772 50 173.20508075688772 65L173.20508075688772 135Q173.20508075688772 150 160.21469970012114 157.5L99.59292143521044 192.5Q86.60254037844386 200 73.61215932167728 192.5L12.99038105676658 157.5Q0 150 0 135L0 65Q0 50 12.99038105676658 42.5Z"></path>
+                                                    </svg>
+                                                </svg>
+                                            </div>
+                                            <div class="c-ava c-ava8">
+                                                <svg id='pattern' xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                                    <defs>
+                                                        <pattern id='image8' width="1" height="1" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                                            <image id="imageBg" xlink:href='images/cells/sells_8.jpg' width="100" height="100" preserveAspectRatio="none"></image>
+                                                        </pattern>
+                                                    </defs>
+                                                    <svg version="1.2" xmlns="http://www.w3.org/2000/svg" width="174" height="140" viewbox="0 0 173.20508075688772 200" class="imageStroke imageHex8">
+                                                        <path d="M73.61215932167728 7.499999999999999Q86.60254037844386 0 99.59292143521044 7.499999999999999L160.21469970012114 42.5Q173.20508075688772 50 173.20508075688772 65L173.20508075688772 135Q173.20508075688772 150 160.21469970012114 157.5L99.59292143521044 192.5Q86.60254037844386 200 73.61215932167728 192.5L12.99038105676658 157.5Q0 150 0 135L0 65Q0 50 12.99038105676658 42.5Z"></path>
+                                                    </svg>
+                                                </svg>
+                                            </div>
+                                            <div class="c-ava c-ava9">
+                                                <svg id='pattern' xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                                    <defs>
+                                                        <pattern id='image9' width="1" height="1" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                                            <image id="imageBg" xlink:href='images/cells/sells_9.jpg' width="100" height="100" preserveAspectRatio="none"></image>
+                                                        </pattern>
+                                                    </defs>
+                                                    <svg version="1.2" xmlns="http://www.w3.org/2000/svg" width="174" height="140" viewbox="0 0 173.20508075688772 200" class="imageStroke imageHex9">
+                                                        <path d="M73.61215932167728 7.499999999999999Q86.60254037844386 0 99.59292143521044 7.499999999999999L160.21469970012114 42.5Q173.20508075688772 50 173.20508075688772 65L173.20508075688772 135Q173.20508075688772 150 160.21469970012114 157.5L99.59292143521044 192.5Q86.60254037844386 200 73.61215932167728 192.5L12.99038105676658 157.5Q0 150 0 135L0 65Q0 50 12.99038105676658 42.5Z"></path>
+                                                    </svg>
+                                                </svg>
+                                            </div>
+                                            <div class="c-ava c-ava10">
+                                                <svg id='pattern' xmlns="http://www.w3.org/2000/svg" version="1.1">
+                                                    <defs>
+                                                        <pattern id='image10' width="1" height="1" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                                            <image id="imageBg" xlink:href='images/cells/sells_10.jpg' width="100" height="100" preserveAspectRatio="none"></image>
+                                                        </pattern>
+                                                    </defs>
+                                                    <svg version="1.2" xmlns="http://www.w3.org/2000/svg" width="174" height="140" viewbox="0 0 173.20508075688772 200" class="imageStroke imageHex10">
+                                                        <path d="M73.61215932167728 7.499999999999999Q86.60254037844386 0 99.59292143521044 7.499999999999999L160.21469970012114 42.5Q173.20508075688772 50 173.20508075688772 65L173.20508075688772 135Q173.20508075688772 150 160.21469970012114 157.5L99.59292143521044 192.5Q86.60254037844386 200 73.61215932167728 192.5L12.99038105676658 157.5Q0 150 0 135L0 65Q0 50 12.99038105676658 42.5Z"></path>
+                                                    </svg>
+                                                </svg>
+                                            </div>
+                                            <div class="clear"></div>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                                <div class="info_cells">
+                                    <div class="playersfrom10">1 players from 10</div>
+                                    <div class="count_points">1 place = 100 points</div>
+                                    <div class="clear"></div>
+                                    <div class="name_ninja">Name ninja</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    <script src="js/wow.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

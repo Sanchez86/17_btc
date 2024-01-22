@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=100% width=device-width, initial-scale=1">
+    <title>cash roulette</title>
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="css/animate.css" rel="stylesheet" />
+    <link href="css/fonts.css" rel="stylesheet" />
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="css/history.css" rel="stylesheet" />
+    <link href="css/cash_roulette.css" rel="stylesheet" />
+    <link href="css/media.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/device.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.backstretch.js"></script>
+    <script>
+        $(document).ready(function () {
+            $.backstretch("images/cash_roulette/games_cash_roulette_bg.png");
+        });
+    </script>
+</head>
+<body>
+    <div class="cash_roulette_optimize1"></div>
+    <div class="cash_roulette_optimize2"></div>
+    <div class="cash_roulette_optimize3"></div>
+    <div class="cash_roulette_optimize4"></div>
+        <!-- Modal fairGame-->
+        <div class="modal fade game_rules" id="fairGame" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span></span></button>
+                        <div class="clear"></div>
+                        <div>
+                            <img src="images/mkModal.png" />
+                            <h2>cash roulette</h2>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            As each round begins the service will generate a random number from 0 to 1 (for example, 0.21492) + salt. Salt is a random set of symbols (for example: iGwpMtsYs). These symbols are used to prevent the round's number decryption.
+                            The round's number and salt are encrypted by the service through algorithm <a href="#"> sha224 </a> and are shown as each round begins.
+                        </p>
+                        <p>
+                            In the end of the round previously encrypted number is multiplied by the total bank of the round points, thus getting the number of the winning point.
+                        </p>
+                        <p>
+                            Pls see the example: In the end the total round bank is 83657 points, and the random number was 0.21492. So the service multiplies this number by 83657 points and gets the number 17979, that’s will be the winning point. The winner of the round will be the player, who deposited this point.
+                        </p>
+                        <p>
+                            The fair play stands at the principle that we cannot know what exactly the points bank will be in the end of the round, and the random number for multiplication is given right in the beginning of the game. That's why you can be sure that we have no ability to influence the game results .
+                        </p>
+                        <p>
+                            You can check that the result of the game wasn’t prearranged. For this, use any of the online services, for example,<a href="#"> http://www.miniwebtool.com/sha224-hash-generator/. </a> In the end of the round take the round's number+salt, which was encrypted, and repeatedly encrypt it at the service. You will see the same hash value as the one specified in the beginning of the round. This will prove the accuracy of determining the winning point.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End modal fairGame-->
+        <!-- Modal fairRules-->
+        <div class="modal fade game_rules" id="fairRules" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span></span></button>
+                        <div class="clear"></div>
+                        <div>
+                            <img src="images/mkModal.png" />
+                            <h2>Fair game</h2>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <h3>How I can play Roulette?</h3>
+                        <p>
+                            The players deposit certain amount of points into the game. After each spin there is only one winner who gets all the points. The spin lasts 60 seconds. The more points you deposit, the higher winning chances you have. But there is the real chance to win even with the smallest bet!
+                        </p>
+                        <p>
+                            The winner is determined by our fair play system. Read more in the <a href="#">“Fair Game”</a> tab.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End modal fairRules-->
+        <div class="wrap_cash">
+            <!-- menu -->
+            <div id="menue" class="navbar navbar-default navbar-static-top" role="navigation">
+                <a href="index.html" class="logo"></a>
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="index.html">Home</a></li>
+                            <li>
+                                <a class="dropdown" data-toggle="dropdown" href="#">
+                                    games<span style="display:none;" class="iconBlock glyphicon glyphicon-menu-down"></span>
+                                </a>
+                                <ul class="dropdown-menu multi-level" role="menu">
+                                    <!-- aria-labelledby="dropdownMenu"-->
+                                    <li class="dropdown-submenu">
+                                        <a tabindex="-1" href="games.html">User & user</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a tabindex="-1" href="roulette.html">Roulette</a></li>
+                                            <li><a href="#">Duel</a></li>
+                                            <li><a href="#">Cells</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Cash roulette</a></li>
+                                    <li><a href="#">Pyramid game</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">history</a></li>
+                            <li><a href="#" class="active">top</a></li>
+                            <li><a href="#">faq</a></li>
+                            <li><a href="#">free points</a></li>
+                            <li style="display: none;">
+                                <div class="userNameExit">
+                                    <div class="userNameExit-userNme">
+                                        <div class="userNameExit-usernameBlock">
+                                            <a href="#" class="userNameExit__userNme">user name</a>
+                                            <img src="images/kabinet/userNameExit__delimiter.png" class="userNameExit__delimiter" />
+                                            <div class="userNameExit__balance">0</div>
+                                        </div>
+                                        <div class="userNameExit_wrap-border">
+                                            <div class="userNameExit-border">
+                                                <a href="#">
+                                                    <img src="images/kabinet/userNameExit-ava.png" class="userNameExit-ava" alt="Alternate Text" />
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="line_for_menue"></div>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
+            <!-- end menu -->
+
+            <div class="resize">
+                <div>
+
+                    <div class="history lavel">
+                        <div class="roulette_left_bottom"></div>
+                        <div class="roulette_left_top"></div>
+                        <div class="roulette_right_top"></div>
+                        <div class="roulette_right_bottom"></div>
+                        <div class="fairGameModals">
+                            <a href="#" data-toggle="modal" data-target="#fairGame">Fair game</a>
+                            <a href="#" data-toggle="modal" data-target="#fairRules">Rules</a>
+                        </div>
+                        <h2>cash roulette</h2>
+                        <div class="duel_vs wow flipInY" data-wow-delay="0.7s"></div>
+                        <div class="duel_bg"></div>
+                        <div>
+                            <div class="cash_wrap_block">
+                                <div class="cash_sub_buttonsGroup">
+                                    <form action="#" method="post">
+                                        <div class="cash_buttonsGroup">
+                                            <input type="button" value="+10" name="10">
+                                            <input type="button" value="+100" name="100">
+                                            <input type="button" value="+1k" name="1k">
+                                            <input type="button" value="+10k" name="10k">
+                                            <input type="button" value="x2" name="x2">
+                                            <input type="button" value="1/2" name="1_2">
+                                            <input type="button" value="all in" name="all_in" class="all_in">
+                                        </div>
+                                        <div class="cash_stavka">
+                                            <input type="number" min="0" placeholder="0">
+                                            <input type="reset" value="">
+                                        </div>
+                                        <div class="clear"></div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="cash_roulette_left_bar">
+                                    <div class="buttons_group_x">
+                                        <p class="x2_white">
+                                            <input type="button" name="x2_white" value="0" class="button_x" />
+                                            <span>x2</span>
+                                        </p>
+                                        <p class="x14_red">
+                                            <input type="button" name="x14_red" value="0" class="button_x" />
+                                            <span>x14</span>
+                                        </p>
+                                        <p class="x2_balck">
+                                            <input type="button" name="x2_balck" value="0" class="button_x" />
+                                            <span>x2</span>
+                                        </p>
+                                        <div class="take_this_place">
+                                            <a href="#">start</a>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="total_rate_block">
+                                        <div class="total_rate">
+                                            <h3>Total rate</h3>
+                                        </div>
+                                        <div class="total_rate_line total_rate_red">
+                                            <span></span>
+                                            <strong>75</strong>
+                                        </div>
+                                        <div class="total_rate_line total_rate_wight">
+                                            <span></span>
+                                            <strong>50</strong>
+                                        </div>
+                                        <div class="total_rate_line total_rate_balck">
+                                            <span></span>
+                                            <strong>25</strong>
+                                        </div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="cash_roulette_game">
+                                    <div class="target"></div>
+                                    <div class="cash_roulette_nanja"></div>
+                                    <div class="suriken_cash_roulette"></div>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <script src="js/wow.min.js"></script>
+        <script src="js/script.js"></script>
+</body>
+</html>

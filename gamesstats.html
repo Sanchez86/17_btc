@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=100% width=device-width, initial-scale=1">
+    <title>Kabinet Gamesstats</title>
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="css/animate.css" rel="stylesheet" />
+    <link href="css/fonts.css" rel="stylesheet" />
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="css/kabinet.css" rel="stylesheet" />
+	<link href="css/media.css" rel="stylesheet">
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/device.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+</head>
+<body>
+    <!-- Modal  login-->
+    <div class="modal fade" id="myModalLogIn" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/loginImage.png" alt="loginImage" />
+                    <h4>login</h4>
+                    <form name="login" action="#">
+                        <p>
+                            <input type="email" placeholder="Email" />
+                            <input type="password" placeholder="Password" />
+                        </p>
+                        <a href="#" class="forgot_pass">Forgot your password?</a>
+                        <p>
+                            <input type="submit" class="submit" value="login" />
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end  Modal  login-->
+    <!-- Modal  sign up-->
+    <div class="modal fade" id="myModalSignUp" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/loginImage.png" alt="loginImage" />
+                    <h4>Sign Up</h4>
+                    <form name="signUp" action="#">
+                        <p>
+                            <input type="text" placeholder="Login" />
+                            <input type="email" placeholder="Email" />
+                            <input type="password" placeholder="Password" />
+                        </p>
+                        <p>
+                            <input type="submit" class="submit" value="Sign Up" />
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end  Modal  sign up-->
+    <div class="wrap wrap_kabinet">
+        <!-- menu -->
+        <div id="menue" class="navbar navbar-default navbar-static-top" role="navigation">
+            <a href="index.html" class="logo"></a>
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li>
+                            <a class="dropdown active" data-toggle="dropdown" href="#">
+                                games<span style="display:none;" class="iconBlock glyphicon glyphicon-menu-down"></span>
+                            </a>
+                            <ul class="dropdown-menu multi-level" role="menu"><!-- aria-labelledby="dropdownMenu"-->
+                                <li class="dropdown-submenu">
+                                    <a tabindex="-1" href="games.html">User & user</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a tabindex="-1" href="roulette.html">Roulette</a></li>
+                                        <li><a href="#">Duel</a></li>
+                                        <li><a href="#">Cells</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Cash roulette</a></li>
+                                <li><a href="#">Pyramid game</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">history</a></li>
+                        <li><a href="#">top</a></li>
+                        <li><a href="#">faq</a></li>
+                        <li><a href="#">free points</a></li>
+                        <li style="display: none;">
+                            <div class="userNameExit">
+                                <div class="userNameExit-userNme">
+                                    <div class="userNameExit-usernameBlock">
+                                        <a href="#" class="userNameExit__userNme">user name</a>
+                                        <img src="images/kabinet/userNameExit__delimiter.png" class="userNameExit__delimiter" />
+                                        <div class="userNameExit__balance">0</div>
+                                    </div>
+                                    <div class="userNameExit_wrap-border">
+                                        <div class="userNameExit-border">
+                                            <a href="#">
+                                                <img src="images/kabinet/userNameExit-ava.png" class="userNameExit-ava" alt="Alternate Text" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="userNameExit-exit">
+                                    <a href="#" class="userNameExit-exit__btn">Exit</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="line_for_menue"></div>
+                </div><!--/.nav-collapse -->
+            </div>
+        </div>
+        <!-- end menu -->
+        <div class="kabinet">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="kabinet-wrapAvatar">
+                            <div class="kabinet-avatar">
+                                <img src="images/kabinet/kabinet-avatar.png" class="kabinet-avatar__img" alt="kabinet-avatar" />
+                            </div>
+                        </div>
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs kabinet-wrapNav" role="tablist">
+                            <li class="nav__linck" role="presentation"><a href="kabinet.html#personalInfo">Personal Info</a></li>
+                            <li class="nav__linck" role="presentation"><a href="kabinet.html#referralProgram">Referral program</a></li>
+                            <li class="nav__linck" role="presentation"><a href="kabinet.html#balance">Balance</a></li>
+                            <li class="nav__linck active" role="presentation"><a href="gamesstats.html">Games stats</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="kabinet-content">
+
+                                <!-- Nav tabs -->
+                                <ul class="nav nav-tabs nav-tabs-games" role="tablist">
+                                    <li role="presentation" class="nav__linckGame active"><a href="#roulette" aria-controls="home" role="tab" data-toggle="tab">Roulette <span>(0)</span></a></li>
+                                    <li role="presentation" class="nav__linckGame"><a href="#duel" aria-controls="profile" role="tab" data-toggle="tab">Duel <span>(0)</span></a></li>
+                                    <li role="presentation" class="nav__linckGame"><a href="#cash" aria-controls="messages" role="tab" data-toggle="tab">Cash Roulette <span>(0)</span></a></li>
+                                    <li role="presentation" class="nav__linckGame"><a href="#piramid" aria-controls="settings" role="tab" data-toggle="tab">Piramid Game <span>(0)</span></a></li>
+                                    <li role="presentation" class="nav__linckGame"><a href="#cells" aria-controls="settings" role="tab" data-toggle="tab">Cells <span>(0)</span></a></li>
+                                </ul>
+
+                                <!-- Tab panes -->
+                                <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane fade in active" id="roulette">
+                                        <div class="wrapTableGameStatus">
+                                            <table>
+                                                <tr class="wrapTableGameStatus__header">
+                                                    <th class="wrapTableGameStatus__header__th"># id</th>
+                                                    <th class="wrapTableGameStatus__header__th">amount</th>
+                                                    <th class="wrapTableGameStatus__header__th">time</th>
+                                                    <th class="wrapTableGameStatus__header__th">status</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="wrapTableGameStatus-inner">
+                                                            <table>
+                                                                <tr>
+                                                                    <td>12</td>
+                                                                    <td>500</td>
+                                                                    <td> 12.03.2017 12:30</td>
+                                                                    <td>win</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                    <td>&nbsp;</td>
+                                                                </tr>
+                                                            </table>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane fade" id="duel">..2.</div>
+                                    <div role="tabpanel" class="tab-pane fade" id="cash">.3..</div>
+                                    <div role="tabpanel" class="tab-pane fade" id="piramid">..4.</div>
+                                    <div role="tabpanel" class="tab-pane fade" id="cells">..5.</div>
+                                </div>
+
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/wow.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,262 @@
+.wrap_roulette {
+    background-image: url('../images/bg_games_roulette.png');
+}
+.roulette_block{
+    position:relative;
+    margin-top: 19px;
+    padding-top: 33px;
+    min-height: 760px;
+}
+.roulette_left_bottom {
+    position: absolute;
+    bottom: 0;
+    left: -25px;
+    background-image: url('../images/roulette_left_bottom.png');
+    width:204px;
+    height:42px;
+}
+
+.roulette_left_top {
+    position: absolute;
+    top: 0;
+    left: -26px;
+    background-image: url('../images/roulette_left_top.png');
+    width: 139px;
+    height: 138px;
+}
+.roulette_right_top {
+    position: absolute;
+    top: 26px;
+    right: -26px;
+    background-image: url('../images/roulette_right_top.png');
+    width: 72px;
+    height: 257px;
+}
+.roulette_right_bottom {
+    position: absolute;
+    bottom: 0;
+    right: -4px;
+    background-image: url('../images/roulette_right_bottom.png');
+    width: 455px;
+    height: 138px;
+}
+.roulette_block h2{
+    color:#000000;
+    font-size:36px;
+    font-family: 'ChinaCyr';
+    text-align:center;
+    font-weight:bold;
+}
+.point_bank{
+    position: absolute;
+    top: 64px;
+    left: 24px;
+}
+.point_bank p{
+    font-family: 'OpenSans-Regular';
+    font-size:18px;
+    color:#000000;
+    text-transform:uppercase;
+    margin-bottom: 5px;
+}
+.point_bank span{
+    font-family: 'HanZi';
+    color: #000000;
+    vertical-align: top;
+    font-size: 30px;
+    margin-top: 10px;
+    display: inline-block;
+}
+.pb_players{
+    left:auto;
+    right:58px;
+}
+.timeIcon {
+    background-image: url(../images/timeIcon.png);
+    width: 119px;
+    height: 119px;
+    position: absolute;
+    top: 97px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+.innerTimeIcon{
+    width: 8px;
+    height: 8px;
+    background-color: #f23600;
+    border-radius: 10px;
+    position: absolute;
+    top: 55px;
+    left: -4px;
+    -webkit-transition: all 60s;
+    transition: all 60s;
+    -webkit-transform-origin: 63px;
+            transform-origin: 63px;
+    -webkit-transform: rotateZ(90deg);
+            transform: rotateZ(90deg);
+    -webkit-transition-timing-function: linear;
+            transition-timing-function: linear;
+}
+.innerTimeIcon.active{
+    -webkit-transform: rotateZ(450deg);
+            transform: rotateZ(450deg);
+}
+.seconds60{
+    font-family: 'HanZi';
+    font-size:24px;
+    position:absolute;
+    top:0;
+    right:-161px;
+    color:#040404;
+}
+.sub_ruletka{
+    position: relative;
+}
+.ruletka{
+    max-width: 905px;
+    max-height: 150px;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top: 200px;
+}
+.timeIconHren {
+    background-image: url('../images/timeIconHren.png');
+    width:33px;
+    height:34px;
+    position:absolute;
+    top: -28px;
+    left: -5px;
+    right:0;
+    margin:0 auto;
+}
+.igrok{
+    text-align:center;
+    border: 1px solid #121212;
+    border-radius: 20px;
+    max-width: 86px;
+    padding-top: 8px;
+    padding-bottom: 10px;
+    background-color:#ffffff;
+    float:left;
+    margin-bottom: 10px;
+    margin-right:3px;
+}
+.igrok h3{
+    font-size:19px;
+    color:#5d5c6e;
+    text-align:center;
+    font-family: 'ChinaCyr';
+    margin-bottom: 5px;
+}
+.igrok h4{
+    font-size:19px;
+    color:#f23600;
+    text-align:center;
+    font-family: 'ChinaCyr';
+    margin-top: 5px;
+}
+.sl1_ninja1_abs {
+    position: absolute;
+    top: 236px;
+    left: -213px;
+    background-image: url(../images/sl1_ninja1.png);
+    width: 317px;
+    height: 377px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.buttonsGroup input[type="button"]{
+    background-color: rgba(58, 58, 70, 0.25);
+    border: 0;
+    border-right: 2px solid #a8a8ab;
+    padding: 22px 20px;
+    margin: 0;
+    outline: 0;
+    margin-left: -4px;
+    font-family: 'HanZi';
+    color:#000000;
+    font-size:14.5px;
+    -webkit-transition:all 0.5s;
+    transition:all 0.5s;
+}
+.buttonsGroup input[type="button"].all_in{
+    background-color: rgba(58, 58, 70, 0.5);
+    color:#fff;
+}
+.sub_buttonsGroup{
+    width:100%;
+    max-width:520px;
+    margin:0 auto;
+    margin-top: 31px;
+    text-align:center;
+    position: relative;
+}
+.buttonsGroup{
+    padding-left: 7px;
+}
+.buttonsGroup input[type="button"]:hover{
+    opacity:0.8;
+}
+.stavka{
+    position:relative;
+}
+.stavka input[type="number"] {
+    font-family: 'HanZi';
+    font-size: 21px;
+    color: #040404;
+    background-image: url(../images/stavka.png);
+    background-repeat: no-repeat;
+    background-position: 19px center;
+    background-color: rgba(255, 255, 255, 0.54);
+    border: 1px solid #d3d3d3;
+    border-radius: 20px;
+    padding: 13px 73px;
+    margin-top: 12px;
+    margin-bottom: 24px;
+    outline:0;
+    width: 100%;
+}
+.stavka input[type="number"]::-webkit-input-placeholder {color:#040404;}
+.stavka input[type="number"]::-moz-placeholder          {color:#040404;}/* Firefox 19+ */
+.stavka input[type="number"]:-moz-placeholder           {color:#040404;}/* Firefox 18- */
+.stavka input[type="number"]:-ms-input-placeholder      {color:#040404;}
+
+
+.stavka input[type="reset"] {
+    background-image: url('../images/basket.png');
+    background-repeat:no-repeat;
+    background-size:contain;
+    width:18px;
+    height:20px;
+    background-color:rgba(0, 0, 0, 0.00);
+    border:0;
+    outline:0;
+    position:absolute;
+    top: 30px;
+    right: 18px;
+}
+
+.make_a_bet {
+    background-image: url(../images/submit_stavka.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    outline: 0;
+    border: 0;
+    background-color: rgba(51, 51, 51, 0);
+    padding: 31px 57px;
+    color: #f4f4f4;
+    text-transform: uppercase;
+    font-family: 'ChinaCyr';
+    font-size: 21.5px;
+    font-weight: bold;
+    -webkit-transition:color 0.5s;
+    transition:color 0.5s;
+}
+.make_a_bet:hover{
+    color:#000;
+}
+.wrap_roulette .footer{
+    position: relative;
+    bottom: 63px;
+}

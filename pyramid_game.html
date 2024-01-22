@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=100% width=device-width, initial-scale=1">
+    <title>PYRAMID GAME</title>
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="css/animate.css" rel="stylesheet" />
+    <link href="css/fonts.css" rel="stylesheet" />
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="css/history.css" rel="stylesheet" />
+    <link href="css/pyramid_game.css" rel="stylesheet" />
+
+    <link href="css/media.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/device.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.backstretch.js"></script>
+    <script>
+        $(document).ready(function () {
+            $.backstretch("bg.jpg");
+        });
+    </script>
+</head>
+<body>
+    <div class="pyramid_game_optimize1"></div>
+    <div class="pyramid_game_optimize2"></div>
+    <div class="pyramid_game_optimize3"></div>
+    <div class="pyramid_game_optimize4"></div>
+    <div class="pyramid_game_optimize5"></div>
+    <div class="pyramid_game_optimize6"></div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-width">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <div class="content-box-04">
+                                    <div class="content-box-04-wrapp">
+                                        <div class="info-box-01">
+                                            <h3 class="info-title">CURRENT TICKET</h3>
+                                            <form action="./" class="form-01">
+                                                <div class="block-form-01">
+                                                    <div class="block-form-01__wrapp-01">
+                                                        <label class="block-form-01__label">Hash</label>
+                                                        <textarea class="block-form-01__text-01" placeholder="" name="na_01"></textarea>
+                                                    </div>
+                                                    <div class="block-form-01__wrapp-02">
+                                                        <div class="form-box-01">
+                                                            <label class="block-form-01__label">Server Seed</label>
+                                                            <input class="block-form-01__text-02" placeholder="1111110000100" type="text" name="text01">
+                                                        </div>
+                                                        <div class="form-box-02">
+                                                            <label class="block-form-01__label">Client Seed</label>
+                                                            <input class="block-form-01__text-02" placeholder="0010101000101" type="text" name="text01">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="block-form-02">
+                                                    <div class="block-form-02__wrapp-01">
+                                                        <label class="block-form-02__label">Number</label>
+                                                        <textarea class="block-form-02__text-01" placeholder="" name="na_01"></textarea>
+                                                    </div>
+                                                    <div class="block-form-02__wrapp-02">
+                                                        <label class="block-form-02__label">Result</label>
+                                                        <div class="form-box-01">
+                                                            <input class="block-form-02__text-02" placeholder="0010101000101" type="text">
+                                                        </div>
+                                                        <div class="form-box-02">
+                                                            <button class="block-form-02__btn" type="button">VERIFY</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="content-box-04-wrapp">
+                                    <div class="info-box-02">
+                                        <h3 class="info-title">NEXT TICKET</h3>
+                                        <form action="./" class="form-02">
+                                            <div class="block-form-03">
+                                                <div class="block-form-03__wrapp-01">
+                                                    <label class="block-form-03__label">Hash</label>
+                                                    <textarea class="block-form-03__text-01" placeholder="" name="na_01"></textarea>
+                                                    <label class="block-form-03__label">Client Seed</label>
+                                                    <input class="block-form-03__text-02" placeholder="0010101000101" type="text" name="text01">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- Modal fairGame-->
+        <div class="modal fade game_rules" id="fairGame" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span></span></button>
+                        <div class="clear"></div>
+                        <div>
+                            <img src="images/mkModal.png" alt="mkModal" />
+                            <h2>Fair game</h2>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            As each round begins the service will generate a random number from 0 to 1 (for example, 0.21492) + salt. Salt is a random set of symbols (for example: iGwpMtsYs). These symbols are used to prevent the round's number decryption.
+                            The round's number and salt are encrypted by the service through algorithm <a href="#"> sha224 </a> and are shown as each round begins.
+                        </p>
+                        <p>
+                            In the end of the round previously encrypted number is multiplied by the total bank of the round points, thus getting the number of the winning point.
+                        </p>
+                        <p>
+                            Pls see the example: In the end the total round bank is 83657 points, and the random number was 0.21492. So the service multiplies this number by 83657 points and gets the number 17979, that’s will be the winning point. The winner of the round will be the player, who deposited this point.
+                        </p>
+                        <p>
+                            The fair play stands at the principle that we cannot know what exactly the points bank will be in the end of the round, and the random number for multiplication is given right in the beginning of the game. That's why you can be sure that we have no ability to influence the game results .
+                        </p>
+                        <p>
+                            You can check that the result of the game wasn’t prearranged. For this, use any of the online services, for example,<a href="#"> http://www.miniwebtool.com/sha224-hash-generator/. </a> In the end of the round take the round's number+salt, which was encrypted, and repeatedly encrypt it at the service. You will see the same hash value as the one specified in the beginning of the round. This will prove the accuracy of determining the winning point.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End modal fairGame-->
+        <!-- Modal fairRules-->
+        <div class="modal fade game_rules" id="fairRules" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span></span></button>
+                        <div class="clear"></div>
+                        <div>
+                            <img src="images/mkModal.png" alt="mkModal" />
+                            <h2>Fair game</h2>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <h3>How I can play Roulette?</h3>
+                        <p>
+                            The players deposit certain amount of points into the game. After each spin there is only one winner who gets all the points. The spin lasts 60 seconds. The more points you deposit, the higher winning chances you have. But there is the real chance to win even with the smallest bet!
+                        </p>
+                        <p>
+                            The winner is determined by our fair play system. Read more in the <a href="#">“Fair Game”</a> tab.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End modal fairRules-->
+        <div class="pyramid_game">
+            <!-- menu -->
+            <div id="menue" class="navbar navbar-default navbar-static-top" role="navigation">
+                <a href="index.html" class="logo"></a>
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="index.html">Home</a></li>
+                            <li>
+                                <a class="dropdown" data-toggle="dropdown" href="#">
+                                    games<span style="display:none;" class="iconBlock glyphicon glyphicon-menu-down"></span>
+                                </a>
+                                <ul class="dropdown-menu multi-level" role="menu">
+                                    <!-- aria-labelledby="dropdownMenu"-->
+                                    <li class="dropdown-submenu">
+                                        <a tabindex="-1" href="games.html">User & user</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a tabindex="-1" href="roulette.html">Roulette</a></li>
+                                            <li><a href="#">Duel</a></li>
+                                            <li><a href="#">Cells</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Cash roulette</a></li>
+                                    <li><a href="#">Pyramid game</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">history</a></li>
+                            <li><a href="#" class="active">top</a></li>
+                            <li><a href="#">faq</a></li>
+                            <li><a href="#">free points</a></li>
+                            <li style="display: none;">
+                                <div class="userNameExit">
+                                    <div class="userNameExit-userNme">
+                                        <div class="userNameExit-usernameBlock">
+                                            <a href="#" class="userNameExit__userNme">user name</a>
+                                            <img src="images/kabinet/userNameExit__delimiter.png" alt="userNameExit__delimiter" class="userNameExit__delimiter" />
+                                            <div class="userNameExit__balance">0</div>
+                                        </div>
+                                        <div class="userNameExit_wrap-border">
+                                            <div class="userNameExit-border">
+                                                <a href="#">
+                                                    <img src="images/kabinet/userNameExit-ava.png" class="userNameExit-ava" alt="Alternate Text" />
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="line_for_menue"></div>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
+            <!-- end menu -->
+
+            <div class="container">
+                <div class="row">
+                    <div class="history lavel">
+                        <div class="roulette_left_top"></div>
+                        <div class="roulette_right_top"></div>
+                        <div class="roulette_bottom"></div>
+                        <div class="fairGameModals">
+                            <a href="#" data-toggle="modal" data-target="#fairGame">Fair game</a>
+                            <a href="#" data-toggle="modal" data-target="#fairRules">Rules</a>
+                        </div>
+                        <h2>pyramid game</h2>
+                        <div>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-4 col-md-push-4 z-index-1">
+                                        <div class="pg-center">
+                                            <div class="pg-center-winer">Take the main prize!</div>
+                                            <div class="ninja-start">
+                                                <div class="ninja-start-gun ninja-start-gun1"></div>
+                                                <div class="ninja-start-gun ninja-start-gun2"></div>
+                                                <div class="ninja-start-gun ninja-start-gun3"></div>
+                                                <div class="ninja-start-gun ninja-start-gun4"></div>
+                                                <div class="ninja-start-gun ninja-start-gun5"></div>
+                                                <div class="ninja-start-gun ninja-start-gun6"></div>
+                                                <div class="ninja-start-gun ninja-start-gun7"></div>
+                                                <div class="ninja-start-gun ninja-start-gun8"></div>
+                                                <div class="ninja-start-gun ninja-start-gun9"></div>
+                                                <div class="ninja-start-gun ninja-start-gun10"></div>
+                                            </div>
+                                            <div class="pg-center-row">
+                                                <button type="button" class="btn disabled">260p</button>
+                                                <button type="button" class="btn disabled">260p</button>
+                                                <button type="button" class="btn disabled">260p</button>
+                                            </div>
+                                            <div class="pg-center-row">
+                                                <button type="button" class="btn disabled">175p</button>
+                                                <button type="button" class="btn disabled">175p</button>
+                                                <button type="button" class="btn disabled">175p</button>
+                                            </div>
+                                            <div class="pg-center-row">
+                                                <button type="button" class="btn disabled">120p</button>
+                                                <button type="button" class="btn disabled">120p</button>
+                                                <button type="button" class="btn disabled">120p</button>
+                                            </div>
+                                            <div class="pg-center-row">
+                                                <button type="button" class="btn disabled">80p</button>
+                                                <button type="button" class="btn disabled">80p</button>
+                                                <button type="button" class="btn disabled">80p</button>
+                                            </div>
+                                            <div class="pg-center-row">
+                                                <button type="button" class="btn disabled">55p</button>
+                                                <button type="button" class="btn disabled">55p</button>
+                                                <button type="button" class="btn disabled">55p</button>
+                                            </div>
+                                            <div class="pg-center-row">
+                                                <button type="button" class="btn disabled">35p</button>
+                                                <button type="button" class="btn disabled">35p</button>
+                                                <button type="button" class="btn disabled">35p</button>
+                                            </div>
+                                            <div class="pg-center-row">
+                                                <button type="button" class="btn disabled">25p</button>
+                                                <button type="button" class="btn disabled">25p</button>
+                                                <button type="button" class="btn disabled">25p</button>
+                                            </div>
+                                            <div class="pg-center-row">
+                                                <button type="button" class="btn disabled">15p</button>
+                                                <button type="button" class="btn disabled">15p</button>
+                                                <button type="button" class="btn disabled">15p</button>
+                                            </div>
+                                            <div class="pg-center-row">
+                                                <button type="button" class="btn disabled">10p</button>
+                                                <button type="button" class="btn disabled">10p</button>
+                                                <button type="button" class="btn disabled">10p</button>
+                                            </div>
+                                            <div class="pg-center-row">
+                                                <button type="button">5p</button>
+                                                <button type="button">5p</button>
+                                                <button type="button" class="try_again btn disabled">5p</button>
+                                            </div>
+                                            <div class="count-controller">
+                                                <form name="rate" action="#" method="post">
+                                                    <button class="count-controller-btn count-controller-min">min</button>
+                                                    <button class="count-controller-btn count-controller-minus">-</button>
+                                                    <input type="number" value="5" class="count-controller-rate count-controller-btn" />
+                                                    <button class="count-controller-btn count-controller-plus">+</button>
+                                                    <button class="count-controller-btn count-controller-max">max</button>
+                                                    <div>
+                                                        <input type="submit" name="name" value="play" class="count-controller-submit" />
+                                                    </div>
+                                                    <div class="set-lavel">
+                                                        <button class="set-lavel_easy"><img src="images/piramida/set-lavel_easy_icon.png" alt="lavel_easy_icon" />easy</button>
+                                                        <button class="set-lavel_middle"><img src="images/piramida/set-lavel_middle_icon.png" alt="lavel_middle_icon" />middle</button>
+                                                        <button class="set-lavel_hard"><img src="images/piramida/set-lavel_hard_icon.png" alt="lavel_hard_icon" />hard</button>
+                                                    </div>
+
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="check_the_ticket_btn">
+                                            <button data-toggle="modal" data-target="#myModal">Check the ticket</button>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-sm-12 col-md-4 col-md-pull-4">
+                                        <div class="pg-left">
+                                            <h2>Wall of heroes</h2>
+                                            <div class="pg-tables">
+                                                <table class="pg-left-header">
+                                                    <tr>
+                                                        <th>Rank</th>
+                                                        <th>Player</th>
+                                                        <th>Bets</th>
+                                                    </tr>
+                                                </table>
+                                                <table>
+                                                    <tr>
+                                                        <td class="pg-left-number">1</td>
+                                                        <td class="pg-left-name">Name</td>
+                                                        <td class="pg-left-money"><strong>5</strong><span>p</span></td>
+                                                    </tr>
+                                                </table>
+                                                <table>
+                                                    <tr>
+                                                        <td class="pg-left-number">2</td>
+                                                        <td class="pg-left-name">Name</td>
+                                                        <td class="pg-left-money"><strong>1235</strong><span>p</span></td>
+                                                    </tr>
+                                                </table>
+                                                <table>
+                                                    <tr>
+                                                        <td class="pg-left-number">3</td>
+                                                        <td class="pg-left-name">Name</td>
+                                                        <td class="pg-left-money"><strong>5</strong><span>p</span></td>
+                                                    </tr>
+                                                </table>
+                                                <table>
+                                                    <tr>
+                                                        <td class="pg-left-number">4</td>
+                                                        <td class="pg-left-name">Name</td>
+                                                        <td class="pg-left-money"><strong>5</strong><span>p</span></td>
+                                                    </tr>
+                                                </table>
+                                                <table>
+                                                    <tr>
+                                                        <td class="pg-left-number">5</td>
+                                                        <td class="pg-left-name">Name</td>
+                                                        <td class="pg-left-money"><strong>5</strong><span>p</span></td>
+                                                    </tr>
+                                                </table>
+                                                <table>
+                                                    <tr>
+                                                        <td class="pg-left-number">6</td>
+                                                        <td class="pg-left-name">Name</td>
+                                                        <td class="pg-left-money"><strong>5</strong><span>p</span></td>
+                                                    </tr>
+                                                </table>
+                                                <table>
+                                                    <tr>
+                                                        <td class="pg-left-number">7</td>
+                                                        <td class="pg-left-name">Name</td>
+                                                        <td class="pg-left-money"><strong>5</strong><span>p</span></td>
+                                                    </tr>
+                                                </table>
+                                                <table>
+                                                    <tr>
+                                                        <td class="pg-left-number">8</td>
+                                                        <td class="pg-left-name">Name</td>
+                                                        <td class="pg-left-money"><strong>5</strong><span>p</span></td>
+                                                    </tr>
+                                                </table>
+                                                <table>
+                                                    <tr>
+                                                        <td class="pg-left-number">9</td>
+                                                        <td class="pg-left-name">Name</td>
+                                                        <td class="pg-left-money"><strong>5</strong><span>p</span></td>
+                                                    </tr>
+                                                </table>
+                                                <table>
+                                                    <tr>
+                                                        <td class="pg-left-number">10</td>
+                                                        <td class="pg-left-name">Name</td>
+                                                        <td class="pg-left-money"><strong>5</strong><span>p</span></td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-4">
+                                        <div class="pg-right">
+                                            <div class="pg-gs pg-right-gamePlayed">
+                                                <p>4825634</p>
+                                                <span>Games played</span>
+                                            </div>
+                                            <div class="pg-gs pg-right-maxPayout">
+                                                <p>114.123.256</p>
+                                                <span>Max payout</span>
+                                            </div>
+                                            <div class="clear"></div>
+                                            <!-- Nav tabs -->
+                                            <ul class="nav nav-tabs pg-right-tabs">
+                                                <li class="active"><a href="#all_games" data-toggle="tab">all games</a></li>
+                                                <li><a href="#my_games" data-toggle="tab">my games</a></li>
+                                                <li><a href="#winnings" data-toggle="tab">winnings</a></li>
+                                            </ul>
+
+                                            <!-- Tab panes -->
+                                            <div class="tab-content pg-right-tab-content">
+                                                <div class="tab-pane fade in active" id="all_games">
+                                                    <div class="pg-right">
+                                                        <div class="pg-tables">
+                                                            <table class="pg-right-header">
+                                                                <tr>
+                                                                    <th class="pg-right-name">Player</th>
+                                                                    <th class="pg-right-bet">Bet</th>
+                                                                    <th class="pg-right-profit">Profit</th>
+                                                                    <th class="pg-right-step">Step</th>
+                                                                    <th class="pg-right-lavel"></th>
+                                                                </tr>
+                                                            </table>
+                                                            <table>
+                                                                <tr>
+                                                                    <td class="pg-right-name">Name</td>
+                                                                    <td class="pg-right-bet"><strong>1</strong><span>p</span></td>
+                                                                    <td class="pg-right-profit">-1</td>
+                                                                    <td class="pg-right-step">1</td>
+                                                                    <td class="pg-right-lavel">
+                                                                        <img src="images/piramida/icon_easy.png" alt="icon_easy" />
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <table>
+                                                                <tr>
+                                                                    <td class="pg-right-name">Name</td>
+                                                                    <td class="pg-right-bet"><strong>5</strong><span>p</span></td>
+                                                                    <td class="pg-right-profit">-5</td>
+                                                                    <td class="pg-right-step">1</td>
+                                                                    <td class="pg-right-lavel">
+                                                                        <img src="images/piramida/icon_hard.png" alt="icon_hard" />
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <table>
+                                                                <tr>
+                                                                    <td class="pg-right-name">Name</td>
+                                                                    <td class="pg-right-bet"><strong>5</strong><span>p</span></td>
+                                                                    <td class="pg-right-profit">-5</td>
+                                                                    <td class="pg-right-step">1</td>
+                                                                    <td class="pg-right-lavel">
+                                                                        <img src="images/piramida/icon_middle.png" alt="icon_middle" />
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <table>
+                                                                <tr>
+                                                                    <td class="pg-right-name">Name</td>
+                                                                    <td class="pg-right-bet"><strong>5</strong><span>p</span></td>
+                                                                    <td class="pg-right-profit">-5</td>
+                                                                    <td class="pg-right-step">1</td>
+                                                                    <td class="pg-right-lavel">
+                                                                        <img src="images/piramida/icon_easy.png" alt="icon_easy" />
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <table>
+                                                                <tr>
+                                                                    <td class="pg-right-name">Name</td>
+                                                                    <td class="pg-right-bet"><strong>5</strong><span>p</span></td>
+                                                                    <td class="pg-right-profit">-5</td>
+                                                                    <td class="pg-right-step">1</td>
+                                                                    <td class="pg-right-lavel">
+                                                                        <img src="images/piramida/icon_hard.png" alt="icon_hard" />
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <table>
+                                                                <tr>
+                                                                    <td class="pg-right-name">Name</td>
+                                                                    <td class="pg-right-bet"><strong>5</strong><span>p</span></td>
+                                                                    <td class="pg-right-profit">-5</td>
+                                                                    <td class="pg-right-step">1</td>
+                                                                    <td class="pg-right-lavel">
+                                                                        <img src="images/piramida/icon_middle.png" alt="icon_middle" />
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <table>
+                                                                <tr>
+                                                                    <td class="pg-right-name">Name</td>
+                                                                    <td class="pg-right-bet"><strong>5</strong><span>p</span></td>
+                                                                    <td class="pg-right-profit">-5</td>
+                                                                    <td class="pg-right-step">1</td>
+                                                                    <td class="pg-right-lavel">
+                                                                        <img src="images/piramida/icon_easy.png" alt="icon_easy" />
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <table>
+                                                                <tr>
+                                                                    <td class="pg-right-name">Name</td>
+                                                                    <td class="pg-right-bet"><strong>5</strong><span>p</span></td>
+                                                                    <td class="pg-right-profit">-5</td>
+                                                                    <td class="pg-right-step">1</td>
+                                                                    <td class="pg-right-lavel">
+                                                                        <img src="images/piramida/icon_hard.png" alt="icon_hard" />
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <table>
+                                                                <tr>
+                                                                    <td class="pg-right-name">Name</td>
+                                                                    <td class="pg-right-bet"><strong>5</strong><span>p</span></td>
+                                                                    <td class="pg-right-profit">-5</td>
+                                                                    <td class="pg-right-step">1</td>
+                                                                    <td class="pg-right-lavel">
+                                                                        <img src="images/piramida/icon_middle.png" alt="icon_middle" />
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <table>
+                                                                <tr>
+                                                                    <td class="pg-right-name">Name</td>
+                                                                    <td class="pg-right-bet"><strong>5</strong><span>p</span></td>
+                                                                    <td class="pg-right-profit">-5</td>
+                                                                    <td class="pg-right-step">1</td>
+                                                                    <td class="pg-right-lavel">
+                                                                        <img src="images/piramida/icon_middle.png" alt="icon_middle" />
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade" id="my_games">
+                                                    <div class="pg-right">
+                                                        <div class="pg-tables">
+                                                            <table class="pg-right-header">
+                                                                <tr>
+                                                                    <th class="pg-right-name">Player</th>
+                                                                    <th class="pg-right-bet">Bet</th>
+                                                                    <th class="pg-right-profit">Profit</th>
+                                                                    <th class="pg-right-step">Step</th>
+                                                                    <th class="pg-right-lavel"></th>
+                                                                </tr>
+                                                            </table>
+                                                            <table>
+                                                                <tr>
+                                                                    <td class="pg-right-name">Name</td>
+                                                                    <td class="pg-right-bet"><strong>2</strong><span>p</span></td>
+                                                                    <td class="pg-right-profit">-2</td>
+                                                                    <td class="pg-right-step">2</td>
+                                                                    <td class="pg-right-lavel">
+                                                                        <img src="images/piramida/icon_easy.png" alt="icon_easy" />
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <table>
+                                                                <tr>
+                                                                    <td class="pg-right-name">Name</td>
+                                                                    <td class="pg-right-bet"><strong>5</strong><span>p</span></td>
+                                                                    <td class="pg-right-profit">-5</td>
+                                                                    <td class="pg-right-step">1</td>
+                                                                    <td class="pg-right-lavel">
+                                                                        <img src="images/piramida/icon_hard.png" alt="icon_hard" />
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <table>
+                                                                <tr>
+                                                                    <td class="pg-right-name">Name</td>
+                                                                    <td class="pg-right-bet"><strong>5</strong><span>p</span></td>
+                                                                    <td class="pg-right-profit">-5</td>
+                                                                    <td class="pg-right-step">1</td>
+                                                                    <td class="pg-right-lavel">
+                                                                        <img src="images/piramida/icon_middle.png" alt="icon_middle" />
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <table>
+                                                                <tr>
+                                                                    <td class="pg-right-name">Name</td>
+                                                                    <td class="pg-right-bet"><strong>5</strong><span>p</span></td>
+                                                                    <td class="pg-right-profit">-5</td>
+                                                                    <td class="pg-right-step">1</td>
+                                                                    <td class="pg-right-lavel">
+                                                                        <img src="images/piramida/icon_easy.png" alt="icon_easy" />
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <table>
+                                                                <tr>
+                                                                    <td class="pg-right-name">Name</td>
+                                                                    <td class="pg-right-bet"><strong>5</strong><span>p</span></td>
+                                                                    <td class="pg-right-profit">-5</td>
+                                                                    <td class="pg-right-step">1</td>
+                                                                    <td class="pg-right-lavel">
+                                                                        <img src="images/piramida/icon_hard.png" alt="icon_hard" />
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <table>
+                                                                <tr>
+                                                                    <td class="pg-right-name">Name</td>
+                                                                    <td class="pg-right-bet"><strong>5</strong><span>p</span></td>
+                                                                    <td class="pg-right-profit">-5</td>
+                                                                    <td class="pg-right-step">1</td>
+                                                                    <td class="pg-right-lavel">
+                                                                        <img src="images/piramida/icon_middle.png" alt="icon_middle" />
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <table>
+                                                                <tr>
+                                                                    <td class="pg-right-name">Name</td>
+                                                                    <td class="pg-right-bet"><strong>5</strong><span>p</span></td>
+                                                                    <td class="pg-right-profit">-5</td>
+                                                                    <td class="pg-right-step">1</td>
+                                                                    <td class="pg-right-lavel">
+                                                                        <img src="images/piramida/icon_easy.png" alt="icon_easy" />
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <table>
+                                                                <tr>
+                                                                    <td class="pg-right-name">Name</td>
+                                                                    <td class="pg-right-bet"><strong>5</strong><span>p</span></td>
+                                                                    <td class="pg-right-profit">-5</td>
+                                                                    <td class="pg-right-step">1</td>
+                                                                    <td class="pg-right-lavel">
+                                                                        <img src="images/piramida/icon_hard.png" alt="icon_hard" />
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <table>
+                                                                <tr>
+                                                                    <td class="pg-right-name">Name</td>
+                                                                    <td class="pg-right-bet"><strong>5</strong><span>p</span></td>
+                                                                    <td class="pg-right-profit">-5</td>
+                                                                    <td class="pg-right-step">1</td>
+                                                                    <td class="pg-right-lavel">
+                                                                        <img src="images/piramida/icon_middle.png" alt="icon_middle" />
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                            <table>
+                                                                <tr>
+                                                                    <td class="pg-right-name">Name</td>
+                                                                    <td class="pg-right-bet"><strong>5</strong><span>p</span></td>
+                                                                    <td class="pg-right-profit">-5</td>
+                                                                    <td class="pg-right-step">1</td>
+                                                                    <td class="pg-right-lavel">
+                                                                        <img src="images/piramida/icon_middle.png" alt="icon_middle" />
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade" id="winnings">
+
+                                                    <div class="pg-tables">
+                                                        <table class="pg-right-header">
+                                                            <tr>
+                                                                <th class="pg-right-name">Player</th>
+                                                                <th class="pg-right-bet">Bet</th>
+                                                                <th class="pg-right-profit">Profit</th>
+                                                                <th class="pg-right-step">Step</th>
+                                                                <th class="pg-right-lavel"></th>
+                                                            </tr>
+                                                        </table>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="pg-right-name">Name</td>
+                                                                <td class="pg-right-bet"><strong>3</strong><span>p</span></td>
+                                                                <td class="pg-right-profit">-3</td>
+                                                                <td class="pg-right-step">3</td>
+                                                                <td class="pg-right-lavel">
+                                                                    <img src="images/piramida/icon_easy.png" alt="icon_easy" />
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="pg-right-name">Name</td>
+                                                                <td class="pg-right-bet"><strong>5</strong><span>p</span></td>
+                                                                <td class="pg-right-profit">-5</td>
+                                                                <td class="pg-right-step">1</td>
+                                                                <td class="pg-right-lavel">
+                                                                    <img src="images/piramida/icon_hard.png" alt="icon_hard" />
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="pg-right-name">Name</td>
+                                                                <td class="pg-right-bet"><strong>5</strong><span>p</span></td>
+                                                                <td class="pg-right-profit">-5</td>
+                                                                <td class="pg-right-step">1</td>
+                                                                <td class="pg-right-lavel">
+                                                                    <img src="images/piramida/icon_middle.png" alt="icon_middle" />
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="pg-right-name">Name</td>
+                                                                <td class="pg-right-bet"><strong>5</strong><span>p</span></td>
+                                                                <td class="pg-right-profit">-5</td>
+                                                                <td class="pg-right-step">1</td>
+                                                                <td class="pg-right-lavel">
+                                                                    <img src="images/piramida/icon_easy.png" alt="icon_easy" />
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="pg-right-name">Name</td>
+                                                                <td class="pg-right-bet"><strong>5</strong><span>p</span></td>
+                                                                <td class="pg-right-profit">-5</td>
+                                                                <td class="pg-right-step">1</td>
+                                                                <td class="pg-right-lavel">
+                                                                    <img src="images/piramida/icon_hard.png" alt="icon_hard" />
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="pg-right-name">Name</td>
+                                                                <td class="pg-right-bet"><strong>5</strong><span>p</span></td>
+                                                                <td class="pg-right-profit">-5</td>
+                                                                <td class="pg-right-step">1</td>
+                                                                <td class="pg-right-lavel">
+                                                                    <img src="images/piramida/icon_middle.png" alt="icon_middle" />
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="pg-right-name">Name</td>
+                                                                <td class="pg-right-bet"><strong>5</strong><span>p</span></td>
+                                                                <td class="pg-right-profit">-5</td>
+                                                                <td class="pg-right-step">1</td>
+                                                                <td class="pg-right-lavel">
+                                                                    <img src="images/piramida/icon_easy.png" alt="icon_easy" />
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="pg-right-name">Name</td>
+                                                                <td class="pg-right-bet"><strong>5</strong><span>p</span></td>
+                                                                <td class="pg-right-profit">-5</td>
+                                                                <td class="pg-right-step">1</td>
+                                                                <td class="pg-right-lavel">
+                                                                    <img src="images/piramida/icon_hard.png" alt="icon_hard" />
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="pg-right-name">Name</td>
+                                                                <td class="pg-right-bet"><strong>5</strong><span>p</span></td>
+                                                                <td class="pg-right-profit">-5</td>
+                                                                <td class="pg-right-step">1</td>
+                                                                <td class="pg-right-lavel">
+                                                                    <img src="images/piramida/icon_middle.png" alt="icon_middle" />
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                        <table>
+                                                            <tr>
+                                                                <td class="pg-right-name">Name</td>
+                                                                <td class="pg-right-bet"><strong>5</strong><span>p</span></td>
+                                                                <td class="pg-right-profit">-5</td>
+                                                                <td class="pg-right-step">1</td>
+                                                                <td class="pg-right-lavel">
+                                                                    <img src="images/piramida/icon_middle.png" alt="icon_middle" />
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <script src="js/wow.min.js"></script>
+        <script src="js/script.js"></script>
+</body>
+</html>

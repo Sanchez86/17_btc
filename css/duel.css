@@ -1,0 +1,1467 @@
+body {
+    line-height: 1;
+    overflow: hidden;
+}
+.optimize1 {
+    background-image: url('../images/duel/PvP_left_01.png');
+}
+
+.optimize2 {
+    background-image: url('../images/duel/PvP_left_02.png');
+}
+
+.optimize3 {
+    background-image: url('../images/duel/PvP_left_03.png');
+}
+
+.optimize4 {
+    background-image: url('../images/duel/PvP_left_04.png');
+}
+
+.optimize5 {
+    background-image: url('../images/duel/PvP_left_05.png');
+}
+
+.optimize6 {
+    background-image: url('../images/duel/PvP_left_06.png');
+}
+
+.optimize7 {
+    background-image: url('../images/duel/PvP_left_07.png');
+}
+
+.optimize7_1 {
+    background-image: url('../images/duel/PvP_left_08.png');
+}
+
+.optimize7_2 {
+    background-image: url('../images/duel/PvP_left_09.2.png');
+}
+
+.optimize8 {
+    background-image: url('../images/duel/PvP_left_win.png');
+}
+
+.optimize9 {
+    background-image: url('../images/duel/PvP_right_01.png');
+}
+
+.optimize10 {
+    background-image: url('../images/duel/PvP_right_02.png');
+}
+
+.optimize11 {
+    background-image: url('../images/duel/PvP_right_03.png');
+}
+
+.optimize12 {
+    background-image: url('../images/duel/PvP_right_04.png');
+}
+
+.optimize13 {
+    background-image: url('../images/duel/PvP_right_05.png');
+}
+
+.optimize14 {
+    background-image: url('../images/duel/PvP_right_06.png');
+}
+
+.optimize15 {
+    background-image: url('../images/duel/PvP_right_07.png');
+}
+
+.optimize15_1 {
+    background-image: url('../images/duel/PvP_right_08.png');
+}
+
+.optimize15_2 {
+    background-image: url('../images/duel/PvP_right_09.png');
+}
+
+.optimize16 {
+    background-image: url('../images/duel/PvP_right_win.png');
+}
+
+.resize {
+    width: 1170px;
+    margin: 0 auto;
+    -webkit-transform-origin: left;
+    transform-origin: left;
+}
+
+.wrap_lavel {
+    overflow: hidden;
+}
+
+.make_your_bet {
+    position: absolute;
+    top: 0;
+    right: 70px;
+}
+
+    .make_your_bet p {
+        color: #000;
+        font-size: 14px;
+        font-family: 'OpenSans-Regular';
+        line-height: 38px;
+    }
+
+    .make_your_bet li {
+        display: inline-block;
+        margin-right: 32px;
+    }
+
+        .make_your_bet li a {
+            color: #aaaaaa;
+            font-size: 21px;
+            font-family: 'HanZi';
+            position: relative;
+            -webkit-transition: color 0.5s;
+            transition: color 0.5s;
+        }
+
+            .make_your_bet li a.active,
+            .make_your_bet li a:hover {
+                color: #000;
+                text-decoration: none;
+            }
+
+            .make_your_bet li a:focus {
+                text-decoration: none;
+            }
+
+            .make_your_bet li a.active:after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                right: -5px;
+                width: 10px;
+                height: 10px;
+                border-radius: 10px;
+                background-color: #f23600;
+            }
+
+.duel_bg {
+    background-image: url('../images/duel/duel_bg.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    bottom: 128px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    z-index: 1000;
+}
+
+    .duel_bg.active {
+        width: 277px;
+        height: 247px;
+        opacity: 0.1;
+        z-index: 0 !important;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";
+    }
+
+.duel_vs {
+    background-image: url('../images/duel/duel_vs.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    top: 84px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 156px;
+    height: 209px;
+    z-index: 1;
+    -webkit-transition: opacity 1s;
+    transition: opacity 1s;
+}
+
+    .duel_vs.active {
+        opacity: 0.1 !important;
+        z-index: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";
+    }
+
+.duel {
+    z-index: 100;
+}
+
+.duel_left,
+.duel_right {
+    width: 50%;
+    float: left;
+}
+
+.ninja_left.loser {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+}
+
+.ninja_right.loser {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+}
+
+.ninja_left {
+    background-image: url('../images/duel/PvP_left_01.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: inherit;
+    width: 100vw;
+    height: 100vh;
+    max-width: 411px;
+    max-height: 540px;
+    float: right;
+    margin-top: -140px;
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    -webkit-transition: opacity 1s;
+    transition: opacity 1s;
+}
+
+.ninja_right {
+    background-image: url('../images/duel/PvP_right_01.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: inherit;
+    width: 100vw;
+    height: 100vh;
+    max-width: 411px;
+    max-height: 540px;
+    float: left;
+    margin-top: -140px;
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    -webkit-transition: opacity 1s;
+    transition: opacity 1s;
+}
+
+.left_win .ninja_left {
+    -webkit-animation-name: duel_left;
+    animation-name: duel_left;
+    -webkit-animation-duration: 10s;
+    animation-duration: 10s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+.left_win .ninja_right {
+    -webkit-animation-name: duel_right;
+    animation-name: duel_right;
+    -webkit-animation-duration: 10s;
+    animation-duration: 10s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+.right_win .ninja_left {
+    -webkit-animation-name: duel_left2;
+    animation-name: duel_left2;
+    -webkit-animation-duration: 10s;
+    animation-duration: 10s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+.right_win .ninja_right {
+    -webkit-animation-name: duel_right2;
+    animation-name: duel_right2;
+    -webkit-animation-duration: 10s;
+    animation-duration: 10s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes duel_left {
+    0% {
+        background-image: url('../images/duel/PvP_left_01.png');
+    }
+
+    5% {
+        background-image: url('../images/duel/PvP_left_01.png');
+    }
+
+    10% {
+        background-image: url('../images/duel/PvP_left_02.png');
+    }
+
+    15% {
+        background-image: url('../images/duel/PvP_left_02.png');
+        margin-right: 0px;
+    }
+
+    20% {
+        background-image: url('../images/duel/PvP_left_03.png');
+        margin-right: -80px;
+    }
+
+    25% {
+        background-image: url('../images/duel/PvP_left_03.png');
+    }
+
+    30% {
+        background-image: url('../images/duel/PvP_left_04.png');
+    }
+
+    35% {
+        background-image: url('../images/duel/PvP_left_04.png');
+    }
+
+    40% {
+        background-image: url('../images/duel/PvP_left_05.png');
+    }
+
+    45% {
+        background-image: url('../images/duel/PvP_left_05.png');
+    }
+
+    50% {
+        background-image: url('../images/duel/PvP_left_06.png');
+    }
+
+    55% {
+        background-image: url('../images/duel/PvP_left_06.png');
+        margin-right: -80px;
+    }
+
+    60% {
+        background-image: url('../images/duel/PvP_left_07.png');
+        margin-right: -60px;
+    }
+
+    64% {
+        background-image: url('../images/duel/PvP_left_07.png');
+        margin-right: -60px;
+    }
+
+    65% {
+        background-image: url('../images/duel/PvP_left_08.png');
+        margin-right: -100px;
+    }
+
+    75% {
+        background-image: url('../images/duel/PvP_left_08.png');
+    }
+
+    80% {
+        background-image: url('../images/duel/PvP_left_win.png');
+    }
+
+    100% {
+        background-image: url('../images/duel/PvP_left_win.png');
+        margin-right: -100px;
+    }
+}
+
+@keyframes duel_left {
+    0% {
+        background-image: url('../images/duel/PvP_left_01.png');
+    }
+
+    5% {
+        background-image: url('../images/duel/PvP_left_01.png');
+    }
+
+    10% {
+        background-image: url('../images/duel/PvP_left_02.png');
+    }
+
+    15% {
+        background-image: url('../images/duel/PvP_left_02.png');
+        margin-right: 0px;
+    }
+
+    20% {
+        background-image: url('../images/duel/PvP_left_03.png');
+        margin-right: -80px;
+    }
+
+    25% {
+        background-image: url('../images/duel/PvP_left_03.png');
+    }
+
+    30% {
+        background-image: url('../images/duel/PvP_left_04.png');
+    }
+
+    35% {
+        background-image: url('../images/duel/PvP_left_04.png');
+    }
+
+    40% {
+        background-image: url('../images/duel/PvP_left_05.png');
+    }
+
+    45% {
+        background-image: url('../images/duel/PvP_left_05.png');
+    }
+
+    50% {
+        background-image: url('../images/duel/PvP_left_06.png');
+    }
+
+    55% {
+        background-image: url('../images/duel/PvP_left_06.png');
+        margin-right: -80px;
+    }
+
+    60% {
+        background-image: url('../images/duel/PvP_left_07.png');
+        margin-right: -60px;
+    }
+
+    64% {
+        background-image: url('../images/duel/PvP_left_07.png');
+        margin-right: -60px;
+    }
+
+    65% {
+        background-image: url('../images/duel/PvP_left_08.png');
+        margin-right: -100px;
+    }
+
+    75% {
+        background-image: url('../images/duel/PvP_left_08.png');
+    }
+
+    80% {
+        background-image: url('../images/duel/PvP_left_win.png');
+    }
+
+    100% {
+        background-image: url('../images/duel/PvP_left_win.png');
+        margin-right: -100px;
+    }
+}
+
+
+@-webkit-keyframes duel_right {
+    0% {
+        background-image: url('../images/duel/PvP_right_01.png');
+    }
+
+    5% {
+        background-image: url('../images/duel/PvP_right_01.png');
+    }
+
+    10% {
+        background-image: url('../images/duel/PvP_right_02.png');
+    }
+
+    15% {
+        background-image: url('../images/duel/PvP_right_02.png');
+        margin-left: 0px;
+    }
+
+    20% {
+        background-image: url('../images/duel/PvP_right_03.png');
+        margin-left: -80px;
+    }
+
+    25% {
+        background-image: url('../images/duel/PvP_right_03.png');
+    }
+
+    30% {
+        background-image: url('../images/duel/PvP_right_04.png');
+    }
+
+    35% {
+        background-image: url('../images/duel/PvP_right_04.png');
+    }
+
+    40% {
+        background-image: url('../images/duel/PvP_right_05.png');
+    }
+
+    45% {
+        background-image: url('../images/duel/PvP_right_05.png');
+        margin-left: -80px;
+    }
+
+    50% {
+        background-image: url('../images/duel/PvP_right_06.png');
+        margin-left: -100px;
+    }
+
+    55% {
+        background-image: url('../images/duel/PvP_right_06.png');
+    }
+
+    60% {
+        background-image: url('../images/duel/PvP_right_07.png');
+    }
+
+    65% {
+        background-image: url('../images/duel/PvP_right_07.png');
+    }
+
+    70% {
+        background-image: url('../images/duel/PvP_right_09.png');
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+
+    100% {
+        background-image: url('../images/duel/PvP_right_09.png');
+        margin-left: -100px;
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    }
+}
+
+
+@keyframes duel_right {
+    0% {
+        background-image: url('../images/duel/PvP_right_01.png');
+    }
+
+    5% {
+        background-image: url('../images/duel/PvP_right_01.png');
+    }
+
+    10% {
+        background-image: url('../images/duel/PvP_right_02.png');
+    }
+
+    15% {
+        background-image: url('../images/duel/PvP_right_02.png');
+        margin-left: 0px;
+    }
+
+    20% {
+        background-image: url('../images/duel/PvP_right_03.png');
+        margin-left: -80px;
+    }
+
+    25% {
+        background-image: url('../images/duel/PvP_right_03.png');
+    }
+
+    30% {
+        background-image: url('../images/duel/PvP_right_04.png');
+    }
+
+    35% {
+        background-image: url('../images/duel/PvP_right_04.png');
+    }
+
+    40% {
+        background-image: url('../images/duel/PvP_right_05.png');
+    }
+
+    45% {
+        background-image: url('../images/duel/PvP_right_05.png');
+        margin-left: -80px;
+    }
+
+    50% {
+        background-image: url('../images/duel/PvP_right_06.png');
+        margin-left: -100px;
+    }
+
+    55% {
+        background-image: url('../images/duel/PvP_right_06.png');
+    }
+
+    60% {
+        background-image: url('../images/duel/PvP_right_07.png');
+    }
+
+    65% {
+        background-image: url('../images/duel/PvP_right_07.png');
+    }
+
+    70% {
+        background-image: url('../images/duel/PvP_right_09.png');
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+
+    100% {
+        background-image: url('../images/duel/PvP_right_09.png');
+        margin-left: -100px;
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    }
+}
+
+@-webkit-keyframes duel_left2 {
+    0% {
+        background-image: url('../images/duel/PvP_left_01.png');
+        opacity: 0.99;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=99)";
+    }
+
+    5% {
+        background-image: url('../images/duel/PvP_left_01.png');
+    }
+
+    10% {
+        background-image: url('../images/duel/PvP_left_02.png');
+    }
+
+    15% {
+        background-image: url('../images/duel/PvP_left_02.png');
+        margin-right: 0px;
+    }
+
+    20% {
+        background-image: url('../images/duel/PvP_left_03.png');
+        margin-right: -80px;
+    }
+
+    25% {
+        background-image: url('../images/duel/PvP_left_03.png');
+    }
+
+    30% {
+        background-image: url('../images/duel/PvP_left_04.png');
+    }
+
+    35% {
+        background-image: url('../images/duel/PvP_left_04.png');
+    }
+
+    40% {
+        background-image: url('../images/duel/PvP_left_05.png');
+    }
+
+    45% {
+        background-image: url('../images/duel/PvP_left_05.png');
+    }
+
+    50% {
+        background-image: url('../images/duel/PvP_left_06.png');
+    }
+
+    55% {
+        background-image: url('../images/duel/PvP_left_06.png');
+        margin-right: -80px;
+    }
+
+    60% {
+        background-image: url('../images/duel/PvP_left_07.png');
+        margin-right: -60px;
+    }
+
+    65% {
+        background-image: url('../images/duel/PvP_left_07.png');
+        margin-right: -60px;
+    }
+
+    70% {
+        background-image: url('../images/duel/PvP_left_09.2.png');
+    }
+
+    75% {
+        background-image: url('../images/duel/PvP_left_09.2.png');
+    }
+
+    80% {
+        background-image: url('../images/duel/PvP_left_09.2.png');
+        opacity: 0.99;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=99)";
+    }
+
+    100% {
+        background-image: url('../images/duel/PvP_left_09.2.png');
+        margin-right: -60px;
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    }
+}
+
+@keyframes duel_left2 {
+    0% {
+        background-image: url('../images/duel/PvP_left_01.png');
+        opacity: 0.99;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=99)";
+    }
+
+    5% {
+        background-image: url('../images/duel/PvP_left_01.png');
+    }
+
+    10% {
+        background-image: url('../images/duel/PvP_left_02.png');
+    }
+
+    15% {
+        background-image: url('../images/duel/PvP_left_02.png');
+        margin-right: 0px;
+    }
+
+    20% {
+        background-image: url('../images/duel/PvP_left_03.png');
+        margin-right: -80px;
+    }
+
+    25% {
+        background-image: url('../images/duel/PvP_left_03.png');
+    }
+
+    30% {
+        background-image: url('../images/duel/PvP_left_04.png');
+    }
+
+    35% {
+        background-image: url('../images/duel/PvP_left_04.png');
+    }
+
+    40% {
+        background-image: url('../images/duel/PvP_left_05.png');
+    }
+
+    45% {
+        background-image: url('../images/duel/PvP_left_05.png');
+    }
+
+    50% {
+        background-image: url('../images/duel/PvP_left_06.png');
+    }
+
+    55% {
+        background-image: url('../images/duel/PvP_left_06.png');
+        margin-right: -80px;
+    }
+
+    60% {
+        background-image: url('../images/duel/PvP_left_07.png');
+        margin-right: -60px;
+    }
+
+    65% {
+        background-image: url('../images/duel/PvP_left_07.png');
+        margin-right: -60px;
+    }
+
+    70% {
+        background-image: url('../images/duel/PvP_left_09.2.png');
+    }
+
+    75% {
+        background-image: url('../images/duel/PvP_left_09.2.png');
+    }
+
+    80% {
+        background-image: url('../images/duel/PvP_left_09.2.png');
+        opacity: 0.99;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=99)";
+    }
+
+    100% {
+        background-image: url('../images/duel/PvP_left_09.2.png');
+        margin-right: -60px;
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    }
+}
+
+
+@-webkit-keyframes duel_right2 {
+    0% {
+        background-image: url('../images/duel/PvP_right_01.png');
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+
+    5% {
+        background-image: url('../images/duel/PvP_right_01.png');
+    }
+
+    10% {
+        background-image: url('../images/duel/PvP_right_02.png');
+    }
+
+    15% {
+        background-image: url('../images/duel/PvP_right_02.png');
+        margin-left: 0px;
+    }
+
+    20% {
+        background-image: url('../images/duel/PvP_right_03.png');
+        margin-left: -80px;
+    }
+
+    25% {
+        background-image: url('../images/duel/PvP_right_03.png');
+    }
+
+    30% {
+        background-image: url('../images/duel/PvP_right_04.png');
+    }
+
+    35% {
+        background-image: url('../images/duel/PvP_right_04.png');
+    }
+
+    40% {
+        background-image: url('../images/duel/PvP_right_05.png');
+    }
+
+    45% {
+        background-image: url('../images/duel/PvP_right_05.png');
+        margin-left: -80px;
+    }
+
+    50% {
+        background-image: url('../images/duel/PvP_right_06.png');
+        margin-left: -100px;
+    }
+
+    55% {
+        background-image: url('../images/duel/PvP_right_06.png');
+        margin-left: -100px;
+    }
+
+    60% {
+        background-image: url('../images/duel/PvP_right_07.png');
+        margin-left: -80px;
+    }
+
+    65% {
+        background-image: url('../images/duel/PvP_right_07.png');
+        margin-left: -80px;
+    }
+
+    70% {
+        background-image: url('../images/duel/PvP_right_08.png');
+        margin-left: -97px;
+    }
+
+    75% {
+        background-image: url('../images/duel/PvP_right_08.png');
+    }
+
+    90% {
+        background-image: url('../images/duel/PvP_right_win.png');
+    }
+
+    100% {
+        background-image: url('../images/duel/PvP_right_win.png');
+        margin-left: -95px;
+    }
+}
+
+
+@keyframes duel_right2 {
+    0% {
+        background-image: url('../images/duel/PvP_right_01.png');
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+
+    5% {
+        background-image: url('../images/duel/PvP_right_01.png');
+    }
+
+    10% {
+        background-image: url('../images/duel/PvP_right_02.png');
+    }
+
+    15% {
+        background-image: url('../images/duel/PvP_right_02.png');
+        margin-left: 0px;
+    }
+
+    20% {
+        background-image: url('../images/duel/PvP_right_03.png');
+        margin-left: -80px;
+    }
+
+    25% {
+        background-image: url('../images/duel/PvP_right_03.png');
+    }
+
+    30% {
+        background-image: url('../images/duel/PvP_right_04.png');
+    }
+
+    35% {
+        background-image: url('../images/duel/PvP_right_04.png');
+    }
+
+    40% {
+        background-image: url('../images/duel/PvP_right_05.png');
+    }
+
+    45% {
+        background-image: url('../images/duel/PvP_right_05.png');
+        margin-left: -80px;
+    }
+
+    50% {
+        background-image: url('../images/duel/PvP_right_06.png');
+        margin-left: -100px;
+    }
+
+    55% {
+        background-image: url('../images/duel/PvP_right_06.png');
+        margin-left: -100px;
+    }
+
+    60% {
+        background-image: url('../images/duel/PvP_right_07.png');
+        margin-left: -80px;
+    }
+
+    65% {
+        background-image: url('../images/duel/PvP_right_07.png');
+        margin-left: -80px;
+    }
+
+    70% {
+        background-image: url('../images/duel/PvP_right_08.png');
+        margin-left: -97px;
+    }
+
+    75% {
+        background-image: url('../images/duel/PvP_right_08.png');
+    }
+
+    90% {
+        background-image: url('../images/duel/PvP_right_win.png');
+    }
+
+    100% {
+        background-image: url('../images/duel/PvP_right_win.png');
+        margin-left: -95px;
+    }
+}
+
+.duel_left .block_user {
+    margin-left: 62px;
+}
+
+.duel_right .block_user {
+    margin-right: 99px;
+    float: right;
+}
+
+.block_user {
+    max-width: 200px;
+    text-align: center;
+    margin-top: -60px;
+    position: relative;
+}
+
+.block_user_avatar {
+    background-image: url(../images/duel/duel_ava_border.png);
+    background-repeat: no-repeat;
+    border-radius: 50px;
+    width: 90px;
+    height: 90px;
+    padding-top: 5px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 6px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+    .block_user_avatar img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50px;
+        border: 2px solid #1b1b1b;
+    }
+
+.block_user_name a {
+    color: #000000;
+    font-size: 14px;
+    font-family: 'ChinaCyr';
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 32px;
+    text-decoration: none;
+}
+
+    .block_user_name a:hover {
+        text-decoration: underline;
+    }
+
+.take_this_place a {
+    color: #000000;
+    font-size: 14.4px;
+    font-family: 'ChinaCyr';
+    text-transform: uppercase;
+    font-weight: bold;
+    background-image: url(../images/duel/duel_btn.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    line-height: 56px;
+    text-align: center;
+    padding: 0 22px;
+    -webkit-transition: background-image 0.5s, color 0.5s;
+    transition: background-image 0.5s, color 0.5s;
+}
+
+    .take_this_place a:hover {
+        background-image: url('../images/duel/duel_btn_active.png');
+        color: #f4f4f4;
+    }
+
+/**/
+.cells-winner-close {
+    position: absolute;
+    top: -21px;
+    right: 15px;
+    -webkit-transform: rotateZ(130deg);
+    transform: rotateZ(130deg);
+    cursor: pointer;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    color: rgb(51, 51, 51);
+}
+
+    .cells-winner-close:hover {
+        -webkit-transform: rotateZ(310deg);
+        transform: rotateZ(310deg);
+        color: red;
+    }
+
+.cells-winner {
+    position: absolute;
+    top: -50%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'ChinaCyr';
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 90px;
+    background-color: rgba(255, 255, 255, 0.96);
+    max-width: 80%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(35, 31, 32, 0.59);
+    z-index: 1000;
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    -webkit-transition-delay: 8s;
+    transition-delay: 8s;
+}
+
+.duel .cells-winner span {
+    color: red;
+    margin-right: 10px;
+}
+
+.duel.active .cells-winner {
+    top: 28%;
+    -webkit-animation-delay: 7s;
+    animation-delay: 7s;
+    -webkit-animation-name: cells-winner;
+    animation-name: cells-winner;
+    -webkit-animation-duration: 6s;
+    animation-duration: 6s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes cells-winner {
+    0% {
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    }
+
+    10% {
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+
+    90% {
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+
+    100% {
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    }
+}
+
+@keyframes cells-winner {
+    0% {
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    }
+
+    10% {
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+
+    90% {
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+
+    100% {
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    }
+}
+
+/**/
+
+.winner {
+    color: #f53800;
+    font-size: 32px;
+    font-family: 'ChinaCyr';
+    line-height: 43px;
+    font-weight: bold;
+}
+
+.hoose {
+    color: #000000;
+    font-size: 16px;
+    font-family: 'ChinaCyr';
+    line-height: 43px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: -80px;
+}
+
+@media only screen and (max-height: 850px) {
+    .resize {
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+        margin-top: -50px;
+        -webkit-transform-origin: center;
+        transform-origin: center;
+    }
+}
+
+@media only screen and (max-height: 750px) {
+    .resize {
+        -webkit-transform: scale(0.7);
+        transform: scale(0.7);
+        margin-top: -80px;
+        -webkit-transform-origin: center;
+        transform-origin: center;
+    }
+}
+
+@media only screen and (max-height: 650px) {
+    .resize {
+        -webkit-transform: scale(0.6);
+        transform: scale(0.6);
+        margin-top: -130px;
+        -webkit-transform-origin: center;
+        transform-origin: center;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .resize {
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+        -webkit-transform-origin: left;
+        transform-origin: left;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .resize {
+        -webkit-transform: scale(0.8);
+        transform: scale(0.8);
+        -webkit-transform-origin: left;
+        transform-origin: left;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .resize {
+        margin-left: 112px;
+        margin-top: -120px;
+        -webkit-transform: scale(0.7);
+        transform: scale(0.7);
+        -webkit-transform-origin: left;
+        transform-origin: left;
+    }
+
+    .history .duel_vs.active {
+        opacity: 0.1 !important;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";
+    }
+
+    .fairGameModals {
+        z-index: 1;
+    }
+}
+@media only screen and (max-width: 1023px){
+    .resize {
+        margin-left: 112px;
+        margin-top: 0px;
+    }
+}
+@media only screen and (max-width: 900px) {
+    .resize {
+        margin-left: 0px;
+        -webkit-transform: scale(0.7);
+        transform: scale(0.7);
+        -webkit-transform-origin: left;
+        transform-origin: left;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .resize {
+        -webkit-transform-origin: left;
+        transform-origin: left;
+        margin-left: -18px;
+        margin-top: -50px;
+    }
+
+    .fairGameModals {
+        left: 40px;
+    }
+
+    .duel_vs {
+        width: 106px;
+    }
+
+    .hoose {
+        font-size: 18px;
+        margin-top: 0;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .resize {
+        -webkit-transform: scale(0.6);
+        transform: scale(0.6);
+        -webkit-transform-origin: left;
+        transform-origin: left;
+    }
+    .history {
+        margin-top: 0;
+    }
+}
+
+@media only screen and (max-width: 736px) {
+    .resize h2 {
+        padding-top: 0;
+        margin-top: -30px;
+    }
+
+    .resize {
+        -webkit-transform: scale(0.7);
+        transform: scale(0.7);
+        -webkit-transform-origin: left;
+        transform-origin: left;
+        margin-left: -23px;
+        margin-top: -80px;
+    }
+
+    .duel {
+        -webkit-transform: scale(0.65);
+        transform: scale(0.65);
+        margin-top: -50px;
+    }
+
+    .ninja_left,
+    .ninja_right {
+        height: 144vh;
+        margin-top: -340px;
+    }
+
+    .block_user {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+        width: 100%;
+        max-width: 600px;
+        margin-top: 80px;
+    }
+
+    .duel_left .block_user {
+        margin-left: -250px;
+    }
+
+    .duel_right .block_user {
+        margin-right: -250px;
+    }
+
+    .duel_vs {
+        width: 65px;
+        height: 180px;
+    }
+
+    .duel_bg,
+    .hoose {
+        display: none;
+    }
+
+    .make_your_bet li a {
+        color: #828282;
+        font-size: 23px;
+    }
+
+    .fairGameModals a {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 667px) {
+    .resize {
+        -webkit-transform: scale(0.64);
+        transform: scale(0.64);
+        -webkit-transform-origin: left;
+        transform-origin: left;
+        margin-left: -40px;
+        margin-top: -140px;
+    }
+
+    .fairGameModals {
+        left: 60px;
+    }
+}
+
+@media only screen and (max-width: 568px) {
+    .resize {
+        -webkit-transform: scale(0.56);
+        transform: scale(0.56);
+        -webkit-transform-origin: left;
+        transform-origin: left;
+        margin-left: -40px;
+        margin-top: -140px;
+    }
+
+    .ninja_left, .ninja_right {
+        height: 174vh;
+    }
+}
+
+@media only screen and (max-width: 567px) {
+    .resize {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        margin-left: 0;
+        margin-top: 0;
+        width: 100%;
+    }
+
+    .duel_right .block_user {
+        margin-right: -100px;
+    }
+
+    .duel_left .block_user {
+        margin-left: -100px;
+    }
+
+    .ninja_left, .ninja_right {
+        margin-top: -20px;
+    }
+
+    .duel {
+        -webkit-transform: scale(0.4);
+        transform: scale(0.4);
+        margin-top: -30px;
+    }
+
+    .duel_vs {
+        top: 244px;
+    }
+
+    .make_your_bet li {
+        margin-right: 20px;
+    }
+
+        .make_your_bet li a {
+            font-size: 16px;
+        }
+
+    .make_your_bet p {
+        font-size: 12px;
+    }
+
+    .lavel h2 {
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+
+    .fairGameModals a {
+        font-size: 10px;
+    }
+
+    .fairGameModals {
+        top: -20px;
+        left: 0;
+    }
+
+    .ninja_left {
+        width: 130vw;
+    }
+
+    .ninja_right {
+        width: 130vw;
+    }
+
+    .block_user {
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
+        margin-top: 270px;
+    }
+
+    .make_your_bet {
+        position: absolute;
+        top: 60px;
+        right: 70px;
+    }
+}
+@media only screen and (max-width: 566px) {
+    .resize {
+        margin-top: 50px;
+    }
+}
+@media only screen and (max-width: 667px) {
+    .cells-winner {
+        max-width: 100%;
+        font-size: 28px;
+        padding: 15px;
+    }
+
+    .cells-winner-close {
+        font-size: 60px;
+        top: -86px;
+        right: -45px;
+        color: #000000;
+    }
+    .history {
+        margin-top: 20px;
+    }
+}
+@media only screen and (max-width: 666px){
+    .history {
+        margin-top: 40px;
+    }
+}
+@media only screen and (max-width: 375px) {
+    .resize {
+        margin-top: 20px;
+    }
+}
+@media only screen and (max-width: 320px) {
+    .make_your_bet {
+        right: 0;
+    }
+    .lavel h2 {
+        font-size: 26px;
+    }
+}
